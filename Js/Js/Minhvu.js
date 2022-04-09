@@ -14,6 +14,7 @@ function Next()
             slideIndex +=1;
             dots[slideIndex].className += " active";
             dots[slideIndex-1].className = dots[slideIndex-1].className.replace(" active", "");
+            
         }
     else 
     {
@@ -21,8 +22,10 @@ function Next()
         slideIndex=0;
         dots[3].className = dots[3].className.replace(" active", "");
         dots[slideIndex].className += " active";
+
     }
-    Chuyensilde.style.marginLeft='-' + chuyen + 'px'; 
+    Chuyensilde.style.marginLeft='-' + chuyen + 'px';
+    
 }
 function Back()
 {
@@ -37,11 +40,12 @@ function Back()
     {
         chuyen -= Kichthuoc;
         slideIndex -=1;
-        dots[slideIndex].className += " active";
-        dots[slideIndex+1].className = dots[slideIndex+1].className.replace(" active", "");
+        dot[slideIndex].className += " active";
+        dot[slideIndex+1].className = dots[slideIndex+1].className.replace(" active", "");
     }
-    Chuyensilde.style.marginLeft='-'+chuyen+'px';
+    Chuyensilde.style.marginLeft='-' + chuyen + 'px'; 
 }
 setInterval(function(){
-    Next();
+   
+         Next();
 },5000)

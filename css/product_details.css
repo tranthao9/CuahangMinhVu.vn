@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.Details{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+.product-image{
+    display: flex;
+}
+.product-image img{
+    padding: 3px;
+}
+.content-product{
+    padding: 20px;
+    line-height: 20px;
+    
+}
+.Content1{
+    border-bottom: 1px solid rgb(227, 224, 224);
+    padding-bottom: 20px;
+}
+.Content1 span:first-child{
+    font-size: 20px;
+    color: darkgreen;
+}
+.buttom1-fb{
+    float: right;
+    display: flex;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.buttom1-fb>.like{
+    margin-left: 5px;
+    background-color: rgb(55, 55, 247);
+    border-radius: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.buttom1-fb>.like a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+.buttom1-fb>.like i{
+    color: white;
+}
+.Content2{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 20px;
+    line-height: 30px;
+    border-bottom: 1px solid rgb(227, 224, 224);
+    padding-bottom: 20px;
+}
+.Content2>div{
+    margin-right: 10px;
+}
+.Content2>div:last-child{
+    background-color: rgb(186, 43, 43);
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+}
+.computer-configuration{
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+}
+.DUI ul{
+   list-style: none;
+   padding: 0;
+   display: block
+   
+}
+.DUI>ul>li{
+    border: 1px solid rgb(227, 224, 224);
+    border-radius: 5px;
+    line-height: 25px;
+    padding-left: 5px;
+    width: 48%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+
+
+}
+.DUI>ul>li span:last-child{
+    font-size: 16px;
+    color: rgb(237, 118, 118);
+
+}
+.information{
+    padding-left: 20px;
+}
+.information div{
+    float: right;
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    font-size: 20px;
+    color: goldenrod;
+}
+.Fistif{
+    display: flex;
+    margin-top: 0;
+}
+.Fistif i{
+    background-color: white;
+    color:rgb(18, 207, 43);
+    font-size: 16px;
+}
+.Fistif b{
+    color: red;
+}
+.Fistif a{
+    color: darkgreen;
+    cursor: pointer;
+}
+.information-image{
+ float: right;
+ margin-top: 10px;
+ padding-bottom: 20px;
+ border-bottom: 1px solid rgb(227, 224, 224);
+}
+.submitBT{
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.BT1{
+    background-color: rgb(220, 220, 17);
+    color: red;
+    line-height: 25px;
+    border-radius: 5px;
+    border: 1px solid rgb(227, 224, 224);
+    font-weight: 500;
+    
+}
+.BT2{
+    background-color: darkgreen;
+    color: white;
+    line-height: 25px;
+    margin-left: 10px;
+    width: 25%;
+    border-radius: 5px;
+    border: 1px solid rgb(227, 224, 224);
+}
+.Information-product{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.product1{
+    border-bottom: 1px solid black;
+}
+.product11{
+    background-color: rgb(8, 88, 8);
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 3px 3px 0 0;
+}
+.product2 p{
+    font-size: 25px;
+    color: darkgreen;
+    font-weight: 500;
+}
+.product2 p:nth-child(2){
+    font-size: 15px;
+    color: black;
+    line-height: 20px;
+    font-weight: 300;
+}
+

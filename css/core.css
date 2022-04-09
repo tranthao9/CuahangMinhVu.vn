@@ -16,7 +16,7 @@ html {
   font-family: "roboto", sans-serif;
 }
 /* For mobile phones: */
-@media only screen and (min-width: 0px) {
+@media only screen and (min-width: 200px) {
     .col-m-0 {width: 0%;}
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}

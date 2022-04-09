@@ -11,7 +11,7 @@ body{
 }
 .title{
     box-sizing: border-box;
-    width: 98%;
+    width: 100%;
     border: 1px solid white;
     
 }
@@ -22,7 +22,6 @@ body{
     
 }
 .title>.title-bottom{
-    float: right;
     display: grid;
     grid-template-columns: 20% 16% 14% 20% 16% 16%;
     background-color:rgb(42, 104, 92);
@@ -31,7 +30,25 @@ body{
     padding: 5px;
     border-radius:0 0 4px  4px;
     margin-bottom: 0;
+    float: right;
+    margin-right: 10px;
     
+}
+.title>.title-login{
+    float: right;
+    
+}
+.title>.title-login>a i{
+    font-size: 20px;
+    padding-top: 2px;
+    color: #000000;
+    float: right;
+    padding-right: 8px;
+
+    
+}
+.title>.title-login>a i:hover{
+    color:#0ca719;
 }
 .title>.title-bottom a{
     text-decoration: none;
@@ -54,6 +71,7 @@ body{
     text-align: right;
     list-style-type: none;
     padding-right: 10px;
+    float: right;
 }
 .style>.style-l >ul{
   
@@ -181,6 +199,42 @@ body{
  .style>.style-l >ul>li:hover>ul>ul>.style-li1 a:hover{
     color: red;
  }
+ #menu-icon {
+     display: none;
+     background-color: linear-gradient(#d6fdd9, #ffffff);
+     color: gray;
+     border: 1px solid rgb(223, 217, 217);
+     width: 40px;
+     height: 35px;
+     cursor: pointer;
+     margin-top: 10px;
+     margin-left: -5px;
+     padding-right: 8px;
+     border-radius: 5px;
+     padding-top: 5px;
+ }
+ #menu-icon i{
+   font-size: 25px;
+}
+ @media  screen and (max-width:900px) {
+     #main-menu{
+         margin-top: 30px;
+         margin-left: -500px;
+         display: flex;
+         text-align: center;
+         display: none;
+     }
+     #menu-icon{
+        display: block;
+     }
+     
+
+     
+     
+ }
+ @media screen and(max-width) {
+     
+ }
 .background{
     max-width: 1200px;
     width: 100%;
@@ -195,7 +249,7 @@ body{
  .background-1>.mysilde{
     width: 400%;
     height: 100%;
-    transition: all 0.8s;
+    transition: all 1s;
  }
  .background-1>.mysilde >.mysilde1{
     float: left;
@@ -203,6 +257,7 @@ body{
     height: 100%;
     position: relative;
  }
+ 
  .background-1:hover>.background-111{
     opacity: 1;
  }
@@ -246,20 +301,33 @@ body{
     padding: 10px 20px 20px 10px;
     box-shadow: 1px 1px 15px rgb(247, 243, 243);
 }
-
+.LaptopT>.Laptop1{
+    border-bottom: 1px solid black;
+}
 .LaptopT>.Laptop1 >ul
 {
    list-style-type: none;
    font-size: 14px;
    line-height: 30px;
    text-align: center;
-   
-  
+   line-height: 35px;
+}
+.LaptopT>.Laptop1 >ul >.active2  a
+{
+   background-color: rgb(8, 88, 8);
+   color: white;
+   border-radius: 5px 5px 0 0;
+
+}
+.LaptopT>.Laptop1 >ul>.active2:hover a
+{
+   background-color: rgb(8, 88, 8);
+   color: white;
 
 }
 .LaptopT>.Laptop1 >ul> li:hover a
 {
-   color: rgb(118, 114, 110);
+   color: rgb(130, 126, 121);
 
 }
 .LaptopT>.Laptop1 >ul> li:last-child a
@@ -273,43 +341,48 @@ body{
   border: 1px solid red; 
 
 }
-.LaptopT>.Laptop1 >ul> li a
+.LaptopT>.Laptop1 >ul> li> a
 {
    text-decoration: none;
    color: black;
    
 
 }
+.LaptopT>.Laptop1 >ul> li
+{
+  margin-left: 5px;
+}
 .LaptopT{
     max-width: 1200px;
     width: 100%;
     margin: auto;
+    
 }
 .LaptopT>.Laptop1-1{
     border-top: 1px solid black
 }
-.LaptopT>.Laptop1-1>.Laptop11{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11{
     padding: 15px;
    
 }
 
 
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder{
     border: 1px solid gainsboro;
     width: 100%;
     height: 100%;
     
 }
 
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder:hover{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder:hover{
     border: 1px solid black;
     box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2) , 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder>.box {
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.box {
     position: relative;
 
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder>.box>.Cu{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.box>.Cu{
     position: absolute;
     top: 8px;
     left: 0px;
@@ -321,7 +394,19 @@ body{
     line-height: 25px;
     border-radius:0 50% 50% 0;
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder>.box>.sale{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.box>.Moi{
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(255, 55, 0);
+    width: 40px;
+    text-align: center;
+    line-height: 25px;
+    border-radius:0 50% 50% 0;
+}
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.box>.sale{
     position: absolute;
     top: 35px;
     left: 0px;
@@ -333,40 +418,43 @@ body{
     line-height: 25px;
     border-radius:0 50% 50% 0;
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder>.Gio{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.Gio{
     width: 25px;
     height: 20px;
     border: 1px solid rgb(173, 166, 166);
-    margin-left: 20px;
+    float: right;
+    margin-right: 5px;
     margin-bottom:  15px;
     color: dimgray;
+    padding-left: 3px;
+    padding-top: 3px;
     
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder>.Gio:hover{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.Gio:hover{
     color: rgb(68, 132, 68);
     
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder> .Lap-a{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder> .Lap-a{
     padding-left: 5px; font-weight: bold; text-decoration: none;color: black;
     font-size: 13px;
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder> .Lap-a:hover{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder> .Lap-a:hover{
     color: red;
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder> .Lap-a:active{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder> .Lap-a:active{
     background-color: darkgreen;
     color: white;
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder> .box>img{
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder> .box>img{
    width: 100%;
    height: 110%;
    padding: 10%;
    transition: 1s;
 }
-.LaptopT>.Laptop1-1>.Laptop11>.LapBorder> .box>img:hover{
+
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder:hover img{
     transform: scale(1.25,1.35);
 }
-
 
 .new{
     max-width: 1200px;
@@ -444,6 +532,40 @@ body{
 .new>.new3>.new34 img{
     padding-right: 10px;
 }
+.NextB{
+    position: relative;
+    
+}
+.Next1 {
+    position: absolute;
+    top: 40%;
+    left: 1%;
+    transition: 23;
+  
+}
+.Next1 i{
+   color:#d6fdd9;
+   font-size: 50px;
+}
+.Next1 i:hover{
+    color:#b3d649;
+    font-size: 50px;
+ }
+.Next2 {
+    position: absolute;
+    top: 40%;
+    right: 1%;
+    transition: 3s;
+  
+}
+.Next2 i{
+   color:#d6fdd9;
+   font-size: 50px;
+}
+.Next2 i:hover{
+    color:#b3d649;
+    font-size: 50px;
+ }
 .support{
     background-color: #e4f7bc;
     padding-top: 30px;
@@ -655,3 +777,266 @@ body{
     font-weight: 500;
    
 }
+.fix_tel { position:fixed; bottom:50px; left:0px; z-index:999;display: flex;} /* left 18px là cách bên trái 18px. nếu muốn cho nút gọi sang phải thay là right */
+.fix_tel a {text-decoration: none; display:block;}
+.ring-alo-phone {
+background-color: transparent;
+cursor: pointer;
+height: 80px;
+transition: visibility 0.5s ease 0s;
+visibility: hidden;
+width: 80px;
+z-index: 200000 !important;
+}
+.ring-alo-phone.ring-alo-show {
+visibility: visible;
+}
+.ring-alo-ph-circle {
+animation: 1s ease-in-out 0s normal none infinite running ring-alo-circle-anim;
+background-color: transparent;
+border: 2px solid rgba(237, 13, 21, 0.4);
+border-radius: 100%;
+height: 70px;
+left: 10px;
+opacity: 0.1;
+position: absolute;
+top: 12px;
+transform-origin: 50% 50% 0;
+transition: all 0.5s ease 0s;
+width: 70px;
+}
+.ring-alo-phone.ring-alo-active .ring-alo-ph-circle {
+animation: 1.2s ease-in-out 0s normal none infinite running ring-alo-circle-anim !important;
+}
+.ring-alo-phone.ring-alo-static .ring-alo-ph-circle {
+animation: 1.2s ease-in-out 0s normal none infinite running ring-alo-circle-anim !important;
+}
+.ring-alo-phone.ring-alo .ring-alo-ph-circle {
+border-color: red;
+}
+.ring-alo-ph-circle-fill {
+animation: 1.2s ease-in-out 0s normal none infinite running ring-alo-circle-fill-anim;
+border: 2px solid transparent;
+border-radius: 100%;
+height: 30px;
+left: 30px;
+opacity: 0.1;
+position: absolute;
+top: 33px;
+transition: all 0.5s ease 0s;
+width: 30px;
+}
+
+.ring-alo-phone.ring-alo .ring-alo-ph-circle-fill {
+background-color: red;
+opacity: 0.75 !important;
+}
+    
+.ring-alo-ph-img-circle {
+animation: 1s ease-in-out 0s normal none infinite running ring-alo-circle-img-anim;
+border: 2px solid transparent;
+border-radius: 100%;
+height: 30px;
+left: 30px; 
+opacity: 1;
+position: absolute;
+top: 33px;
+width: 30px;
+}
+.ring-alo-phone.ring-alo .ring-alo-ph-img-circle {
+background-color: red;
+}
+@keyframes ring-alo-circle-anim {
+0% {
+opacity: 0.1;
+transform:  scale(0.5) ;
+}
+30% {
+opacity: 0.5;
+transform:  scale(0.7) ;
+}
+100% {
+opacity: 0.6;
+transform: scale(1) ;
+}
+}
+    
+@keyframes ring-alo-circle-img-anim {
+0% {
+transform: rotate(0deg) scale(1) ;
+}
+10% {
+transform: rotate(-25deg) scale(1) ;
+}
+20% {
+transform: rotate(25deg) scale(1) ;
+}
+30% {
+transform: rotate(-25deg) scale(1);
+}
+40% {
+transform: rotate(25deg) scale(1) ;
+}
+50% {
+transform: rotate(0deg) scale(1) ;
+}
+100% {
+transform: rotate(-25deg) scale(1) ;
+}
+}
+.ring-alo-ph-img-circle a img {
+width: 100%;
+position: relative;;
+}
+.Lienhe{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 200px;
+    line-height: 25px;
+    position: fixed;
+    bottom: 120px;
+    background-color: whitesmoke;
+    left: 30px;
+    border: 1px solid rgb(219, 212, 212);
+    box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2) , 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: none;
+
+}
+.Lienhe>.lienhe1{
+    color: darkgreen;
+    border-bottom: 1px solid rgb(164, 180, 164);
+    width: 100%;
+}
+.Lienhe>.lienhe3{
+   border-bottom: 1px solid rgb(164, 180, 164);
+   width: 100%;
+   display: inline-block;
+}
+.Lienhe>.lienhe3 span{
+    color: red;
+    float: right;
+ }
+ .Lienhe>.lienhe3 i{
+    color: darkgreen;
+    float: right;
+    padding-top: 5px;
+ }
+.open{
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    cursor: pointer;
+}
+.open1{
+    animation: 1.2s ease-in-out 0s normal none infinite running open1;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: rgb(164, 217, 112);
+   z-index: 999;
+   position: relative;
+}
+.open1 i{
+   color: white;
+   font-size: 15px;
+ }
+ .open2{
+     width:85px ;
+     height: 85px;
+     border-radius: 100%;
+     background-color:rgb(110, 214, 6) ;
+     opacity: 0.5;
+     position: absolute;
+     bottom: -12.5px;
+     right: -12.5px;
+     animation: 1.2s ease-in-out 0s normal none infinite running open2;
+ }
+ @keyframes open2{
+     from{
+         opacity: 1;
+         transform: scale(0,0);
+     }
+     to{
+        opacity: 0;
+        transform: scale(1,1);
+    }
+ }
+ @keyframes open1{
+    
+     0%{
+         transform: scale(1,1);
+     }
+     50%{
+        transform: scale(0.85,0.85);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+ }
+ .open3{
+     position: fixed;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     background-color: black;
+     opacity: 0.85;
+     display: none;
+ }
+ .open31{
+    margin-top: 5px;
+    position: fixed;
+ }
+ .open31 span{
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+ }
+ .open31 i{
+    color: white;
+    font-size: 25px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+    padding-left: 10px;
+    margin-left: 10px;
+ }
+ .open31 img{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+ }
+ .open32 i{
+     position: fixed;
+    bottom: 15px;
+    right: 10px;
+    cursor: pointer;
+    width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: rgb(164, 217, 112);
+   color: white; font-size: 40px;
+   padding-left: 13px;
+   padding-top: 10px;
+ }
+ .updown i{
+    position: fixed;
+    right: 10px;
+    cursor: pointer;
+    width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: rgb(164, 217, 112);
+   color: white; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 20px;
+   font-weight: bold;
+ }
+ .updown i:hover{
+    color: #000000;
+    background-color: rgb(116, 141, 90);
+ }
