@@ -32,7 +32,11 @@
 .page> ul>li a{
    text-decoration: none;
    color: black;
+   cursor: pointer;
  }
+ .page> ul>li>a i{
+     color: gray;
+  }
 .page> ul>li:first-child{
     border-radius: 5px 0 0 5px;
  }

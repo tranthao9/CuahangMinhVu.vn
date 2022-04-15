@@ -6,7 +6,41 @@
     max-width: 1200px;
     width: 100%;
     margin: auto;
+    margin-top:20px
 }
+.DetailImg1 {
+    position: relative;
+}
+
+.Next3{
+    position: absolute;
+    top:40%;
+    left: 1%;
+    
+}
+.Next3 i{
+   font-size: 30px;
+   color: #dddddd;
+    
+}
+.Next4 i{
+    font-size: 30px;
+    color: #dddddd;
+ }
+ .Next3 i:hover{
+   
+    color: rgb(7, 110, 7);
+     
+ }
+ .Next4 i:hover{
+     color:rgb(7, 110, 7);
+  }
+.Next4{
+    position: absolute;
+    top:40%;
+    right: 1%;
+}
+
 .product-image{
     display: flex;
 }
@@ -60,6 +94,15 @@
 .Content2>div{
     margin-right: 10px;
 }
+.Content2 div:last-child{
+    opacity: 0.8;
+    cursor: pointer;
+
+}
+.Content2 div:last-child :hover{
+    opacity: 0.8;
+
+}
 .Content2>div:last-child{
     background-color: rgb(186, 43, 43);
     color: white;
@@ -86,13 +129,16 @@
     margin-top: 10px;
     margin-bottom: 10px;
     float: left;
-
+    cursor: pointer;
 
 }
 .DUI>ul>li span:last-child{
     font-size: 16px;
     color: rgb(237, 118, 118);
 
+}
+.active4{
+    background-color: rgb(212, 252, 236);
 }
 .information{
     padding-left: 20px;
@@ -111,7 +157,7 @@
 }
 .Fistif i{
     background-color: white;
-    color:rgb(18, 207, 43);
+    color:rgb(77, 163, 88);
     font-size: 16px;
 }
 .Fistif b{
@@ -120,6 +166,9 @@
 .Fistif a{
     color: darkgreen;
     cursor: pointer;
+}
+.Fistif a:hover{
+    text-decoration: underline;
 }
 .information-image{
  float: right;
@@ -141,16 +190,27 @@
     border-radius: 5px;
     border: 1px solid rgb(227, 224, 224);
     font-weight: 500;
-    
+    cursor: pointer;
+}
+.BT1:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
 }
 .BT2{
-    background-color: darkgreen;
+    background-color: rgb(41, 95, 41);
     color: white;
     line-height: 25px;
     margin-left: 10px;
     width: 25%;
     border-radius: 5px;
     border: 1px solid rgb(227, 224, 224);
+    cursor: pointer;
+}
+.BT2:hover{
+    background-color: rgb(13, 196, 13);
+    color: white;
+    cursor: pointer;
 }
 .Information-product{
     max-width: 1200px;
@@ -179,5 +239,33 @@
     color: black;
     line-height: 20px;
     font-weight: 300;
+}.product3{
+    margin: auto;
+     width: 380px;
+     line-height: 25px;
+     text-align: left;
+     
+}
+.product3 td,th{
+  padding: 8px;
+}
+.product3 table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+.product3 tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .product3 tr {
+    background-color:rgb(255, 251, 251);
+  }
+  .product3 span{
+      color: red;
+      font-weight: bold;
+  }
+.VideoThinkpadT460s{
+    width: 600px;
+    margin: auto;
 }
 

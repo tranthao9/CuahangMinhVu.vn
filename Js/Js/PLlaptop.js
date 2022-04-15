@@ -57,30 +57,7 @@ function Click3() {
     a[3].className += " active2";
 }
 Init();
-//Javascript -- up down
-    var upz=$(document).height();
-    var upp=document.body.clientWidth;
-   $(document).ready(function(){
-       $(window).scroll(function(){
-           if($(this).scrollTop())
-           {$('.upa').fadeIn();}
-           else{
-               $('.upa').fadeOut();
-           }
-       });
-       $('.upa').click(function(){
-           $('html,body').animate({
-               scrollTop:0
-           },500);
-       });
-       $('.downa').click(function(){
-           $('html,body').animate({
-               scrollTop:upz
-           },500);
-           $('.downa').fadeOut(2000);
-           $('.downa').fadeIn(2000);
-       });
-   });
+
 //Display video
 var listVD=document.getElementsByClassName("video");
 function InitVD(){

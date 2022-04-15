@@ -1,0 +1,78 @@
+.Paying{
+   
+   padding-left: 5px;
+}
+.payhead{
+    margin-top: 20px;
+    font-weight: bold;
+}
+.pay1{
+    display: flex;
+    width: 500px;
+    margin: auto;
+    line-height: 30px;
+    padding: 10px;
+}
+.pay1 label{
+   width: 20%;
+   float: left;
+   text-align: right;
+}
+.pay1 input{
+    width: 80%;
+    margin-left: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(244, 206, 180);
+}
+#thongtin{
+   height: 88px; 
+   width: 80%;
+    margin-left: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(244, 206, 180);
+
+}
+#Tinh{
+    width: 80%;
+    margin-left: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(244, 206, 180);
+}
+.send{
+    margin-left: 78%;
+    background-color: rgb(222, 55, 55);
+    line-height: 35px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.send:hover{
+   
+    background-color: rgb(55, 222, 105);
+    
+}
+.CartCT{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+.Cart-contentF{
+  
+}
+.cart-item1{
+    width: 40%;
+    display: flex;
+ }
+
+  .cart-column1{
+    font-size: 20px;
+    font-weight: bold;
+   margin: 20px 20px 30px 20px ;
+   padding-bottom: 10px;
+   padding-top: 10px;
+   border-bottom: 1px solid black;
+   align-items: center;
+}
