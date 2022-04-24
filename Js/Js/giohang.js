@@ -28,12 +28,37 @@ function addCart(item){
   alert("Thêm vào giỏ hàng thành công");
   location.reload();
 }
+function ADDung(){
+  var km=$('.CTKM').val();
+  var t=0;
+  var kmt;
+  var ten="";
+  for(x of listcart){
+    t += x.price * x.quantity;}
+  if(km =="20-11")
+   {
+     ten="10%"
+     kmt=Math.round((t*0.9)*1.1);
+   }
+   else
+   {
+     ten="0%"
+     kmt=Math.round(t*1.1);
+    
+   }
+   var totall={km:ten,total:kmt+" VNĐ"}
+   localStorage.setItem("Discount",JSON.stringify(totall));
+  location.reload();
+}
 var listcart=JSON.parse(localStorage.getItem('Cart')) || []
+var listdiscount=JSON.parse(localStorage.getItem('Discount')) || []
 function LoadData(){
   var str="";
+  var tt="";
   var n=0;
   var t=0;
-  var d=0;
+  var km;
+  var total;
   for(x of listcart){
     n=n+x.quantity
     t += x.price * x.quantity;
@@ -44,21 +69,44 @@ function LoadData(){
     </div>
     <span class="cart-price price-product cart-column">`+x.price+`đ</span>
     <div class="cart-quantity cart-quantity-ca cart-column">
-        <input style="width:40% ;line-height: 30px;border-radius: 5px;
+        <input style="width:50% ;text-align:center;line-height: 30px;border-radius: 5px;
         border: 1px solid #56CCF2;background-color: #eee;color: #333;
         padding-left: 5px;" id="q_`+Number(x.id)+`" onchange="updateQuantity(`+ x.id + `)" type="number" value="`+ x.quantity + `">
         <button onclick="Remove(`+ x.id + `)" class="Cart-xoa" type="button">Xóa</button>
     </div>
-</div>
+    </div>
     `;
+    tt += `<div class="Infoder1"> 
+    <img src="` + x.image+`" width="100%" >
+    <div>
+        <span> `+x.name+`</span><br>
+        <span > Số lượng : `+x.quantity+`</span>
+    </div>
+    </div>`;
+        if( listdiscount.km=="10%")
+        {
+          listdiscount.total=Math.round((t*0.9)*1.1) + " VNĐ";
+          $('.CTKM').val("20-11");
+
+        }
+        else
+        {
+          listdiscount.total=Math.round(t*1.1) + " VNĐ";
+        }
+        var totall={km:listdiscount.km,total:listdiscount.total}
+        localStorage.setItem("Discount",JSON.stringify(totall));
   }
+  $('.Infoder11').html(tt);
   $('.over-cart').html(str);
   $('.cart-total-price').text(t+" VNĐ");
   $('#Soluong').text("("+n+") sản phẩm");
+  $('.OnCart').text("("+n+")");
+  $('.cart-total-price2').text(listdiscount.km);
+  $('.cart-total-price4').text(listdiscount.total);
 }
 LoadData();
 function Paying(){
-  window.location.href="Paying.html";
+  window.location.href="InformationCS.html";
 }
 function RemoveCart(){
   localStorage.setItem('Cart',null);
@@ -87,53 +135,149 @@ function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
+function validatePhone(Phone) {
+  var filter = /^[0-9-+]+$/;
+  if (filter.test(Phone)) {
+      return true;
+  }
+  else {
+      return false;
+  }
+}
 function DatHang() {
-  var hoten = $('#txt_hoten').val();
-  if (hodem == null || hodem == '' || hodem.length > 50) {
-      $('#s_hdem').html('Sai định dạng họ đệm');
-  } else {
-      $('#s_hdem').html('*');
-  }
+  
+let d = new Date();
+let year = d.getFullYear();
+let month = d.getMonth() + 1;
+let day = d.getDate();
+let dayofweek = d.getDay();
+const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
+
+
+  var hoten = $('#txt_hdem').val();
   var email = $('#txt_email').val();
-  if (email != '' && !validateEmail(email)) {
-      $('#s_email').html('Sai định dạng email');
-  } else {
-      $('#s_email').html('');
+  var address = $('#txt_diachi').val();
+  var sdt = $('#txt_sdt').val();
+  var tinh=$('#txt_tinh').val();
+  if (hoten == null || hoten == '' || hoten.length > 50) {
+      $('#s_hdem').html('Sai định dạng họ đệm');
+  } 
+  else {
+      $('#s_hdem').html('*');
+      {
+        if ( !validateEmail(email) && email != '' ) 
+        {
+            $('#s_email').html('Sai định dạng email');
+        } 
+        else 
+        {
+          if(email == '')
+          {
+            $('#s_email').html('Email không được để trống');
+          }
+          else
+          {
+            $('#s_email').html('*');
+            {
+                //
+                if (address == null || address=='') {
+                  $('#s_diachi').html('Địa chỉ không được để rỗng !');
+                  } 
+                  else 
+                  {
+                  $('#s_diachi').html('*');
+                  {
+                    if (sdt == ''   && (validatePhone(sdt)==false)) {
+                      $('#s_sdt').html('Sai định dạng điện thoại');
+                  } else {
+                    if(sdt.length !=10)
+                    {
+                      $('#s_sdt').html('Sai định dạng điện thoại');
+                    }
+                    else
+                    {
+                      $('#s_sdt').html('*');
+                      
+                           //Print
+                            var str = `
+                            <section style="text-align: center;">
+                                <h1>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</h1>
+                            </section>
+                            <div style="font-style: italic;">`+
+                            dayname[dayofweek] + ' ngày '+ day + '/' + month+ '/'+ year    
+                            +`</div>
+                            <div class="donvi">Tên đơn vị bán hàng: Công ty TNHH Minh Vũ</div>
+                            <div>Người mua hàng : `+hoten+`</div>
+                            <div>Số điện thoại : `+sdt+`</div>
+                            <div>Email : `+email+`</div>
+                            <div>Địa chỉ : `+ address +` - Tỉnh  `+ tinh +`</div>
+                            <table style="width: 100%;text-align:left">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên hàng</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiên</th>
+                                    </tr>        
+                          `;
+                          var n = 0;
+                          var t=0;
+                          for (x of listcart) {
+                            str += `
+                            <tr >
+                                <td>`+(++n)+`</td>
+                                <td >`+x.name+`</td>
+                                <td >`+x.quantity+`</td>
+                                <td>`+ (x.price * x.quantity) +` đ</td>
+                            </tr>
+                            `;
+                          }
+                          str += `<div>Tổng tiền : <span>`+listdiscount.total+`</span></div></table>`
+                          str += 
+                          ` <img style="margin-top:30px;margin-left:10%" src="image/uy tín.jpg">
+                          `;
+                          printHtml(str);
+                          localStorage.setItem('Discount',null);
+                          localStorage.setItem('Cart',null);
+                          location.reload();
+                    }
+                  }
+                  }
+                  }
+            }
+          }
+        }
+      }
   }
-  //Print
-  var str = `
-      <section style="text-align: center;">
-          <h1>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</h1>
-      </section>
-      <div style="font-style: italic;">
-          05 tháng 05 năm 2021        
-      </div>
-      <div class="donvi">Tên đơn vị bán hàng: Công ty ABC</div>
-      <div>Người mua hàng:`+hodem+`</div>
-      <div>Email:`+email+`</span></div>
-      <table style="width: 100%;">
-          <tr>
-              <th>Tên hàng</th>
-              <th>Số lượng</th>
-              <th>Thành tiên</th>
-          </tr>            
-  `;
-  var n = 0;
-  for (x of list) {
-      str += `
-      <tr>
-          <td>`+(++n)+`</td>
-          <td>`+x.name+`</td>
-          <td>`+x.quantity+`</td>
-          <td>`+ (x.price * x.quantity) +`</td>
-       </tr>
-      `;
-  }
-  str += `</table>
-  <img src="image/product-02.png">
-  `;
-  printHtml(str);
-  //printHtmlWithUrl('cart.html')
 } 
+function printHtml(data) {
+  let popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+  popupWin.document.write(`
+      <html>
+          <head>
+          <title>Hóa đơn</title>
+          <style>
+              * {
+                  margin: 0;
+                  padding: 0;
+              }
+              table {
+                  width: 100%;
+              }
+              .donvi {
+                  font-size: 14px;
+                  font-weight: bold;
+              }
+              body {
+                  width: 1000px;
+                  margin: 0 auto;
+              }
+          </style>
+          </head>
+      <body onload="window.print();window.close()">${data}</body>
+      </html>`
+  );
+  popupWin.document.close();
+}
+
 
 

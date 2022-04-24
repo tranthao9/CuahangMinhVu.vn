@@ -27,15 +27,15 @@
                 <a href="#">Video</a>
                 <a href="#">Giới thiệu</a>
                 <a href="#">Liên hệ</a>
-                <a onclick="ShowCart()" href="#"><i style="color: white;" class="fa-solid fa-cart-shopping"></i>&nbsp;Giỏ  </a>
+                <a class="Cartbutom"  href="#"><i style="color: white;" class="fa-solid fa-cart-shopping"></i>&nbsp;<span  class="OnCart"></span>  </a>
             </div>
             <div class="Cart">
                 <div class="Cart-content">
                         <div class="Cart-header">
                             <a>Giỏ hàng</a>
                             <a id="Soluong"></a>
-                            <span onclick="HideCart()"> &times;</span>
-                            <a class="Watchall-Cart">Xem tất cả</a>
+                            <span id="HideCart"> &times;</span>
+                            <a target="_blank" href="http://127.0.0.1:5500/Paying.html" class="Watchall-Cart">Xem tất cả</a>
                             
                         </div>
                         <div class="Cart-body">
@@ -45,8 +45,6 @@
                                 <span class="cart-quantity  cart-column">Số Lượng</span>
                             </div>
                             <div class="over-cart overY">
-
-                                
                             </div>
                            
                             <div class="cart-total">
@@ -71,7 +69,7 @@
             <div class="col-3 col-s-9 col-m-9 style-center" >
                 <form style="display: flex;">
                     <input style=" height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
-                    <button style="background-color:rgb(229, 245, 234) ;border: 1px solid rgb(188, 225, 200);"  type="submit"><div style="font-size: 18px;"><i class="fa-solid fa-magnifying-glass"></i></div></button>
+                    <button style="background-color:rgb(229, 245, 234) ;border: 1px solid rgb(188, 225, 200);border-radius: 0 5px 5px 0;"  type="submit"><div style="font-size: 18px;"><i class="fa-solid fa-magnifying-glass"></i></div></button>
                 </form>
             </div>
             <div class="col-7 col-s-1 col-m-1 style-l">
@@ -339,6 +337,7 @@
                                <img id="imagehover" src="image/lenovothinkpade540c_200_150 (1).jpg" >
                                <div class="Cu">Cũ</div>
                                <div class="sale">-3%</div>
+                               
                        </div><br>
                        <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
@@ -348,7 +347,7 @@
                         </a><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
                         <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
-                        <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a onclick="addCart({id:'01',image:'image/lenovothinkpade540c_200_150 (1).jpg',price:'7300000',name:'Lenovo Thinkpad E540'})"class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
+                        <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a onclick="addCart({id:'01',image:'image/lenovothinkpade540c_200_150 (1).jpg',price:'7300000',name:'Lenovo Thinkpad E540'})"class="Gio"><i class="fa-solid fa-cart-shopping "></i></a><br>
                         <del>7.500.000</del>
                        </div>
                        </div>

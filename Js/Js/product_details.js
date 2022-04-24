@@ -10,6 +10,7 @@ function ShowImgDetails(e) {
     }
     document.getElementById("main-details").src=e.src;
     e.style.opacity  = 1;
+    Zoom();
 }
 function NextPD(){
     for(let x of listimg) {
@@ -21,7 +22,7 @@ function NextPD(){
         index=0;
     document.getElementById("main-details").src=listimg[index].src
     listimg[index].style.opacity=1;
-
+    Zoom();
 }
 function BackPD(){
     for(let x of listimg) {
@@ -34,7 +35,7 @@ function BackPD(){
     document.getElementById("main-details").src=listimg[index].src
     
     listimg[index].style.opacity=1;
-
+    Zoom();
 }
 //
 var listcontent=document.getElementsByClassName("display_content");
@@ -89,3 +90,33 @@ function ClickCT(a){
     }
 }
 InitCT();
+
+function Zoom(){
+    var a=(document.getElementById("main-details").src).lastIndexOf('image')
+
+    var zoom = function(elm) {
+      elm
+        .on('mouseover', function() {
+          $('.images22').children('.addzoom').css({'transform': 'scale(2)'
+         });
+         $('.images22').show();
+        })
+        .on('mouseout', function() {
+          $('.images22').children('.addzoom').css({'transform': 'scale(1)'});
+          $('.images22').hide();
+        })
+        .on('mousemove', function(e) {
+          $('.images22').children('.addzoom').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+        })
+    }
+    $('#main-details ').each(function() {
+        var x=document.getElementById("main-details").src ; debugger;
+        $('.images22')
+          .html('<div class="addzoom"></div>')
+          .children('.addzoom').css({'background-image': 'url("../'+ (document.getElementById("main-details").src).slice(a,(document.getElementById("main-details").src).length)  +'")'});
+        zoom($(this));
+      })
+}
+$(document).ready(function(){
+    Zoom();
+})

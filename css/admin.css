@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+}
+.head{
+    background: linear-gradient(#d6fdd9, #ffffff);
+    
+}
+.head>.logo img{
+    width: 40%;
+    padding-top: 5px;
+}
+.head>.hello{
+    line-height: 50px;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 550;
+    text-shadow:  2px 2px 5px #a9a15a;
+}
+.head>.hello i{
+   padding-top: 5px;
+   color: #1bc129;
+   padding-left: 5px;
+}
+
+.all{
+    margin-top: 0px;
+}
+.all>.selection{
+    border: 1px solid #95c199
+}
+.all>.selection>.search{
+    display: flex;
+   width: 95%;
+   margin: auto;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+.all>.selection>.search> input{
+    width: 85%;
+    border-radius: 2px 0 0 2px;
+    border: 1px solid #95c199 ;
+    line-height: 23px;
+}
+.all>.selection>.search> i{
+    width: 15%;
+    padding: 6px;
+    background-color: #95c199;
+    color: rgb(57, 57, 57);
+    border-radius: 0 2px 2px 0;
+}
+.all>.selection>.management{
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border-top: 1px solid #95c199;
+}
+.all>.selection>.management:first-child{
+    border-top: 1px solid white;
+}
+.all>.selection>.management:hover{
+   background-color: #eaf9eb;
+}
+.all>.selection>.management>dl{
+    margin: 0;
+    padding: 0;
+   
+}
+.all>.selection>.management>dl>dd{
+    border-top: 1px solid #95c199;
+}
+.all>.selection>.management>dl>dd{
+    margin-left: 8%;
+    font-size: 14px;
+    border-left:1px dotted  rgb(207, 153, 87);
+    display: none;
+}
+.all>.selection>.management>dl>dd>span{
+    color:  rgb(207, 153, 87);
+    opacity: 0.5;
+}
+.all>.selection>.management>dl>dt{
+   
+    padding-left: 5%;
+}
+.all>.selection>.management>dl>dt>i:last-child{
+   
+    float: right;
+    margin-right: 15px;
+    padding-top: 15px;
+}
+.all>.selection>.management>dl>dd:hover{
+   background-color: bisque;
+}
+.Details>.home{
+    display: none;
+}
+.Details>.home>.logohome{
+    display: flex;
+    justify-content: center;
+}
+.Details>.home>.homehello{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: rgb(20, 12, 235);
+}
+.Details>.home>.homett{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    color: #064d0c;
+}
+.Details>.home>.infhome{
+    margin-left: 5%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #064d0c;
+    margin-top: 10px;
+}
+.Details>.home>#changepww{
+    float: right;
+    margin-right: 30px;
+    background-color: #90ed64;
+    line-height: 30px;
+    border: none;
+    font-weight: 500;
+    border-radius: 3px;
+}
+.Details>.home>#changepww:hover{
+    background-color: chocolate;
+}
+.Details>.home>#changepww i{
+   padding-right: 3px;
+}
+.Details>.home>.homedetails{
+    display: flex;
+   justify-content: center;
+ }
+ .Details>.home>.homedetails>table{
+     line-height: 30px;
+ }
+ .Details>.home>.homedetails>table tr td:first-child{
+    padding-right: 50px;
+    font-weight: bold;
+}
+.Details>.home>.homedetails>table tr td:last-child{
+    font-size: 14px;
+}
+.all>.Details>.computer_company>.headerCP{
+    margin-left: 20px;
+}
+.all>.Details>.computer_company>.headerCP button{
+    float: right;
+    margin-right: 20px;
+}

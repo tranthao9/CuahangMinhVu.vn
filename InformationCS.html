@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
         <link rel="stylesheet" href="Hurricane,Roboto/Roboto/Roboto-BlackItalic.ttf">
         <link rel="stylesheet" href="css/Paying.css">
+        <link rel="stylesheet" href="css/IFoder.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <body>
@@ -275,7 +276,7 @@
         
     </section>
     </header>
-    </section>
+    </section >
     <section style="margin-top:150px">
         <div class="option">
             <a href="http://127.0.0.1:5500/CuahangMinhVu.html">Trang chủ </a>
@@ -285,26 +286,58 @@
     </section>
     <section >
         <div class="row CartCT">
-            <div class="col-6 col-s-12 col-m-12 Cart-contentF">
-                    <div class="Cart-header">
-                        <a>Giỏ hàng</a>
-                        <a id="Soluong"></a>
+            <from class="col-6 col-s-12 col-m-12" >
+                <div class=" Paying">
+                    <div class="col-12 col-s-12 col-m-12 payhead">
+                        THÔNG TIN NGƯỜI NHẬN
                     </div>
-                    <div class="Cart-body">
-                        <div class="Cart-row">
-                            <span class="cart-item  cart-column">Sản Phẩm</span>
-                            <span class="cart-price  cart-column">Giá</span>
-                            <span class="cart-quantity  cart-column">Số Lượng</span>
+                    <div class="infomationpay">
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_hdem">Họ tên <span id="s_hdem" style="color: red;">*</span>: </label>
+                            <input type="text" id="txt_hdem" placeholder="Nhập họ và tên">
                         </div>
-                        <div class="over-cart">
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_tinh">Tỉnh <span id="s_tinh" style="color: red;">*</span>: </label>
+                            <select id="txt_tinh">
+                                <option value="Hưng Yên">Hưng Yên</option>
+                                <option value="Hà Nội">Hà Nội</option>
+                                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                <option value="Hà Nam">Hà Nam</option>
+                                <option value="Hải Dương">Hải Dương</option>
+                                <option value="Bắc Giang">Bắc Giang</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_diachi">Địa chỉ <span id="s_diachi" style="color: red;">*</span>: </label>
+                            <input type="text" id="txt_diachi" placeholder="Địa chỉ của bạn">
+                        </div>
+        
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_sdt">Điện thoại <span id="s_sdt" style="color: red;">*</span>: </label>
+                            <input type="text" id="txt_sdt" placeholder="Số điện thoại của bạn">
+                        </div>
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_email">Email <span id="s_email" style="color: red;">*</span>: </label>
+                            <input type="text" id="txt_email" placeholder="Email của bạn (nếu có)">
+                        </div>
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_tt">Thông tin : </label>
+                            <textarea id="thongtin" placeholder="Laptop Minh Vũ sẽ gọi lại ngay khi bạn gửi đơn hàng"></textarea>
+                            
+                        </div>
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <button onclick="DatHang()" class="send">
+                                Gửi đơn hàng
+                            </button>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button onclick="UpdateCart()" type="button" class="close-footer">Cập nhập giỏ hàng</button>
-                    </div>
-            </div>
-            <div class="col-6 col-s-12 col-m-12 cart-TC">
-                <div class="Cart-total2">
+                </div>
+            </from>
+            <div class="col-6 col-s-12 col-m-12 Infoder">
+                <div>Thông tin đơn hàng</div>
+                <div class="Infoder11">
+                </div>
+               <div class="Totalpay">
                     <div>Tổng tiền</div>
                     <div>
                         <span>Tạm tính: </span>
@@ -315,25 +348,14 @@
                         <span class="cart-total-price2"></span>
                     </div>
                     <div>
-                        <span>Vận chuyển: </span>
-                        <span >Miễn phí vận chuyển</span>
-                    </div>
-                    <div>
                         <span>Thành tiền:(Đã bao gồm VAT): </span>
                         <span class="cart-total-price4"></span>
                     </div>
-                    <div >
-                        <span>Mã giảm giá/Quà tặng </span>
-                        <a style="display: flex;justify-content: center;margin-top: 10px;">
-                            <input style="border-radius: 2px 0 0 2px ; border: none; line-height: 30px;width: 80%; " type="text" class="CTKM"  name="CTKM" >
-                            <button onclick="ADDung()" style="background-color:black ;border: none;border-radius: 0 2px 2px 0; color: white"  >Áp dụng</button>
-                        </a>
-                    </div>
-                    <a  onclick="Paying()"><button class="DAtHANG"  >TIẾN HÀNH ĐẶT HÀNG</button></a>
-                </div>
+               </div>
             </div>
         </div>
     </section>
+   
     <section style="background-color: rgb(222, 218, 218); padding-top: 20px;padding-bottom: 20px;">
         <div class="LaptopT NextB">
             <div class="Next1">

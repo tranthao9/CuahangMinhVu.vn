@@ -91,11 +91,39 @@ setInterval(function(){
 },5000);
 InitSP();
 //gio hang
-var cart=document.getElementsByClassName("Cart");
-            function ShowCart(){
-                cart[0].style.display='block';
-                
-            }
-            function HideCart(){
-                cart[0].style.display='none';
-            }
+// var cart=document.getElementsByClassName("Cart");
+//             function ShowCart(){
+//                 cart[0].style.display='block';
+//             }
+//             function HideCart(){
+//                 cart[0].style.display='none';
+//             }
+$(document).ready(function () {
+    $('.Cartbutom').click(function(){
+        $('.Cart-content').css({
+            'transform': 'scale(1)',
+            'opacity': '1'
+        })
+        
+    })
+    $('#HideCart').click(function()
+    {
+        $('.Cart-content').css({
+            'transform': 'scale(0)',
+            'opacity': '0.5'
+        })
+    })
+});
+$(document).ready(function () {
+    $(window).scroll(function () { 
+      if($(this).scrollTop()){
+          $('.style').addClass('scrollscreen');
+          $('.style').removeClass('style1');
+      }
+      else
+      {
+        $('.style').addClass('style1');
+        $('.style').removeClass('scrollscreen');
+      }
+    });
+});

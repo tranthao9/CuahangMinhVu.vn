@@ -83,16 +83,5 @@
      },3000);
 });
 
-$(document).ready(function () {
-    $(window).scroll(function () { 
-      if($(this).scrollTop()){
-          $('.style').addClass('scrollscreen');
-          $('.style').removeClass('style1');
-      }
-      else
-      {
-        $('.style').addClass('style1');
-        $('.style').removeClass('scrollscreen');
-      }
-    });
-});
+
+

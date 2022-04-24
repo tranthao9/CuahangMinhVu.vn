@@ -394,7 +394,6 @@ body{
     to{transform: translateX(100%);
     }
 }
-
 .to-left{
     animation: to-left 2s forwards;
 }
@@ -411,7 +410,6 @@ body{
    height: 200px;
    padding: 10px 20px 10px 10px;
    box-shadow: 1px 1px 15px rgb(247, 243, 243);
-  
  }
 .background-22{
     height:200px;
@@ -445,36 +443,34 @@ body{
    background-color: rgb(8, 88, 8);
    color: white;
    border-radius: 5px 5px 0 0;
-
 }
 .LaptopT>.Laptop1 >ul>.active2:hover a
 {
    background-color: rgb(8, 88, 8);
    color: white;
-
 }
 .LaptopT>.Laptop1 >ul> li:hover a
 {
    color: rgb(130, 126, 121);
-
 }
 .LaptopT>.Laptop1 >ul> li:last-child a
 {
    text-align: right
-
 }
 .LaptopT>.Laptop1 >ul> li:last-child > a >button
 {
-  background-color: red; color: white;
-  border: 1px solid red; 
-
+  background-color: rgb(84, 136, 32); color: white;
+  border:none;
+  border-radius: 3px;
+}
+.LaptopT>.Laptop1 >ul> li:last-child > a >button:hover
+{
+  background-color: rgb(206, 126, 34); 
 }
 .LaptopT>.Laptop1 >ul> li> a
 {
    text-decoration: none;
    color: black;
-   
-
 }
 .LaptopT>.Laptop1 >ul> li
 {
@@ -552,6 +548,16 @@ body{
     line-height: 25px;
     border-radius:0 50% 50% 0;
 }
+.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.box>.imagebay{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 35px;
+    height: 35px;
+    border-radius:100%;
+    overflow: hidden;
+    display: block;
+}
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.Laptop111>.Gio{
     width: 25px;
     height: 20px;
@@ -562,6 +568,7 @@ body{
     padding-left: 3px;
     
 }
+
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.Laptop111>.Gio:hover{
     color: rgb(68, 132, 68);
     
@@ -1119,6 +1126,7 @@ position: relative;;
      background-color: black;
      opacity: 0.85;
      display: none;
+     z-index: 99999;
  }
  .open31{
     margin-top: 5px;
@@ -1177,18 +1185,7 @@ position: relative;;
     color: #000000;
     background-color: rgb(116, 141, 90);
  }
- .Cart{
-     position: fixed;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     background-color: rgba(0, 0, 0, 0.4);
-     z-index: 1;
-     overflow: auto;
-     display: none;
-     
- }
+
  .Watchall-Cart{
      border: none;
      float: right;
@@ -1204,15 +1201,27 @@ position: relative;;
     color: chocolate;
 }
  .Cart-content{
-     width: 550px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+     width: 500px;
      margin: auto;
-     margin-top: 1%;
-     border: 1px solid black;
+     margin-top: 3%;
+     border: 1px solid rgb(238, 199, 199);
      background-color: white;
+     box-shadow:  6px 6px 10px 0 rgba(0,0,0,0.5) , -6px -6px 10px 0 rgba(0,0,0,0.5);
+     border-radius: 2px;
+     transition: all 1s;
+     transform: scale(0);
+     opacity: 0.5;
+     transform-origin: top;
+
  }
+
  .Cart-header {
      line-height: 30px;
-    border-bottom: 1px solid gainsboro;
     padding: 10px;
      
  }
@@ -1232,15 +1241,13 @@ position: relative;;
 }
 .Cart-row{
     display: flex;
+    border-bottom: 1px solid rgb(244, 223, 209);
 }
 
 .cart-column{
     font-size: 15px;
     font-weight: bold;
-   margin: 10px 10px 20px 10px ;
-   padding-bottom: 10px;
-   padding-top: 10px;
-   border-bottom: 1px solid black;
+   margin: 10px 10px 10px 10px ;
    align-items: center;
 }
 .cart-item{
@@ -1256,7 +1263,6 @@ position: relative;;
  }
  .Cart-product{
      display: flex;
-     margin-top: -30px;
  }
  .Cart-img{
      width: 20%;
@@ -1284,17 +1290,17 @@ position: relative;;
      ;
  }
 .Cart-xoa{
-    width: 40%;
+    width: 45%;
      line-height: 30px;
      border-radius: 5px;
      border: 1px solid red;
      background-color: red;
      color: white;
-     padding-left: 5px;
+     text-align: center;
 }
 .cart-total {
     text-align: end;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-right: 5px;
     margin-bottom: 10px;
   }
@@ -1304,6 +1310,7 @@ position: relative;;
     font-size: 20px;
     color: black;
     margin-right: 20px;
+   
   }
   
   .cart-total-price {
@@ -1312,10 +1319,10 @@ position: relative;;
   }
   .modal-footer {
     display: flex;
-    border-top: 1px solid #aaaaaa;
+    margin-top: 10px;
     padding: 20px;
     justify-content: end;
-    border-top: 1px solid #aaaaaa;
+   
   }
   .close-footer{
       font-size: 18px;

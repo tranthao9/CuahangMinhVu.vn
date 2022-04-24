@@ -1,58 +1,38 @@
-.Paying{
-   
-   padding-left: 5px;
-}
-.payhead{
-    margin-top: 20px;
-    font-weight: bold;
-}
-.pay1{
-    display: flex;
-    width: 500px;
-    margin: auto;
-    line-height: 30px;
-    padding: 10px;
-}
-.pay1 label{
-   width: 20%;
-   float: left;
-   text-align: right;
-}
-.pay1 input{
-    width: 80%;
-    margin-left: 5px;
-    border-radius: 3px;
-    border: 1px solid rgb(244, 206, 180);
-}
-#thongtin{
-   height: 88px; 
-   width: 80%;
-    margin-left: 5px;
-    border-radius: 3px;
-    border: 1px solid rgb(244, 206, 180);
 
-}
-#Tinh{
-    width: 80%;
-    margin-left: 5px;
-    border-radius: 3px;
-    border: 1px solid rgb(244, 206, 180);
-}
-.send{
-    margin-left: 78%;
-    background-color: rgb(222, 55, 55);
-    line-height: 35px;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-}
-.send:hover{
-   
-    background-color: rgb(55, 222, 105);
+.cart-TC{
+    padding-left: 5px;
+    margin-top: 50px;
     
 }
+.Cart-total2{
+    width: 75%;
+    margin: auto;
+    background-color: rgb(230, 232, 233);
+    padding: 15px;
+}
+.Cart-total2 div:first-child{
+   font-size: 18px;
+   border: none;
+}
+.Cart-total2 div{
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(202, 200, 198);
+ }
+ .Cart-total2 > div>span:last-child{
+    float: right;
+    font-size: 14px !important;
+    font-weight: 600;
+ }
+ .DAtHANG{
+    background-color:rgb(155, 14, 14) ;
+    color: white;
+     width: 80%;
+    margin-left: 10%;
+    line-height: 32px;
+    border: none;
+ }
+
 .CartCT{
     max-width: 1200px;
     width: 100%;
@@ -60,6 +40,7 @@
     display: flex;
 }
 .Cart-contentF{
+    min-height: 400px;
   
 }
 .cart-item1{
