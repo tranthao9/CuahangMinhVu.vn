@@ -26,7 +26,7 @@ function addCart(item){
   }
   localStorage.setItem("Cart",JSON.stringify(list));
   alert("Thêm vào giỏ hàng thành công");
-  location.reload();
+ location.reload();
 }
 function ADDung(){
   var km=$('.CTKM').val();
@@ -46,12 +46,13 @@ function ADDung(){
      kmt=Math.round(t*1.1);
     
    }
-   var totall={km:ten,total:kmt+" VNĐ"}
+   var totall={km:ten,total:kmt}
    localStorage.setItem("Discount",JSON.stringify(totall));
   location.reload();
 }
-var listcart=JSON.parse(localStorage.getItem('Cart')) || []
-var listdiscount=JSON.parse(localStorage.getItem('Discount')) || []
+var listcart=JSON.parse(localStorage.getItem('Cart')) || [];
+var listdiscount=JSON.parse(localStorage.getItem('Discount')) || [];
+var listbill=JSON.parse(localStorage.getItem('bill')) || [];
 function LoadData(){
   var str="";
   var tt="";
@@ -85,24 +86,34 @@ function LoadData(){
     </div>`;
         if( listdiscount.km=="10%")
         {
-          listdiscount.total=Math.round((t*0.9)*1.1) + " VNĐ";
+          listdiscount.total=Math.round((t*0.9)*1.1) ;
           $('.CTKM').val("20-11");
+          listdiscount.km="10%";
 
         }
         else
         {
-          listdiscount.total=Math.round(t*1.1) + " VNĐ";
+          listdiscount.km="0%";
+          listdiscount.total=Math.round(t*1.1) ;
         }
         var totall={km:listdiscount.km,total:listdiscount.total}
         localStorage.setItem("Discount",JSON.stringify(totall));
   }
   $('.Infoder11').html(tt);
   $('.over-cart').html(str);
-  $('.cart-total-price').text(t+" VNĐ");
+  $('.cart-total-price').text(t+"đ");
   $('#Soluong').text("("+n+") sản phẩm");
   $('.OnCart').text("("+n+")");
   $('.cart-total-price2').text(listdiscount.km);
-  $('.cart-total-price4').text(listdiscount.total);
+  if(listdiscount != "")
+  {
+    $('.cart-total-price4').text(listdiscount.total+"đ")
+  }
+  else
+  {
+    $('.cart-total-price4').text(listdiscount.total)
+  }
+ 
 }
 LoadData();
 function Paying(){
@@ -144,15 +155,14 @@ function validatePhone(Phone) {
       return false;
   }
 }
+
 function DatHang() {
-  
 let d = new Date();
-let year = d.getFullYear();
+let year = d.getFullYear(); 
 let month = d.getMonth() + 1;
 let day = d.getDate();
 let dayofweek = d.getDay();
 const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
-
 
   var hoten = $('#txt_hdem').val();
   var email = $('#txt_email').val();
@@ -220,8 +230,14 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
                                     </tr>        
                           `;
                           var n = 0;
-                          var t=0;
+                         
+                          var bill2 = [];
                           for (x of listcart) {
+                            bill2.push({
+                              "Masp" : x.id,
+                              "tensp" : x.name,
+                              "Tongtien" : (x.price * x.quantity)
+                            }) 
                             str += `
                             <tr >
                                 <td>`+(++n)+`</td>
@@ -231,7 +247,26 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
                             </tr>
                             `;
                           }
-                          str += `<div>Tổng tiền : <span>`+listdiscount.total+`</span></div></table>`
+                          bill2.push({
+                            "giamgia":listdiscount.km,
+                            "thanhtoan":listdiscount.total,
+                            "thu":dayname[dayofweek],
+                            "day":day,
+                             "thang":month,
+                             "nam":year
+                          }) 
+                          if(listbill==null)
+                          {
+                            listbill=bill2
+                          }
+                          else
+                          {
+                            listbill.push(bill2);
+                          }
+                          
+                          localStorage.setItem("bill",JSON.stringify(listbill));
+                          str += `<div>Giảm giá : <span>`+listdiscount.km+`</span></div>
+                          <div>Tổng tiền : <span>`+listdiscount.total+`</span></div></table>`
                           str += 
                           ` <img style="margin-top:30px;margin-left:10%" src="image/uy tín.jpg">
                           `;

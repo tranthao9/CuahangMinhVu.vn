@@ -87,6 +87,7 @@ function ClickVD(a){
     }
     if(a==3)
     {
+        
         for(let x of listVD)
         {
             x.style.display='none';

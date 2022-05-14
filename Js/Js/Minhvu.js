@@ -53,7 +53,6 @@
             $('.Nodeslide ul li').removeClass('active_nut');
             $('.Nodeslide ul li:last-child').addClass('active_nut');
         }
-      
     });
     $('.Nodeslide ul li').click(function(event) {
         clearInterval(auto);
