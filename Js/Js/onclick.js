@@ -5,7 +5,6 @@ function index()
 function giohang()
 {
     window.location.href = "../Paying.html";
-  
 }
 function login(){
     window.location.href = "../login.html";
