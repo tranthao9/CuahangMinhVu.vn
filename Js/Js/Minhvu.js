@@ -2,6 +2,7 @@
  $(document).ready(function(){
     
     $('.background-112').click(function(event){
+        
         var vi_tri_hien_tai = $('.active_nut').index()+1;
         var slide_next = $('.active').next();
         if(slide_next.length != 0)

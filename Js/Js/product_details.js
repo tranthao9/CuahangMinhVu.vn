@@ -110,7 +110,7 @@ function Zoom(){
         })
     }
     $('#main-details ').each(function() {
-        var x=document.getElementById("main-details").src ; debugger;
+        var x=document.getElementById("main-details").src ; 
         $('.images22')
           .html('<div class="addzoom"></div>')
           .children('.addzoom').css({'background-image': 'url("../'+ (document.getElementById("main-details").src).slice(a,(document.getElementById("main-details").src).length)  +'")'});

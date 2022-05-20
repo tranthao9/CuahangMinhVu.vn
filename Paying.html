@@ -22,11 +22,11 @@
             <div class=" title-login">
                 <a href="http://127.0.0.1:5500/%C4%90%C4%83ng%20nh%E1%BA%ADp.html" target="_bank"> <i class="fa-solid fa-circle-user"></i></a>
             </div>
-            <div class="col-5 col-s-10 col-m-10 title-bottom">
-                <a href="#">Trang chủ</a>
+            <div style="cursor: pointer;" class="col-5 col-s-10 col-m-10 title-bottom">
+                <a onclick="index()">Trang chủ</a>
                 <a href="#">Tin tức</a>
                 <a href="#">Video</a>
-                <a href="#">Giới thiệu</a>
+                <a onclick="lienhe()">Giới thiệu</a>
                 <a href="#">Liên hệ</a>
                 <a class="Cartbutom"  href="#"><i style="color: white;" class="fa-solid fa-cart-shopping"></i>&nbsp;<span  class="OnCart"></span>  </a>
             </div>
@@ -36,7 +36,7 @@
                             <a>Giỏ hàng</a>
                             <a id="Soluong"></a>
                             <span id="HideCart"> &times;</span>
-                            <a target="_blank" href="http://127.0.0.1:5500/Paying.html" class="Watchall-Cart">Xem tất cả</a>
+                            <a target="_blank" onclick="giohang()" class="Watchall-Cart">Xem tất cả</a>
                             
                         </div>
                         <div class="Cart-body">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="modal-footer">
                             <button onclick="UpdateCart()" type="button" class="close-footer">Cập nhập giỏ hàng</button>
-                            <a target="_blank" href="http://127.0.0.1:5500/Paying.html"><button type="button" class="order">Thanh Toán</button></a>
+                            <a target="_blank" onclick="giohang()"><button type="button" class="order">Thanh Toán</button></a>
                         </div>
                 </div>
             </div>
@@ -65,11 +65,11 @@
     <section >
         <div class="row style style1">
             <div class="col-2 col-s-2 col-m-2 style-i">
-                <img   src="image/logo.png"  >
+                <img onclick="index()"  src="image/logo.png"  >
             </div>
             <div class="col-3 col-s-9 col-m-9 style-center" >
                 <form style="display: flex;">
-                    <input style=" height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
+                    <input style=" height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);outline: none;" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
                     <button style="background-color:rgb(229, 245, 234) ;border: 1px solid rgb(188, 225, 200);border-radius: 0 5px 5px 0;"  type="submit"><div style="font-size: 18px;"><i class="fa-solid fa-magnifying-glass"></i></div></button>
                 </form>
             </div>
@@ -277,10 +277,10 @@
     </header>
     </section>
     <section style="margin-top:150px">
-        <div class="option">
-            <a href="http://127.0.0.1:5500/CuahangMinhVu.html">Trang chủ </a>
+        <div class="option" style="cursor: pointer;">
+            <a onclick="index()">Trang chủ </a>
             <span>&#160;/&#160;</span>
-            <a href="http://127.0.0.1:5500/.html">Giỏ hàng</a>
+            <a href="">Giỏ hàng</a>
         </div>
     </section>
     <section >
@@ -296,7 +296,7 @@
                             <span class="cart-price  cart-column">Giá</span>
                             <span class="cart-quantity  cart-column">Số Lượng</span>
                         </div>
-                        <div class="over-cart">
+                        <div class="over-cart2">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -325,7 +325,7 @@
                     <div >
                         <span>Mã giảm giá/Quà tặng </span>
                         <a style="display: flex;justify-content: center;margin-top: 10px;">
-                            <input style="border-radius: 2px 0 0 2px ; border: none; line-height: 30px;width: 80%; " type="text" class="CTKM"  name="CTKM" >
+                            <input style="border-radius: 2px 0 0 2px ; border: none; line-height: 30px;width: 80%;outline: none; " type="text" class="CTKM"  name="CTKM" >
                             <button onclick="ADDung()" style="background-color:black ;border: none;border-radius: 0 2px 2px 0; color: white"  >Áp dụng</button>
                         </a>
                     </div>
@@ -334,7 +334,7 @@
             </div>
         </div>
     </section>
-    <section style="background-color: rgb(222, 218, 218); padding-top: 20px;padding-bottom: 20px;">
+    <section style="background-color: rgb(249, 246, 246); padding-top: 20px;padding-bottom: 20px;">
         <div class="LaptopT NextB">
             <div class="Next1">
                 <i onclick="BackSP()" style="left: 5px;" class="fa-solid fa-angle-left"></i> 
@@ -366,11 +366,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                       </div>
@@ -388,11 +385,8 @@
                      <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                         <br><br>
-                        <a >
-                            ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                        </a><br><br>
                         <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.000.000</del>
                      </div>
@@ -409,9 +403,6 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -429,9 +420,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -449,11 +437,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.000.000</del>
                   </div>
@@ -470,11 +455,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                   </div>
@@ -494,11 +476,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                   <br><br>
-                  <a >
-                      Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                  </a><br><br><br><br>
                   <div ><b>Bảo hàng: </b>12 tháng</div>
-                  <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                  <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                   <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                   <del>7.500.000</del>
                   </div>
@@ -516,11 +495,8 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                     <br><br>
-                    <a >
-                        ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                    </a><br><br>
                     <div><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>7.000.000</del>
                  </div>
@@ -537,11 +513,8 @@
               <div class="Laptop111">
                 <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                 <br><br>
-                <a >
-                    Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                </a><br><br><br><br>
                 <div ><b>Bảo hàng: </b>12 tháng</div>
-                <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                 <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                 <del>8.100.000</del>
               </div>
@@ -768,4 +741,5 @@
 <script type="text/javascript" src="Js/Js/general.js"></script>
 <script type="text/javascript" src="Js/Js/product_details.js"></script>
 <script type="text/javascript" src="Js/Js/giohang.js"></script>
+<script type="text/javascript" src="Js/Js/onclick.js"></script>
 </html>

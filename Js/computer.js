@@ -3,7 +3,7 @@ function OpenAddcomputer(){
     RefreshMT();
     $('.display').css({'transform':'scaleY(1)'});
     $('.Addcomputer').css({'transform':'scaleY(1)'});
-    
+    $('.note').text("")
 }
 
 function ExitMT(){
@@ -25,12 +25,45 @@ function AddComputer(){
     var motah=$('#motamt').val();
     var giaban=$('#giaban').val();
     var soseri=$('#mamaytinh').val();
-    var kt=true;
-    if (soseri=="" || tenh == "" || motah=="" || giaban=="" || validateGia(giaban)==false )
+    var ok=true;
+    if(soseri=="")
     {
-        kt=false;
+        ok=false;
+        $('.note').text("Số seri không được để trống !")
+        
+       
     }
-    if(kt==true)
+    for(x of listcomputer)
+    {
+        if(x.mamaytinh==soseri)
+        {
+            ok=false;
+            $('.note').text("Số seri không được trùng nhau !")
+        
+        }
+    }
+    if(tenh == "")
+    {
+        ok=false;
+        {
+            $('.note').text("Tên máy tính không được để trống !")
+        }
+    }
+    if( motah =="")
+    {
+        ok=false;
+        {
+            $('.note').text("Mô tả máy tính không được để trống !")
+        }
+    }
+    if( giaban =="")
+    {
+        ok=false;
+        {
+            $('.note').text("Giá bán máy tính không được để trống !")
+        }
+    }
+    if(ok==true)
     {
         var totalll = {
             "mamaytinh": soseri,
@@ -44,11 +77,6 @@ function AddComputer(){
        RefreshMT();
        alert("Bạn đã thêm thành công")
     }
-   else
-   {
-       alert("Dữ liệu không được để trống và phải đúng định dạng với giá bán")
-   }
-  
 }
 
 function RefreshMT()
@@ -123,13 +151,38 @@ function UpdateComputerA()
     var giaban=$('#giaban').val();
 
     var ok =true;
-    if(seri==""|| ten == "" || mota =="" || giaban=="")
+    if(seri=="")
     {
         ok=false;
         {
-            alert("Dữ liệu không được để trống !")
+            $('.note').text("Số seri không được để trống !")
         }
        
+    }
+    if(ten == "")
+    {
+        ok=false;
+        {
+            $('.note').text("Tên máy tính không được để trống !")
+        }
+    }
+    if( mota =="")
+    {
+        ok=false;
+        {
+            $('.note').text("Mô tả máy tính không được để trống !")
+        }
+    }
+    if( giaban =="")
+    {
+        ok=false;
+        {
+            $('.note').text("Giá bán máy tính không được để trống !")
+        }
+    }
+    if(validateGia(giaban)==false)
+    {
+        $('.note').text("Định dạng giá bán máy tính sai, giá bán phải là số!")
     }
     if(ok==true)
     {

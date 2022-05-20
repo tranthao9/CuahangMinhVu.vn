@@ -34,18 +34,23 @@
  .pay1{
      display: inline-block;
      margin: auto;
-     line-height: 30px;
-     width: 80%;
-     margin-left: 1%;
+     line-height: 25px;
+     width: 90%;
+     margin-left: 5%;
+     margin-top: 10px;
  }
  .pay1 label{
     width: 100%;
+    
  }
  .pay1 input{
     width: 100%;
      border-radius: 3px;
      border: 1px solid rgb(244, 206, 180);
-     line-height: 25px;
+     line-height: 20px;
+     outline: none;
+     padding: 5px;
+     outline: none;
  }
  
 #thongtin{

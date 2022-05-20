@@ -45,7 +45,11 @@
    color: #1bc129;
    padding-left: 5px;
 }
-
+.clickhh{
+    background-color: #ecf1ec;
+    border-right: 5px solid rgb(248, 235, 208);
+    
+}
 .all{
     margin-top: 0px;
    
@@ -77,6 +81,7 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
+    
 }
 .all>.selection>.thumuc{
     padding-left: 10px;
@@ -400,24 +405,9 @@
 {
     background-color: white;
     display: none;
+  
 }
-.all>.Details>.overview>.overview1>.sales>span
-{
-    font-size: 18px;
-    font-weight: bold;
-   line-height: 50px;
-   color: red;
-   margin-left: 30px;
 
-}
-.all>.Details>.overview>.overview1>.sales>img
-{
-    width: 100%;
-    padding: 100px;
-    padding-top: 0;
-    padding-bottom: 20px;
-
-}
 .all>.Details>.overview>.overview1>.sales_week
 {
     display: grid;
@@ -466,7 +456,7 @@
 {
   margin-left: 30px;
   font-size: 18px;
-  border-right: 1px solid rgb(137, 130, 130);
+  border-right: 1px solid rgb(137, 130, 130)
  
 }
 .all>.Details>.overview>.overview1>.sale_quickly>.sale_quickly1 i
@@ -567,6 +557,8 @@
     width: 70%;
     border: 1px solid rgb(44, 150, 44);
     border-radius: 3px;
+    outline: none;
+    padding: 5px;
 }
 .all>.Details>.Dongcomputer>.searchCPdetail>.searchCP1 #mota{
     width: 80%;
@@ -677,11 +669,15 @@
     width: 80%;
     border: 1px solid seagreen;
     border-radius: 3px;
+    outline: none;
+    padding: 5px;
  }
 .Addcompany>.addCP1 textarea{
     width: 80%;
     border: 1px solid seagreen;
     border-radius: 3px;
+    outline: none;
+    padding: 5px;
  }
  .Addcompany> button{
     float:  right;
@@ -777,30 +773,34 @@
     width: 70%;
     border: 1px solid seagreen;
     border-radius: 3px;
+    outline: none;
+    padding: 5px;
  }
- .AddDongmaytinh>.addCP2 {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    margin: auto;
+ .AddDongmaytinh>.addCP2{
+    width: 70%;
+    display: flex;
+    margin-left: 10%;
+    line-height: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
+ }
+ .AddDongmaytinh>.addCP2> input{
+   padding: 5px;
  }
  
  .AddDongmaytinh>.addCP2 span{
-   
+    width: 30%;
     font-size: 16px;
     font-weight: bold;
  }
- .AddDongmaytinh>.addCP2>.soluong input{
-   width: 25%;
-   height: 25px;
-   border: 1px solid seagreen;
-   border-radius: 3px;
- }
+
+
  .AddDongmaytinh>.addCP1 textarea{
     width: 70%;
     border: 1px solid seagreen;
     border-radius: 3px;
+    outline: none;
+    padding: 5px;
  }
  .AddDongmaytinh> button{
     float:  right;
@@ -890,6 +890,8 @@
      width: 70%;
      border: 1px solid rgb(44, 150, 44);
      border-radius: 3px;
+     outline: none;
+     padding: 5px;
  }
  .all>.Details>.computer_managememnt>.searchCPdetail>.searchCP1 #mota{
      width: 80%;
@@ -979,6 +981,8 @@
     width: 70%;
     border: 1px solid seagreen;
     border-radius: 3px;
+    outline: none;
+    padding: 5px;
  }
  .Addcomputer>.addCP2 {
     width: 80%;
@@ -998,11 +1002,15 @@
    height: 25px;
    border: 1px solid seagreen;
    border-radius: 3px;
+   outline: none;
+   padding: 5px;
  }
  .Addcomputer>.addCP1 textarea{
     width: 70%;
     border: 1px solid seagreen;
     border-radius: 3px;
+    outline: none;
+    padding: 5px;
  }
  .Addcomputer> button{
     float:  right;
@@ -1093,6 +1101,8 @@
      width: 70%;
      border: 1px solid rgb(44, 150, 44);
      border-radius: 3px;
+     outline: none;
+     padding: 5px;
  }
  .all>.Details>.provider_managememnt>.searchCPdetail>.searchCP1 #mota{
      width: 80%;
@@ -1182,6 +1192,8 @@
     width: 70%;
     border: 1px solid seagreen;
     border-radius: 3px;
+    outline: none;
+    padding: 5px;
  }
  .AddProvider>.addCP2 {
     width: 80%;
@@ -1201,6 +1213,8 @@
    height: 25px;
    border: 1px solid seagreen;
    border-radius: 3px;
+   outline: none;
+   padding: 5px;
  }
  .AddProvider> button{
     float:  right;
@@ -1232,6 +1246,423 @@
     color: white;
  }
  .AddProvider>#updatea{
+    background-color: rgb(155, 223, 31);
+    border: none;
+    line-height: 25px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+}
+.note{
+    margin-left: 30%;
+}
+
+/* ADD computer */
+.all>.Details>.computer_managememnt{
+    display: none;
+ }
+ .all>.Details>.computer_managememnt>.headerCP{
+     padding-top: 5px;
+     padding-left: 20px;
+     line-height: 30px;
+     box-shadow: 2px 3px 2px 0 rgba(33, 33, 33, 0.3),-2px 0px 2px 0 rgba(33, 33, 33, 0.3);
+ }
+ .all>.Details>.computer_managememnt>.headerCP button{
+     float: right;
+     margin-right: 20px;
+     background-color: rgb(13, 230, 136);
+     border: none;
+     line-height: 25px;
+     border-radius: 3px;
+     color: rgb(32, 32, 25);
+     font-weight: 500;
+    
+ }
+ .all>.Details>.computer_managememnt>.searchCP{
+     padding-left: 20px;
+     line-height: 30px;
+     background-color: #dee2de;
+     margin-top: 3px;
+ }
+ .all>.Details>.computer_managememnt>.searchCPdetail{
+     border-bottom: 1px solid rgb(224, 222, 222);
+     border-right: 1px solid rgb(224, 222, 222);
+     border-top: 1px solid rgb(224, 222, 222);
+ 
+ }
+ .all>.Details>.computer_managememnt>.searchCPdetail>.searchCP1{
+     display: flex;
+     width: 50%;
+     padding-top: 20px;
+     margin-left: 20%;
+     line-height: 25px;
+ 
+ }
+ .all>.Details>.computer_managememnt>.searchCPdetail>.searchCP1 span{
+     width: 30%;
+     font-weight: 600;
+     color: #1bc129;
+ }
+ .all>.Details>.computer_managememnt>.searchCPdetail>.searchCP1 input{
+     width: 70%;
+     border: 1px solid rgb(44, 150, 44);
+     border-radius: 3px;
+     outline: none;
+     padding: 5px;
+ }
+ .all>.Details>.computer_managememnt>.searchCPdetail>.searchCP1 #mota{
+     width: 80%;
+     border: 1px solid rgb(44, 150, 44);
+     border-radius: 3px;
+ }
+ .all>.Details>.computer_managememnt>.searchCPdetail button{
+     width: 100px;
+     line-height: 25px;
+     margin-left:60.5%;
+     margin-top: 15px;
+     border-radius: 3px;
+     background-color: #04700d;
+     border: none;
+     color: white;
+     margin-bottom: 20px;
+ 
+ }
+ .all>.Details>.computer_managememnt>.company_details{
+     margin-top: 10px;
+ }
+ .all>.Details>.computer_managememnt>.company_details>.company_detail1{
+     font-size: 20px;
+     font-weight: bold;
+     color:#07b916;
+     margin-bottom: 10px;
+     padding-left: 30px;
+ }
+ 
+ .all>.Details>.computer_managememnt>.company_details>.company_detail2 table{
+     width: 100%;
+     border: 1px solid black;
+     border-collapse: collapse;
+ }
+ .all>.Details>.computer_managememnt>.company_details>.company_detail2 >table th{
+    padding: 8px;
+    border: 1px solid black;
+ }
+ .all>.Details>.computer_managememnt>.company_details>.company_detail2 >table td{
+     padding: 8px;
+     border: 1px solid black;
+     text-align: center;
+ }
+ .all>.Details>.computer_managememnt>.company_details>.company_detail2 >table td i{
+     margin: 8px;
+     cursor: pointer;
+     color: #07b916;
+ }
+ /*  */
+.Addcomputer{
+    border: 1px solid slategrey;
+    background-color: white;
+    border-radius: 5px;
+    position:fixed;
+    top: 30px;
+    transition: all 1s;
+    transform:scaleY(0);
+    transform-origin: top;
+}
+.Addcomputer>.addcp{
+   width: 100%;
+    border-bottom: 1px solid rgb(191, 201, 212);
+    
+}
+.Addcomputer>.addcp span{
+    margin:10px;
+   line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #04700d;
+   
+}
+.Addcomputer>.addCP1{
+   width: 70%;
+   display: flex;
+   margin-left: 10%;
+   line-height: 30px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+.Addcomputer>.addCP1 span{
+    width: 30%;
+    font-size: 16px;
+    font-weight: bold;
+ }
+ .Addcomputer>.addCP1 input{
+    width: 70%;
+    border: 1px solid seagreen;
+    border-radius: 3px;
+    outline: none;
+    padding: 5px;
+ }
+ .Addcomputer>.addCP2 {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: auto;
+    margin-bottom: 20px;
+ }
+ 
+ .Addcomputer>.addCP2 span{
+   
+    font-size: 16px;
+    font-weight: bold;
+ }
+ .Addcomputer>.addCP2>.soluong input{
+   width: 25%;
+   height: 25px;
+   border: 1px solid seagreen;
+   border-radius: 3px;
+   outline: none;
+   padding: 5px;
+ }
+ .Addcomputer>.addCP1 textarea{
+    width: 70%;
+    border: 1px solid seagreen;
+    border-radius: 3px;
+    outline: none;
+    padding: 5px;
+ }
+ .Addcomputer> button{
+    float:  right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+ }
+ .Addcomputer> #refesh{
+    background-color: #07b916;
+    border: none;
+    line-height: 25px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+ }
+ .Addcomputer> #agree{
+    background-color: #f04141;
+    border: none;
+    line-height: 25px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+ }
+ .Addcomputer> #exit{
+   background-color: grey;
+    border: none;
+    line-height: 25px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+ }
+ .Addcomputer>#updatea{
+    background-color: rgb(155, 223, 31);
+    border: none;
+    line-height: 25px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Invoice Input */
+
+.all>.Details>.invoice_input{
+    display: none;
+ }
+ .all>.Details>.invoice_input>.headerCP{
+     padding-top: 5px;
+     padding-left: 20px;
+     line-height: 30px;
+     box-shadow: 2px 3px 2px 0 rgba(33, 33, 33, 0.3),-2px 0px 2px 0 rgba(33, 33, 33, 0.3);
+ }
+ .all>.Details>.invoice_input>.headerCP button{
+     float: right;
+     margin-right: 20px;
+     background-color: rgb(13, 230, 136);
+     border: none;
+     line-height: 25px;
+     border-radius: 3px;
+     color: rgb(32, 32, 25);
+     font-weight: 500;
+    
+ }
+ .all>.Details>.invoice_input>.searchCP{
+     padding-left: 20px;
+     line-height: 30px;
+     background-color: #dee2de;
+     margin-top: 3px;
+ }
+ .all>.Details>.invoice_input>.searchCPdetail{
+     border-bottom: 1px solid rgb(224, 222, 222);
+     border-right: 1px solid rgb(224, 222, 222);
+     border-top: 1px solid rgb(224, 222, 222);
+ 
+ }
+ .all>.Details>.invoice_input>.searchCPdetail>.searchCP1{
+     display: flex;
+     width: 50%;
+     padding-top: 20px;
+     margin-left: 20%;
+     line-height: 25px;
+ 
+ }
+ .all>.Details>.invoice_input>.searchCPdetail>.searchCP1 span{
+     width: 30%;
+     font-weight: 600;
+     color: #1bc129;
+ }
+ .all>.Details>.invoice_input>.searchCPdetail>.searchCP1 input{
+     width: 70%;
+     border: 1px solid rgb(44, 150, 44);
+     border-radius: 3px;
+     outline: none;
+     padding: 5px;
+ }
+ .all>.Details>.invoice_input>.searchCPdetail>.searchCP1 #mota{
+     width: 80%;
+     border: 1px solid rgb(44, 150, 44);
+     border-radius: 3px;
+ }
+ .all>.Details>.invoice_input>.searchCPdetail button{
+     width: 100px;
+     line-height: 25px;
+     margin-left:60.5%;
+     margin-top: 15px;
+     border-radius: 3px;
+     background-color: #04700d;
+     border: none;
+     color: white;
+     margin-bottom: 20px;
+ 
+ }
+ .all>.Details>.invoice_input>.company_details{
+     margin-top: 10px;
+ }
+ .all>.Details>.invoice_input>.company_details>.company_detail1{
+     font-size: 20px;
+     font-weight: bold;
+     color:#07b916;
+     margin-bottom: 10px;
+     padding-left: 30px;
+ }
+ 
+ .all>.Details>.invoice_input>.company_details>.company_detail2 table{
+     width: 100%;
+     border: 1px solid black;
+     border-collapse: collapse;
+ }
+ .all>.Details>.invoice_input>.company_details>.company_detail2 >table th{
+    padding: 8px;
+    border: 1px solid black;
+ }
+ .all>.Details>.invoice_input>.company_details>.company_detail2 >table td{
+     padding: 8px;
+     border: 1px solid black;
+     text-align: center;
+ }
+ .all>.Details>.invoice_input>.company_details>.company_detail2 >table td i{
+     margin: 8px;
+     cursor: pointer;
+     color: #07b916;
+ }
+ /*  */
+ .AddInvoiceInput{
+    border: 1px solid slategrey;
+    background-color: white;
+    border-radius: 5px;
+    position:fixed;
+    top: 10px;
+    transition: all 1s;
+    transform:scaleY(0);
+    transform-origin: top;
+}
+.AddInvoiceInput>.addcp{
+   width: 100%;
+    border-bottom: 1px solid rgb(191, 201, 212);
+    
+}
+.AddInvoiceInput>.addcp span{
+    margin:10px;
+   line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #04700d;
+   
+}
+.AddInvoiceInput>.addCP1{
+   width: 70%;
+   display: flex;
+   margin-left: 10%;
+   line-height: 30px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+.AddInvoiceInput>.addCP1 span{
+    width: 30%;
+    font-size: 16px;
+    font-weight: bold;
+ }
+ .AddInvoiceInput>.addCP1 input{
+    width: 70%;
+    border: 1px solid seagreen;
+    border-radius: 3px;
+    outline: none;
+    padding: 5px;
+ }
+ .AddInvoiceInput>.addCP2 {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: auto;
+    margin-bottom: 20px;
+ }
+ 
+ .AddInvoiceInput>.addCP2 span{
+   
+    font-size: 16px;
+    font-weight: bold;
+ }
+ .AddInvoiceInput>.addCP2>.soluong input{
+   width: 25%;
+   height: 25px;
+   border: 1px solid seagreen;
+   border-radius: 3px;
+   outline: none;
+   padding: 5px;
+ }
+ .AddInvoiceInput> button{
+    float:  right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+ }
+ .AddInvoiceInput> #refesh{
+    background-color: #07b916;
+    border: none;
+    line-height: 25px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+ }
+ .AddInvoiceInput> #agree{
+    background-color: #f04141;
+    border: none;
+    line-height: 25px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+ }
+ .AddInvoiceInput> #exit{
+   background-color: grey;
+    border: none;
+    line-height: 25px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+ }
+ .AddInvoiceInput>#updatea{
     background-color: rgb(155, 223, 31);
     border: none;
     line-height: 25px;

@@ -1,4 +1,21 @@
+var listperson=JSON.parse(localStorage.getItem('register')) || [];
+var listuser=JSON.parse(localStorage.getItem('user')) || [];
+$(document).ready(function(){
+  var d=0;
+  for(x of listperson)
+  {
+      d=d+1;
+      if(listuser.tailkhoan==x.username && listuser.matkhau==x.password)
+      {
+        $('#txt_hdem').val(x.name);
+         $('#txt_email').val(x.email);
+         $('#txt_diachi').val(x.address);
+         $('#txt_sdt').val(x.phone);
+        $('#txt_tinh').val(x.tinh);
+      }
 
+  }
+})
 function addCart(item){
   item.quantity =1;
   var list;
@@ -26,8 +43,9 @@ function addCart(item){
   }
   localStorage.setItem("Cart",JSON.stringify(list));
   alert("Thêm vào giỏ hàng thành công");
- location.reload();
+  location.reload();
 }
+var listcart=JSON.parse(localStorage.getItem('Cart')) || [];
 function ADDung(){
   var km=$('.CTKM').val();
   var t=0;
@@ -58,8 +76,7 @@ function LoadData(){
   var tt="";
   var n=0;
   var t=0;
-  var km;
-  var total;
+  var str2=""
   for(x of listcart){
     n=n+x.quantity
     t += x.price * x.quantity;
@@ -77,6 +94,20 @@ function LoadData(){
     </div>
     </div>
     `;
+      str2 += `<div class="Cart-product">
+      <div class="cart-item cart-column">
+          <img class="Cart-img" src="`+x.image+`">
+          <span class="Cart-infor">`+x.name+`</span>
+      </div>
+      <span class="cart-price price-product cart-column">`+x.price+`đ</span>
+      <div class="cart-quantity cart-quantity-ca cart-column">
+          <input style="width:50% ;text-align:center;line-height: 30px;border-radius: 5px;
+          border: 1px solid #56CCF2;background-color: #eee;color: #333;
+          padding-left: 5px;" id="q2_`+Number(x.id)+`" onchange="updateQuantity2(`+Number(x.id)+ `)" type="number" value="`+ x.quantity + `">
+          <button onclick="Remove2(`+Number(x.id)+ `)" class="Cart-xoa" type="button">Xóa</button>
+      </div>
+      </div>
+      `;
     tt += `<div class="Infoder1"> 
     <img src="` + x.image+`" width="100%" >
     <div>
@@ -84,23 +115,28 @@ function LoadData(){
         <span > Số lượng : `+x.quantity+`</span>
     </div>
     </div>`;
-        if( listdiscount.km=="10%")
-        {
-          listdiscount.total=Math.round((t*0.9)*1.1) ;
-          $('.CTKM').val("20-11");
-          listdiscount.km="10%";
-
-        }
-        else
-        {
-          listdiscount.km="0%";
-          listdiscount.total=Math.round(t*1.1) ;
-        }
-        var totall={km:listdiscount.km,total:listdiscount.total}
-        localStorage.setItem("Discount",JSON.stringify(totall));
+  }
+  if( listdiscount.km=="10%")
+  {
+    listdiscount.total=Math.round(((t)*0.9)*1.1) ;
+    $('.CTKM').val("20-11");
+    listdiscount.km="10%";
+  }
+  else
+  {
+    listdiscount.km="0%";
+    listdiscount.total=Math.round((t)*1.1) ;
+  }
+  var totall={km:listdiscount.km,total:listdiscount.total}
+  localStorage.setItem("Discount",JSON.stringify(totall));
+  if(n==0)
+  {
+    $('.cart-total-price4').text("0đ")
+    listdiscount=[]
   }
   $('.Infoder11').html(tt);
   $('.over-cart').html(str);
+  $('.over-cart2').html(str2);
   $('.cart-total-price').text(t+"đ");
   $('#Soluong').text("("+n+") sản phẩm");
   $('.OnCart').text("("+n+")");
@@ -111,7 +147,7 @@ function LoadData(){
   }
   else
   {
-    $('.cart-total-price4').text(listdiscount.total)
+    $('.cart-total-price4').text("0đ")
   }
  
 }
@@ -124,7 +160,14 @@ function RemoveCart(){
   location.reload();
 }
 function Remove(id){
-  var index=listcart.findIndex( x => x.id == id);
+  var index=listcart.findIndex( x => x.id == id);debugger
+  if(index >=0 ){
+    listcart.splice(index,1);
+  }
+  LoadData();
+}
+function Remove2(id){
+  var index=listcart.findIndex( x => x.id == id);debugger
   if(index >=0 ){
     listcart.splice(index,1);
   }
@@ -132,10 +175,19 @@ function Remove(id){
 }
 function UpdateCart(){
   localStorage.setItem('Cart',JSON.stringify(listcart));
+  localStorage.setItem('Discount',JSON.stringify(listdiscount));
   alert("Bạn đã cập nhập thành công giỏ hàng");
 }
 function updateQuantity(id) {
   var quantity = Number($('#q_'+id).val());
+  var index = listcart.findIndex(x => x.id == id);
+  if (index >= 0 && quantity >=1) {
+    listcart[index].quantity = quantity; 
+  }
+  LoadData();
+}
+function updateQuantity2(id) {
+  var quantity = Number($('#q2_'+id).val());
   var index = listcart.findIndex(x => x.id == id);
   if (index >= 0 && quantity >=1) {
     listcart[index].quantity = quantity; 
@@ -236,6 +288,7 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
                             bill2.push({
                               "Masp" : x.id,
                               "tensp" : x.name,
+                              "soluong" : x.quantity,
                               "Tongtien" : (x.price * x.quantity)
                             }) 
                             str += `
@@ -253,7 +306,8 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
                             "thu":dayname[dayofweek],
                             "day":day,
                              "thang":month,
-                             "nam":year
+                             "nam":year,
+                             "sdt":sdt
                           }) 
                           if(listbill==null)
                           {
@@ -266,7 +320,7 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
                           
                           localStorage.setItem("bill",JSON.stringify(listbill));
                           str += `<div>Giảm giá : <span>`+listdiscount.km+`</span></div>
-                          <div>Tổng tiền : <span>`+listdiscount.total+`</span></div></table>`
+                          <div>Tổng tiền : <span>`+listdiscount.total+`đ</span></div></table>`
                           str += 
                           ` <img style="margin-top:30px;margin-left:10%" src="image/uy tín.jpg">
                           `;
@@ -312,6 +366,53 @@ function printHtml(data) {
       </html>`
   );
   popupWin.document.close();
+}
+function muangay(item)
+{
+  var listprice=document.getElementsByClassName("display_content")
+  if (listprice[0].style.display != 'none')
+  {
+    item.price=11090000
+  }
+  if (listprice[1].style.display != 'none')
+  {
+    item.price=11500000
+    item.id = item.id+1
+  }
+  if (listprice[2].style.display != 'none')
+  {
+    item.price=15500000
+    item.id = item.id+2
+  }
+  item.quantity =1;
+  var list;
+  if(localStorage.getItem('Cart')==null)
+  {
+    list=[item];
+  }
+  else
+  {
+    list=JSON.parse(localStorage.getItem('Cart')) || [];
+    let ok=true;
+    for(let x of list)
+    {
+      if(x.id == item.id && x.price == item.price)
+      {
+        x.quantity += 1;
+        ok=false;
+        break;
+      }
+    }
+    if(ok)
+    {
+      list.push(item);
+    }
+  }
+  localStorage.setItem("Cart",JSON.stringify(list));
+  LoadData()
+  ADDung();
+  window.location.href = "../Paying.html";
+ 
 }
 
 

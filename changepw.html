@@ -14,25 +14,25 @@
                 <img src="image/Đăngnhập.png" width="100%" height="100%">
             </div>
             <div class=" background-2a" >
-                <img src="image/Đăngnhập.png" width="60%" height="500px">
+                <img src="image/Đăngnhập.png" width="60%" height="547px">
             </div>
             <div class=" background-3">
                 <div style="display:inline-block;">
-                    <img src="image/logo (1).png">
+                    <img onclick="index()" src="image/logo (1).png">
                     <img src="image/ma-qr-code_vinacheck.vm_001.jpg" width="30%" height="30%">
                 </div>
-                <form id="target" action="Adminpage.html">
-                    <input class="a1" type="text" id="username" name="username"  placeholder="Username....."><br>
-                    <input class="a2" type="password" id="pwd" name="pwd"  placeholder="Password....."><br>
-                    <label style="font-size: 13px;">
-                        <input type="checkbox" name="" id="" value="checkedValue">
-                        Remember account
-                        </label>
-                   <input class="a3"  type="submit" value="Longin">
+                <form id="targetpw" action="login.html">
+                    <input class="a1" type="text" id="usernamech" value="" placeholder="Username....." ><br>
+                    <input class="a2" type="password" id="pwdol" value=""  placeholder="Password....."><br>
+                    <input class="a2" type="password" id="pwdch" value=""  placeholder="New password....."><br>
+                    <input class="a2" type="password" id="pwdcch" value=""  placeholder="Confirm new password....."><br>
+                    <div style="color: red;line-height: 46px;" class="note_changepww">
+                        *
+                    </div>
+                   <input style="margin-bottom: 2px" class="a3"  type="submit" value="Change password">
                 </form>
-                <div class="background-4">
-                <a style="float: left; width: 80%;" href="#">Forgot your password</a>
-                <a href="http://127.0.0.1:5500/Register.html"  style="padding-right: 10%;" href="#">Register</a></div>
+               
+                
                 <div class="background-5">Fast Signiup With Your Favorite Social Profile</div>
                 <div class="background-6">
                     <a href="https://www.facebook.com/" target="_bbank"><i style="color: rgb(6, 111, 248);" class="fa-brands fa-facebook-square"></i></a>
@@ -47,4 +47,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="Js/Js/Login.js"> </script>
+<script type="text/javascript" src="Js/Js/onclick.js"> </script>
+<script type="text/javascript" src="Js/Js/admin.js"> </script>
 </html>

@@ -19,13 +19,13 @@
             <div class=" col-3 col-s-12 col-m-12 title-w"><i>Thời gian làm việc: Từ 8h30 - 20h30</i></div>
             
             <div class=" title-login">
-                <a href="http://127.0.0.1:5500/%C4%90%C4%83ng%20nh%E1%BA%ADp.html" target="_bank"> <i class="fa-solid fa-circle-user"></i></a>
+                <a onclick="login()" target="_bank"> <i class="fa-solid fa-circle-user"></i></a>
             </div>
             <div class="col-5 col-s-10 col-m-10 title-bottom">
                 <a href="#">Trang chủ</a>
                 <a href="#">Tin tức</a>
                 <a href="#">Video</a>
-                <a href="#">Giới thiệu</a>
+                <a onclick="lienhe()">Giới thiệu</a>
                 <a href="#">Liên hệ</a>
                 <a class="Cartbutom"  href="#"><i style="color: white;" class="fa-solid fa-cart-shopping"></i>&nbsp;<span  class="OnCart"></span>  </a>
             </div>
@@ -35,7 +35,7 @@
                             <a>Giỏ hàng</a>
                             <a id="Soluong"></a>
                             <span id="HideCart"> &times;</span>
-                            <a target="_blank" href="http://127.0.0.1:5500/Paying.html" class="Watchall-Cart">Xem tất cả</a>
+                            <a target="_blank" onclick="xemall()" class="Watchall-Cart">Xem tất cả</a>
                             
                         </div>
                         <div class="Cart-body">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="modal-footer">
                             <button onclick="UpdateCart()" type="button" class="close-footer">Cập nhập giỏ hàng</button>
-                            <a target="_blank" href="http://127.0.0.1:5500/Paying.html"><button type="button" class="order">Thanh Toán</button></a>
+                            <a onclick="giohang()"><button type="button" class="order">Thanh Toán</button></a>
                         </div>
                 </div>
             </div>
@@ -64,11 +64,11 @@
     <section >
         <div class="row style style1">
             <div class="col-2 col-s-2 col-m-2 style-i">
-                <img   src="image/logo.png"  >
+                <img onclick="index()"  src="image/logo.png"  >
             </div>
             <div class="col-3 col-s-9 col-m-9 style-center" >
                 <form style="display: flex;">
-                    <input style=" height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
+                    <input style="outline: none; height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
                     <button style="background-color:rgb(229, 245, 234) ;border: 1px solid rgb(188, 225, 200);border-radius: 0 5px 5px 0;"  type="submit"><div style="font-size: 18px;"><i class="fa-solid fa-magnifying-glass"></i></div></button>
                 </form>
             </div>
@@ -275,7 +275,7 @@
     </section>
     </header>
     </section>
-    <section  style="margin-top: 110px">
+    <section  style="margin-top: 160px">
         <div class="row background">
             <div class="col-8 col-s-8 col-m-12 background-1" >
                 <div class="myslide">
@@ -317,12 +317,12 @@
     <section>
         <div class="LaptopT">
             <div class="row Laptop1">
-                <ul style="padding: 0;">
-                    <li  class="ac active2" onclick="Click0()"><a  href="#PL1"  class="col-3 col-s-6 col-m-12 "  >MÁY HỌC TẬP LÀM VIỆC ONLINE(4-10TR)</a></li>
-                    <li class="ac " onclick="Click1()"><a   href="#PL2"  class="col-3 col-s-6 col-m-6" >LAPTOP DÙNG CHO ĐỒ HỌA</a></li>
-                    <li class="ac " onclick="Click2()"><a   href="#PL3" class="col-2 col-s-6 col-m-6 " >LAPTOP GAMING</a></li>
-                    <li class="ac " onclick="Click3()"><a   href="#PL4" class="col-2 col-s-6 col-m-6 " >LAPTOP CAO CẤP</a></li>
-                    <li ><a href="http://127.0.0.1:5500/WatchAll.html" target="_bank"  class="col-2 col-s-2 col-m-12 ">
+                <ul style="padding: 0;cursor: pointer;">
+                    <li  class="ac active2" onclick="Click0()"><a   class="col-3 col-s-6 col-m-12 "  >MÁY HỌC TẬP LÀM VIỆC ONLINE(4-10TR)</a></li>
+                    <li class="ac " onclick="Click1()"><a     class="col-3 col-s-6 col-m-6" >LAPTOP DÙNG CHO ĐỒ HỌA</a></li>
+                    <li class="ac " onclick="Click2()"><a   class="col-2 col-s-6 col-m-6 " >LAPTOP GAMING</a></li>
+                    <li class="ac " onclick="Click3()"><a   class="col-2 col-s-6 col-m-6 " >LAPTOP CAO CẤP</a></li>
+                    <li ><a onclick="xemall()" target="_bank"  class="col-2 col-s-2 col-m-12 ">
                      <button >Xem tất cả</button>
                  </a></li>
                 </ul>
@@ -342,11 +342,8 @@
                        <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a>
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a onclick="addCart({id:'01',image:'image/lenovothinkpade540c_200_150 (1).jpg',price:'7300000',name:'Lenovo Thinkpad E540'})"class="Gio"><i class="fa-solid fa-cart-shopping "></i></a><br>
                         <del>7.500.000</del>
                        </div>
@@ -362,11 +359,11 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                       <br><br>
-                      <a >
+                      <!-- <a >
                           ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                      </a><br>
+                      </a><br> -->
                       <div ><b>Bảo hàng: </b>12 tháng</div>
-                      <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                      <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                       <b style="font-size: 20px; color: red;">6.800.000 đ</b><a onclick="addCart({id:'02',image:'image/hpelitebook725g3cdhdkyjc_200_150.jpg',price:'6800000',name:'HP Elitebook 725 G3'})" class="Gio" ><i class="fa-solid fa-cart-shopping"></i></a><br> 
                       <del>7.000.000</del> 
                       </div>
@@ -383,9 +380,6 @@
                   <div class="Laptop111">
                     <a href="http://127.0.0.1:5500/product_details.html" target="_bank" class="Lap-a" >Lenovo Thinkpad T460S</a>
                   <br><br>
-                  <a >
-                      Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                  </a><br><br>
                   <div ><b>Bảo hàng: </b>12 tháng</div>
                   <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                   <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a onclick="addCart({id:'03',image:'image/lenovothinkpadt460sc_200_150.jpg',price:'11090000',name:'Lenovo Thinkpad T460S'})"  class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -403,9 +397,6 @@
                    <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a onclick="addCart({id:'04',image:'image/hpprobook650g1_200_150.jpg',price:'7500000',name:'HP Probook 650 G1'})" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -423,11 +414,8 @@
                    <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                    <br><br>
-                   <a >
-                       Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                   </a><br><br>
                    <div ><b>Bảo hàng: </b>12 tháng</div>
-                   <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                   <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                    <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a onclick="addCart({id:'05',image:'image/lenovothinkpadl540_200_150.jpg',price:'7400000',name:'Lenovo Thinkpad L540'})" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                    <del>8.000.000</del>
                    </div>
@@ -444,11 +432,8 @@
                    <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a onclick="addCart({id:'06',image:'image/hpprobook430g3_200_150.jpg',price:'7900000',name:'HP Probook 430 G3'})" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                    </div>
@@ -467,11 +452,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Dell Precision 7710</a>
                     <br><br>
-                    <a >
-                        Core i7-6820HQ / RAM 8GB / SSD 256GB / Màn 17.3 inch FHD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">20.200.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>23.500.000</del>
                   </div>
@@ -488,11 +470,8 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Zbook Studio G3</a>
                  <br><br>
-                 <a >
-                     Core i7-7600HQ / RAM 8GB / SSD 256GB / Màn 12.5 inch 
-                 </a><br><br><br>
                  <div ><b>Bảo hàng: </b>12 tháng</div>
-                 <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                 <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                  <b style="font-size: 20px; color: red;">17.500.000 đ</b><a class="Gio" href="#"><i class="fa-solid fa-cart-shopping"></i></a><br> 
                  <del>18.500.000</del> 
                  </div>
@@ -508,11 +487,8 @@
              <div class="Laptop111">
                 <a href="#" class="Lap-a" >Dell Precision M4800</a>
                 <br><br>
-                <a >
-                   Core i7-4800MQ / Core i7-49NQ. Cỗ máy làm việc mạnh mẽ cho dân CN
-                </a><br><br>
                 <div ><b>Bảo hàng: </b>12 tháng</div>
-                <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
+                <div style=" line-height: 23px"><b>Kho hàng: </b>Hết hàng</div><br><br>
                 <b style="font-size: 20px; color: red;">13.200.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
              </div>
             
@@ -528,9 +504,6 @@
               <div class="Laptop111">
                 <a href="#" class="Lap-a" >Reufurbished Full Box - Dell Precision 7520</a>
                 <br><br>
-                <a >
-                  Xeon E3-1505M V6 / RAM 32GB / NVIDIA Quadro M220 / SSD 1TB 
-                </a><br><br>
                 <div ><b>Bảo hàng: </b>12 tháng</div>
                 <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
                 <b style="font-size: 20px; color: red;">Liên hệ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -547,11 +520,8 @@
               <div class="Laptop111">
                 <a href="#" class="Lap-a" >Dell Precision M3510</a>
               <br><br>
-              <a >
-                Core i5-6300HQ / Ram 8GB / AMD FirePro W5130M / SSD 256GB / Màn 15.6 inch FHD
-              </a><br><br>
               <div ><b>Bảo hàng: </b>12 tháng</div>
-              <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
+              <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br><br>
               <b style="font-size: 20px; color: red;">Hết hàng</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
               <br>
               </div>
@@ -568,11 +538,8 @@
               <div class="Laptop111">
                 <a href="#" class="Lap-a" >Dell Precision 7720</a>
                 <br><br>
-                <a >
-                    Xeon E3 1050Mv6 / RAM 32GB / NVIDIA Quadro P300 / SSD 1TB /Màn 17.3
-                </a><br><br>
                 <div ><b>Bảo hàng: </b>12 tháng</div>
-                <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                 <b style="font-size: 20px; color: red;">33.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                 <del>35.000.000</del>
               </div>
@@ -592,11 +559,8 @@
            <div class="Laptop111">
             <a href="#" class="Lap-a" >Dell Precision 7710</a>
             <br><br>
-            <a >
-                Core i7-6820HQ / RAM 8GB / SSD 256GB / Màn 17.3 inch FHD
-            </a><br><br><br>
             <div ><b>Bảo hàng: </b>12 tháng</div>
-            <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+            <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
             <b style="font-size: 20px; color: red;">20.200.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
             <del>23.500.000</del>
            </div>
@@ -613,11 +577,8 @@
           <div class="Laptop111">
             <a href="#" class="Lap-a" >HP Zbook Studio G3</a>
           <br><br>
-          <a >
-              Core i7-7600HQ / RAM 8GB / SSD 256GB / Màn 12.5 inch 
-          </a><br><br><br>
           <div ><b>Bảo hàng: </b>12 tháng</div>
-          <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+          <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
           <b style="font-size: 20px; color: red;">17.500.000 đ</b><a class="Gio" href="#"><i class="fa-solid fa-cart-shopping"></i></a><br> 
           <del>18.500.000</del> 
           </div>
@@ -633,11 +594,8 @@
       <div class="Laptop111">
         <a href="#" class="Lap-a" >Dell Precision M4800</a>
         <br><br>
-        <a >
-           Core i7-4800MQ / Core i7-49NQ. Cỗ máy làm việc mạnh mẽ cho dân CN
-        </a><br><br>
         <div ><b>Bảo hàng: </b>12 tháng</div>
-        <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
+        <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br><br>
         <b style="font-size: 20px; color: red;">13.200.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
         <br>
       </div>
@@ -653,9 +611,6 @@
        <div class="Laptop111">
         <a href="#" class="Lap-a" >Reufurbished Full Box - Dell Precision 7520</a>
         <br><br>
-        <a >
-          Xeon E3-1505M V6 / RAM 32GB / NVIDIA Quadro M220 / SSD 1TB 
-        </a><br><br>
         <div ><b>Bảo hàng: </b>12 tháng</div>
         <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
         <b style="font-size: 20px; color: red;">Liên hệ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -672,11 +627,8 @@
        <div class="Laptop111">
         <a href="#" class="Lap-a" >Dell Precision M3510</a>
         <br><br>
-        <a >
-          Core i5-6300HQ / Ram 8GB / AMD FirePro W5130M / SSD 256GB / Màn 15.6 inch FHD
-        </a><br><br>
         <div ><b>Bảo hàng: </b>12 tháng</div>
-        <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
+        <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br><br>
         <b style="font-size: 20px; color: red;">Hết hàng</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
         <br>
        </div>
@@ -693,11 +645,8 @@
        <div class="Laptop111">
         <a href="#" class="Lap-a" >Dell Precision 7720</a>
         <br><br>
-        <a >
-            Xeon E3 1050Mv6 / RAM 32GB / NVIDIA Quadro P300 / SSD 1TB /Màn 17.3
-        </a><br><br>
         <div ><b>Bảo hàng: </b>12 tháng</div>
-        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
         <b style="font-size: 20px; color: red;">33.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
         <del>35.000.000</del>
        </div>
@@ -716,11 +665,8 @@
             <div class="Laptop111">
                 <a href="#" class="Lap-a" >Dell Precision 7710</a>
             <br><br>
-            <a >
-                Core i7-6820HQ / RAM 8GB / SSD 256GB / Màn 17.3 inch FHD
-            </a><br><br><br>
             <div ><b>Bảo hàng: </b>12 tháng</div>
-            <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+            <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
             <b style="font-size: 20px; color: red;">20.200.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
             <del>23.500.000</del>
             </div>
@@ -737,11 +683,8 @@
             <div class="Laptop111">
                 <a href="#" class="Lap-a" >HP Zbook Studio G3</a>
             <br><br>
-            <a >
-                Core i7-7600HQ / RAM 8GB / SSD 256GB / Màn 12.5 inch 
-            </a><br><br><br>
             <div ><b>Bảo hàng: </b>12 tháng</div>
-            <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+            <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
             <b style="font-size: 20px; color: red;">17.500.000 đ</b><a class="Gio" href="#"><i class="fa-solid fa-cart-shopping"></i></a><br> 
             <del>18.500.000</del> 
             </div>
@@ -757,11 +700,8 @@
             <div class="Laptop111">
                 <a href="#" class="Lap-a" >Dell Precision M4800</a>
             <br><br>
-            <a >
-                Core i7-4800MQ / Core i7-49NQ. Cỗ máy làm việc mạnh mẽ cho dân CN
-            </a><br><br>
             <div ><b>Bảo hàng: </b>12 tháng</div>
-            <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
+            <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br><br>
             <b style="font-size: 20px; color: red;">13.200.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
             <br>
             </div>
@@ -777,9 +717,6 @@
             <div class="Laptop111">
                 <a href="#" class="Lap-a" >Reufurbished Full Box - Dell Precision 7520</a>
             <br><br>
-            <a >
-                Xeon E3-1505M V6 / RAM 32GB / NVIDIA Quadro M220 / SSD 1TB 
-            </a><br><br>
             <div ><b>Bảo hàng: </b>12 tháng</div>
             <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
             <b style="font-size: 20px; color: red;">Liên hệ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -796,11 +733,8 @@
             <div class="Laptop111">
                 <a href="#" class="Lap-a" >Dell Precision M3510</a>
             <br><br>
-            <a >
-                Core i5-6300HQ / Ram 8GB / AMD FirePro W5130M / SSD 256GB / Màn 15.6 inch FHD
-            </a><br><br>
             <div ><b>Bảo hàng: </b>12 tháng</div>
-            <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br>
+            <div style=" line-height: 20px"><b>Kho hàng: </b>Hết hàng</div><br><br>
             <b style="font-size: 20px; color: red;">Hết hàng</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
             <br>
             </div>
@@ -817,11 +751,8 @@
             <div class="Laptop111">
                 <a href="#" class="Lap-a" >Dell Precision 7720</a>
             <br><br>
-            <a >
-                Xeon E3 1050Mv6 / RAM 32GB / NVIDIA Quadro P300 / SSD 1TB /Màn 17.3
-            </a><br><br>
             <div ><b>Bảo hàng: </b>12 tháng</div>
-            <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+            <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
             <b style="font-size: 20px; color: red;">33.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
             <del>35.000.000</del>
             </div>
@@ -866,11 +797,8 @@
                        <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                        </div>
@@ -888,11 +816,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                         <br><br>
-                        <a >
-                            ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                        </a><br><br>
                         <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.000.000</del>
                       </div>
@@ -909,9 +834,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -929,9 +851,6 @@
                    <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -949,11 +868,8 @@
                    <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.000.000</del>
                    </div>
@@ -970,11 +886,8 @@
                    <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                    </div>
@@ -1018,11 +931,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                       </div>
@@ -1040,11 +950,8 @@
                      <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                         <br><br>
-                        <a >
-                            ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                        </a><br><br>
                         <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.000.000</del>
                      </div>
@@ -1061,9 +968,6 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -1081,9 +985,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -1101,11 +1002,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.000.000</del>
                   </div>
@@ -1122,11 +1020,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                   </div>
@@ -1171,11 +1066,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                       </div>
@@ -1193,11 +1085,8 @@
                      <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                      <br><br>
-                     <a >
-                         ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                     </a><br><br>
                      <div><b>Bảo hàng: </b>12 tháng</div>
-                     <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                     <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                      <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                      <del>7.000.000</del>
                      </div>
@@ -1214,9 +1103,6 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -1234,9 +1120,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -1254,11 +1137,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.000.000</del>
                   </div>
@@ -1275,11 +1155,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                   </div>
@@ -1324,11 +1201,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                       </div>
@@ -1346,11 +1220,8 @@
                      <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                         <br><br>
-                        <a >
-                            ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                        </a><br><br>
                         <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.000.000</del>
                      </div>
@@ -1367,9 +1238,6 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -1387,9 +1255,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -1407,11 +1272,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.000.000</del>
                   </div>
@@ -1428,11 +1290,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                   </div>
@@ -1475,11 +1334,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                       </div>
@@ -1497,11 +1353,8 @@
                      <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                         <br><br>
-                        <a >
-                            ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                        </a><br><br>
                         <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.000.000</del>
                      </div>
@@ -1518,9 +1371,6 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -1538,9 +1388,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -1558,11 +1405,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.000.000</del>
                   </div>
@@ -1579,11 +1423,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                   </div>
@@ -1625,11 +1466,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                       </div>
@@ -1647,11 +1485,8 @@
                      <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                         <br><br>
-                        <a >
-                            ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                        </a><br><br>
                         <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.000.000</del>
                      </div>
@@ -1668,9 +1503,6 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -1688,9 +1520,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -1708,11 +1537,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                   </div>
                   
@@ -1729,11 +1555,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                   </div>
@@ -1770,11 +1593,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                       </div>
@@ -1792,11 +1612,8 @@
                      <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                         <br><br>
-                        <a >
-                            ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                        </a><br><br>
                         <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.000.000</del>
                      </div>
@@ -1813,9 +1630,6 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -1833,9 +1647,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -1853,11 +1664,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.000.000</del>
                   </div>
@@ -1874,9 +1682,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -1941,7 +1746,7 @@
     <section>
         <div class="LaptopT NextB">
             <div class="Next1">
-                <i onclick="BackSP()" style="left: 5px;" class="fa-solid fa-angle-left"></i> 
+                <i onclick="BackSP()" style="left: 5px; " class="fa-solid fa-angle-left"></i> 
             </div>
             <div class="Next2">
                 <i onclick="NextSP()" style="float: right;" class="fa-solid fa-angle-right"></i>
@@ -1970,11 +1775,8 @@
                       <div class="Laptop111">
                         <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                         <br><br>
-                        <a >
-                            Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                        </a><br><br><br><br>
                         <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.500.000</del>
                       </div>
@@ -1992,11 +1794,8 @@
                      <div class="Laptop111">
                         <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                         <br><br>
-                        <a >
-                            ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                        </a><br><br>
                         <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                         <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                         <del>7.000.000</del>
                      </div>
@@ -2013,9 +1812,6 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
                     <br><br>
-                    <a >
-                        Core i5-6300U (i5-6200U) / Core i7-6600U. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
@@ -2033,9 +1829,6 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 650 G1</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / Core i7-4600M. Nhiều option cấu hình
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
                     <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
                     <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
@@ -2053,11 +1846,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
                     <br><br>
-                    <a >
-                        Core i5-4300M(i5-4200M) / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                    </a><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.000.000</del>
                   </div>
@@ -2074,11 +1864,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                     <br><br>
-                    <a >
-                        Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                    </a><br><br><br><br>
                     <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>8.100.000</del>
                   </div>
@@ -2098,11 +1885,8 @@
                   <div class="Laptop111">
                     <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
                   <br><br>
-                  <a >
-                      Core i5-4300M / RAM 4GB / SSD 120GB / Màn 15.6 inch HD
-                  </a><br><br><br><br>
                   <div ><b>Bảo hàng: </b>12 tháng</div>
-                  <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                  <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                   <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                   <del>7.500.000</del>
                   </div>
@@ -2120,11 +1904,8 @@
                  <div class="Laptop111">
                     <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
                     <br><br>
-                    <a >
-                        ADM Pro A8-8600B(ngang Core i5-6300U) / RAM 4GB / SSD 120GB / Màn 12.5 inch 
-                    </a><br><br>
                     <div><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                     <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                     <del>7.000.000</del>
                  </div>
@@ -2141,11 +1922,8 @@
               <div class="Laptop111">
                 <a href="#" class="Lap-a" >HP Probook 430 G3</a>
                 <br><br>
-                <a >
-                    Core i5-6200U / RAM 4GB / SSD 120GB / Màn 13.3 inch HD 1366x768
-                </a><br><br><br><br>
                 <div ><b>Bảo hàng: </b>12 tháng</div>
-                <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br>
+                <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
                 <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
                 <del>8.100.000</del>
               </div>
@@ -2173,11 +1951,11 @@
                 </div>
                 <div class="col-2 col-s-6 col-m-12 border1">
                     <i class="fa-solid fa-recycle"></i>
-                    <a  href="#">CHÍNH SÁCH <br>ĐỔI TRẢ & BẢO HÀNH</a>
+                    <a style="font-size: 13px" href="#">CHÍNH SÁCH <br>ĐỔI TRẢ & BẢO HÀNH</a>
                 </div>
                 <div class="col-2 col-s-6 col-m-12 border1">
                     <i class="fa-solid fa-recycle"></i>
-                    <a href="#">BẢNG GIÁ NÂNG CẤP <br>LINH PHỤ KIỆN</a>
+                    <a style="font-size: 13px" href="#">BẢNG GIÁ NÂNG CẤP <br>LINH PHỤ KIỆN</a>
                 </div>
             </div>
         </div>
@@ -2401,4 +2179,5 @@
 <script type="text/javascript" src="Js/Js/Minhvu.js"></script>
 <script type="text/javascript" src="Js/Js/general.js"></script>
 <script type="text/javascript" src="Js/Js/giohang.js"></script>
+<script type="text/javascript" src="Js/Js/onclick.js"></script>
 </html>

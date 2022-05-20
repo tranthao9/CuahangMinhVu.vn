@@ -5,11 +5,15 @@
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
+    <script type="text/javascript"   
+    src="https://canvasjs.com/assets/script/canvasjs.min.js">  
+</script> 
+
 </head>
 <body>
     <section>
         <div class="row head">
-            <div class="col-2 col-s-2 col-m-4 logo">
+            <div onclick="index()" class="col-2 col-s-2 col-m-4 logo">
                 <img src="image/logo (1).png">
             </div>
             <div  class="col-2 col-s-2 col-m-4 hello">
@@ -18,7 +22,7 @@
             </div>
             <div class="Dangxuat">
                 <a href="http://127.0.0.1:5500/Adminpage.html"><div>Tài khoản</div></a>
-                <a href="http://127.0.0.1:5500/%C4%90%C4%83ng%20nh%E1%BA%ADp.html"><div>Đăng xuất</div></a>
+                <a onclick="dangxuat()"><div>Đăng xuất</div></a>
             </div>
         </div>
     </section>
@@ -29,10 +33,10 @@
                     <input type="text" placeholder="Tìm kiếm ........">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div onclick="Home()" class="management" style="padding-left: 5%;">
+                <div onclick="Home()" class="management clickh " style="padding-left: 5%; margin-top: 5px;">
                     <i  class="fa-solid fa-circle-user"></i> Home
                 </div>
-                <div onclick="OVERVIEW()" class="management counting" style="padding-left: 10px; border-top: 1px solid #ebefeb;">
+                <div onclick="OVERVIEW()" class="management clickh  counting" style="padding-left: 10px; border-top: 1px solid #ebefeb;">
                   
                     <i class="fa-solid fa-chart-column"></i>
                             Thống kê
@@ -45,27 +49,27 @@
                             Thông tin chung
                             <i class="fa-solid fa-angle-down"></i>
                         </dt>
-                        <dd onclick=" HangMT()">
+                        <dd onclick=" HangMT()" class="clickh">
                             <span>--</span>
                             <i class="fa-brands fa-artstation"></i>
                             Quản lý hãng máy tính
                         </dd>
-                        <dd onclick="DongMT()">
+                        <dd onclick="DongMT()" class="clickh">
                             <span>--</span>
                             <i class="fa-brands fa-buy-n-large"></i>
                             Quản lý dòng máy tính
                         </dd>
-                        <dd onclick="COMPUTER()">
+                        <dd onclick="COMPUTER()" class="clickh">
                             <span>--</span>
                             <i class="fa-solid fa-desktop"></i>
                             Quản lý máy tính
                         </dd>
-                        <dd onclick="PROVIDER()" >
+                        <dd onclick="PROVIDER()" class="clickh" >
                             <span>--</span>
                             <i class="fa-solid fa-address-card"></i>
                             Quản lý nhà cung cấp
                         </dd>
-                        <dd>
+                        <dd onclick="INVOICEINPUT()" class="clickh">
                             <span>--</span>
                             <i class="fa-solid fa-newspaper"></i>
                             Quản lý hóa đơn nhập
@@ -114,7 +118,7 @@
             <div class="col-10 col-s-12 col-m-12 Details">
                 <div class="home Page">
                     
-                    <div class="logohome">
+                    <div onclick="index()" class="logohome">
                         <img src="image/logo (1).png" width="20%">
                     </div>
                     <div class="homehello">
@@ -159,7 +163,7 @@
                             </tr>
                         </table>
                     </div>
-                    <button id="changepww"> <i class="fa-solid fa-repeat"></i>Đổi mật khẩu</button>
+                    <button onclick="changemk()" id="changepww"> <i class="fa-solid fa-repeat"></i>Đổi mật khẩu</button>
                 </div>
                 <div class="col-12 col-s-12 col-m-12 overview Page">
                     <div class="col-12 col-s-12 col-m-12 overview1">
@@ -173,7 +177,6 @@
                             <div class="bieudo2 bieudo11">
                                 <i class="fa-solid fa-file-lines"></i>
                                 <span>Đơn hàng<br> <span>0</span></span>
-                                <!-- <span>Sản phẩm<span>0</span></span><br> -->
                             </div>
                             <div class="bieudo3 bieudo11">
                                 <i class="fa-brands fa-artstation"></i>
@@ -181,26 +184,25 @@
                               
                             </div>
                             <div class="bieudo4 bieudo11">
-                                <i class="fa-solid fa-users"></i>
-                                <span>Người dùng mới<br>  <span>0</span></span>
+                                <i class="fa-solid fa-arrow-rotate-left"></i>
+                                <span>Đơn hoàn trả<br><span>0</span>
                                
                             </div>
                         </div>
                         <div class="chooseover">
                             <label for="txt_over">Tổng quan về thống kê </label>
-                            <select onclick="Thongke()" id="txt_over">
+                            <select onchange="Thongke()" id="txt_over" style="outline: none">
                                 <option value="tuan">Theo tuần</option>
                                 <option value="thang">Theo tháng</option>
                                 <option value="nam">Theo năm</option>
                               
                             </select>
                         </div>
-                        <div class="sales">
-                            <span>DOANH THU BÁN HÀNG THEO TUẦN</span>
-                            <img src="image/BieudoTuan.PNG" alt="">
+                        <div class="col-12 col-s-12 col-m-12 sales">
+                            <div id="chartContainerTuan" style="height:400px;width: 60%; margin: auto;" > </div>
                             
                         </div>
-                        <div class="sales_week">
+                        <div class="col-12 col-s-12 col-m-12 sales_week">
                             <div class="money_week week1">
                                 <i class="fa-solid fa-sack-dollar"></i>
                                 <span>Doanh thu<br><span>63.536.000đ</span></span>
@@ -215,11 +217,10 @@
                                 <span>Đơn hoàn trả<br><span>0</span><br>
                             </div>
                         </div>
-                        <div class="sales">
-                            <span>DOANH THU BÁN HÀNG THEO THÁNG</span>
-                            <img src="image/bieudothang.PNG" alt="">
+                        <div class="col-12 col-s-12 col-m-12 sales">
+                            <div id="chartContainerthang" style="height:400px;width: 100%" > </div>
                         </div>
-                        <div class="sales_week">
+                        <div class="col-12 col-s-12 col-m-12 sales_week">
                             <div class="money_week week1">
                                 <i class="fa-solid fa-sack-dollar"></i>
                                 <span>Doanh thu<br><span>132.340.000đ</span></span>
@@ -234,11 +235,10 @@
                                 <span>Đơn hoàn trả<br><span>15</span><br>
                             </div>
                         </div>
-                        <div class="sales">
-                            <span>DOANH THU BÁN HÀNG THEO NĂM</span>
-                            <img src="image/Bieudonam.PNG" alt="">
+                        <div class="col-12 col-s-12 col-m-12 sales">
+                            <div id="chartContainer" style="height:400px;width: 100%" > </div>
                         </div>
-                        <div class="sales_week">
+                        <div class="col-12 col-s-12 col-m-12 sales_week">
                             <div class="money_week week1">
                                 <i class="fa-solid fa-sack-dollar"></i>
                                 <span>Doanh thu<br><span>867.000.0000đ</span></span>
@@ -253,7 +253,7 @@
                                 <span>Đơn hoàn trả<br><span>123</span><br>
                             </div>
                         </div>
-                        <div class="sale_quickly">
+                        <div class="col-12 col-s-12 col-m-12 sale_quickly">
                             <div class="sale_quickly1">
                                 <i class="fa-solid fa-draw-polygon"></i>
                                 <span style="border-bottom:2px solid rgb(9, 137, 192)">Sản phẩm bán chạy </span>
@@ -266,7 +266,7 @@
                                     <span>Lenovo Thinkpad T460s</span>
                                 </div>
                             </div>
-                            <div class="sale_quickly2">
+                            <div class=" sale_quickly2">
                                 <i class="fa-solid fa-eye"></i>
                                 <span style="border-bottom:2px solid rgb(9, 192, 46)">  Sản phẩm xu hướng</span>
                                 <div class="sale_pr">
@@ -290,7 +290,7 @@
                 <div class="computer_company Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
-                        <a>Trang chủ / </a>
+                        <a onclick="index()">Trang chủ / </a>
                         <a>Quản lý hãng máy tính</a>
                         <button onclick="OpenAddcompany()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
@@ -299,7 +299,7 @@
                     </div>
                     <div class="searchCPdetail">
                         <div class="searchCP1">
-                            <span>Mã hãng</span>
+                            <span>Mã hãng </span>
                         <input type="text" >
                         </div>
                         <div class="searchCP1">
@@ -322,7 +322,7 @@
                 <div class="Dongcomputer Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
-                        <a>Trang chủ / </a>
+                        <a onclick="index()">Trang chủ / </a>
                         <a>Quản lý dòng máy tính</a>
                         <button onclick="OpenAddDongMT()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
@@ -354,7 +354,7 @@
                 <div class="computer_managememnt Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
-                        <a>Trang chủ / </a>
+                        <a onclick="index()">Trang chủ / </a>
                         <a>Quản lý máy tính</a>
                         <button onclick="OpenAddcomputer()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
@@ -386,7 +386,7 @@
                 <div class="provider_managememnt Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
-                        <a>Trang chủ / </a>
+                        <a onclick="index()">Trang chủ / </a>
                         <a>Quản lý nhà cung cấp</a>
                         <button onclick="OpenAddProvider()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
@@ -415,10 +415,39 @@
                         <button onclick="UpdateProvider()" id="update"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
                     </div>
                 </div>
+                <div class="invoice_input Page">
+                    <div class="headerCP">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                        <a onclick="index()">Trang chủ / </a>
+                        <a>Quản lý hóa đơn nhập</a>
+                        <button onclick="OpenInvoiceInput()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
+                    </div>
+                    <div class="searchCP">
+                        Tìm kiếm
+                    </div>
+                    <div class="searchCPdetail">
+                        <div class="searchCP1">
+                            <span>Mã hóa đơn nhập</span>
+                        <input type="text" >
+                        </div>
+                        <div class="searchCP1">
+                            <span>Tên hóa đơn nhập</span>
+                        <input type="text" >
+                        </div>
+                        <button><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+                    </div>
+                    <div class="company_details">
+                        <div class="company_detail1">
+                            <i class="fa-brands fa-accusoft"></i>  Danh sách nhà cung cấp
+                        </div>
+                        <div class="company_detail2">
+                            <table  id="invoice_input">
+                            </table>
+                        </div>
+                        <button onclick="UpdateInvoiceInput()" id="update"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
+                    </div>
+                </div>
             </div>
-            
-                
-
             </div>
         </div>
     </section>
@@ -426,77 +455,78 @@
         <div class="displayad">
             <div class="display">  </div>
             <div class="row ADDD">
-            <div class="col-7 col-s-12 col-m-12 Addcompany">
+            <div class="col-7 col-s-12 col-m-12 Addcompany ">
                <div class="addcp">
                    <span>Cập nhập hãng máy tính</span>
                </div>
                <div class="addCP1">
-                   <span>Mã hãng</span>
+                   <span>Mã hãng <span style="color: red"> *</span></span>
                <input id="mahang" type="text" disabled>
                </div>
                <div class="addCP1">
-                   <span>Tên hãng</span>
+                   <span>Tên hãng <span style="color: red"> *</span></span>
                <input id="tenhang" type="text"  >
                </div>
                <div class="addCP1">
-                   <span>Mô tả</span>
-               <textarea id="mota" ></textarea>
+                   <span>Mô tả <span style="color: red"> *</span></span>
+               <textarea id="mota" ></textarea> </div>
+               <div class=" note" style="color: red;margin-bottom: 15px;">
                </div>
+              
                <button id="exit" onclick="Exit()" ><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
                <button id="agree" onclick="AddCompany()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
                <button id="refesh" onclick="Refresh()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
                <button onclick="UpdateCompanyA()" id="updatea"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
                </div>
-            <div class="col-7 col-s-12 col-m-12 AddDongmaytinh">
+            <div class="col-7 col-s-12 col-m-12 AddDongmaytinh ">
                 <div class="addcp">
                     <span>Cập nhập dòng máy tính</span>
                 </div>
                 <div class="addCP1">
-                    <span>Mã dòng máy tính</span>
+                    <span>Mã dòng máy tính<span style="color: red"> *</span></span>
                 <input id="madong" type="text" disabled>
                 </div>
                 <div class="addCP1">
-                    <span>Tên dòng máy tính</span>
+                    <span>Tên dòng máy tính<span style="color: red"> *</span></span>
                 <input id="tendong" type="text" >
                 </div>
                 <div class="addCP1">
-                    <span>Mô tả</span>
+                    <span>Mô tả<span style="color: red"> *</span></span>
                 <textarea id="motad"></textarea></div>
-                <div class="addCP2">
-                    <div class="file">
-                        <span>Hình ảnh</span>
-                    <input id="hinhanh" type="file">
-                    </div>
-                    <div class="soluong">
-                        <span>Số lượng</span>
-                        <input id="soluongDMT"  type="number" min="1" value="1">
-                    </div>
+                <div style="border:none" class="addCP2">
+                    <span>Hình ảnh<span style="color: red"> *</span></span>
+                    <input  id="hinhanh" type="file"> </div>
+                <div class="addCP2 ">
+                    <span>Số lượng<span style="color: red"> *</span></span>
+                    <input style="outline:none;border: 1px solid seagreen;border-radius: 3px;" id="soluongDMT"  type="number" min="1" value="1">
                 </div>
+                <div class=" note" style="color: red;margin-bottom: 15px;"></div>
                 <button id="exitd" onclick="ExitD()" ><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
                 <button id="agreed" onclick="ADDDongMT()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
                 <button id="refeshd" onclick="RefreshD()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
                 <button onclick="UpdateDongMTT()" id="updatead"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
             </div>
-            <div class="col-7 col-s-12 col-m-12 Addcomputer">
+            <div class="col-7 col-s-12 col-m-12 Addcomputer ">
                 <div class="addcp">
                     <span>Cập nhập máy tính</span>
                 </div>
                 <div class="addCP1">
-                    <span>Số seri</span>
+                    <span>Số seri<span style="color: red"> *</span></span>
                 <input id="mamaytinh" type="text" >
                 </div>
                 <div class="addCP1">
-                    <span>Tên máy tính</span>
+                    <span>Tên máy tính<span style="color: red"> *</span></span>
                 <input id="tenmaytinh" type="text"  >
                 </div>
                 <div class="addCP1">
-                    <span>Giá bán</span>
+                    <span>Giá bán<span style="color: red"> *</span></span>
                 <input id="giaban" type="text"  >
                 </div>
                 <div class="addCP1">
-                    <span>Mô tả</span>
+                    <span>Mô tả<span style="color: red"> *</span></span>
                 <textarea id="motamt" ></textarea>
                 </div>
+                <div class="note" style="color: red;margin-bottom: 15px;"></div>
                 <button id="exit" onclick="ExitMT()" ><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
                 <button id="agree" onclick="AddComputer()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
                 <button id="refesh" onclick="RefreshMT()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
@@ -505,32 +535,71 @@
           
            <div class="col-7 col-s-12 col-m-12 AddProvider">
             <div class="addcp">
-                <span>Cập nhập nhà cung cấp</span>
+                <span>Cập nhập nhà cung cấp</span><span style="color: red"> *</span>
             </div>
             <div class="addCP1">
-                <span>Mã nhà cung cấp</span>
+                <span>Mã nhà cung cấp</span><span style="color: red"> *</span>
             <input id="manhacungcap" type="text" disabled >
             </div>
             <div class="addCP1">
-                <span>Tên nhà cung cấp</span>
+                <span>Tên nhà cung cấp</span><span style="color: red"> *</span>
             <input id="tennhacungcap" type="text"  >
             </div>
             <div class="addCP1">
-                <span>Địa chỉ</span>
+                <span>Địa chỉ</span><span style="color: red"> *</span>
             <input id="dcnhacungcap" type="text"  >
             </div>
             <div class="addCP1">
-                <span>Email</span>
+                <span>Email</span><span style="color: red"> *</span>
             <input id="emailnhacungcap" type="text"  >
             </div>
             <div class="addCP1">
-                <span>Số điện thoại</span>
+                <span>Số điện thoại</span><span style="color: red"> *</span>
             <input id="sdtnhacungcap" type="text"  >
             </div>
+            <div class=" note" style="color: red;margin-bottom: 15px;"></div>
             <button id="exit" onclick="ExitProvider()" ><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
             <button id="agree" onclick="ADDProvider()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
             <button id="refesh" onclick="RefreshProvider()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
-            <button onclick="UpdateProviderA()" id="updateaa"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
+            <button onclick="UpdateProviderA()" id="updatea"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
+            </div>
+            <div class="col-9 col-s-12 col-m-12 AddInvoiceInput ">
+                <div class="addcp">
+                    <span>Cập nhập hóa đơn nhập</span>
+                </div>
+                <div class="addCP1">
+                    <span>Mã hóa đơn nhập</span><span style="color: red"> *</span>
+                <input id="mahoadonnhap" type="text" disabled >
+                </div>
+                <div class="addCP1">
+                    <span>Mã nhà cung cấp</span><span style="color: red"> *</span>
+                <input id="manhacungcapI" type="text"  >
+                </div>
+                <div class="addCP1">
+                    <span>Mã nhân viên nhập</span><span style="color: red"> *</span>
+                <input id="manhanvienI" type="text"  >
+                </div>
+                <div class="addCP1">
+                    <span>Ngày nhập</span><span style="color: red"> *</span>
+                <input id="ngaynhapI" type="date"  >
+                </div>
+                <div class="addCP1">
+                    <span>Mã sản phẩm</span><span style="color: red"> *</span>
+                <input id="masanphamI" type="text"  >
+                </div>
+                <div class="addCP1">
+                    <span>Giá sản phẩm</span><span style="color: red"> *</span>
+                <input id="giasanphamI" type="text"  >
+                </div>
+                <div class="addCP1">
+                    <span>Số lượng</span><span style="color: red"> *</span>
+                <input id="soluongsanphamI" type="number" value="1" min="1" ></div>
+               
+                <div class=" note" style="color: red;margin-bottom: 15px;"></div>
+                <button id="exit" onclick="ExitInvoiceInput()" ><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
+                <button id="agree" onclick="ADDInvoiceInput()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
+                <button id="refesh" onclick="RefreshInvoiceInput()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
+                <button onclick="UpdateInvoiceInputA()" id="updatea"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
             </div>
         </div>
        </div>
@@ -543,4 +612,9 @@
 <script type="text/javascript" src="Js/Js/dongMT.js"></script>
 <script type="text/javascript" src="Js/computer.js"></script>
 <script type="text/javascript" src="Js/Js/Provider.js"></script>
+<script type="text/javascript" src="Js/Js/invoiceInput.js"></script>
+<script type="text/javascript" src="Js/Js/onclick.js"></script>
+<script type="text/javascript" src="Js/Js/chart.js"></script>
+<script type="text/javascript"  src="https://canvasjs.com/assets/script/canvasjs.min.js">  </script> 
+
 </html>

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Lenovo Thinkpad T460s</title>
-        <link href="image/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <link rel="stylesheet" href="css/core.css">
-        <link rel="stylesheet" href="css/Watchall.css">
-        <link rel="stylesheet" href="css/product_details.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
-        <link rel="stylesheet" href="Hurricane,Roboto/Roboto/Roboto-BlackItalic.ttf">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/introduce.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
+</head>
 <body>
     <header class="header " >
         <section class="street"></section>
@@ -19,13 +18,13 @@
             <div class=" col-3 col-s-12 col-m-12 title-w"><i>Thời gian làm việc: Từ 8h30 - 20h30</i></div>
             
             <div class=" title-login">
-                <a onclick="login()" target="_bank"> <i class="fa-solid fa-circle-user"></i></a>
+                <a  onclick="login()" target="_bank"> <i class="fa-solid fa-circle-user"></i></a>
             </div>
             <div class="col-5 col-s-10 col-m-10 title-bottom">
-                <a onclick="index()">Trang chủ</a>
+                <a href="#">Trang chủ</a>
                 <a href="#">Tin tức</a>
                 <a href="#">Video</a>
-                <a onclick="lienhe()">Giới thiệu</a>
+                <a href="#">Giới thiệu</a>
                 <a href="#">Liên hệ</a>
                 <a class="Cartbutom"  href="#"><i style="color: white;" class="fa-solid fa-cart-shopping"></i>&nbsp;<span  class="OnCart"></span>  </a>
             </div>
@@ -35,7 +34,7 @@
                             <a>Giỏ hàng</a>
                             <a id="Soluong"></a>
                             <span id="HideCart"> &times;</span>
-                            <a target="_blank" onclick="giohang()" class="Watchall-Cart">Xem tất cả</a>
+                            <a target="_blank"  onclick="giohang()" class="Watchall-Cart">Xem tất cả</a>
                             
                         </div>
                         <div class="Cart-body">
@@ -64,11 +63,11 @@
     <section >
         <div class="row style style1">
             <div class="col-2 col-s-2 col-m-2 style-i">
-                <img  onclick="index()"  src="image/logo.png"  >
+                <img onclick="index()"  src="image/logo.png"  >
             </div>
             <div class="col-3 col-s-9 col-m-9 style-center" >
                 <form style="display: flex;">
-                    <input style=" height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);outline: none;" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
+                    <input style="outline: none; height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
                     <button style="background-color:rgb(229, 245, 234) ;border: 1px solid rgb(188, 225, 200);border-radius: 0 5px 5px 0;"  type="submit"><div style="font-size: 18px;"><i class="fa-solid fa-magnifying-glass"></i></div></button>
                 </form>
             </div>
@@ -274,481 +273,67 @@
         
     </section>
     </header>
-    </section>
-    <section style="margin-top: 150px;">
-        <div class="option">
-            <a onclick="index()">Trang chủ </a>
-            <span>&#160;/&#160;</span>
-            <a onclick="xemall()">LapTop Dùng cho học tập và làm việc online (4-10tr)</a>
-            <span>&#160;/&#160;</span>
-            <a href="#">Thinkpad T460s</a>
+    <section>
+        <div class="gioithieu">
+            <div class="gioithieu1">
+                <i style="font-size: 25px" class="fa-brands fa-asymmetrik"></i>
+                Giới thiệu
+            </div>
         </div>
     </section>
     <section>
-        <div class="row Details">
-            <div class="col-5 col-s-12 col-m-12 DetailImg">
-                <div class="DetailImg1" >
-                    <img id="main-details" src="image/lenovothinkpadt460s_480_360.jpg" width="100%">
-                    <div class="images22"></div>
-                    <div class="Next3">
-                        <i onclick="BackPD()"  class="fa-solid fa-caret-left"></i> 
-                    </div>
-                    <div class="Next4">
-                        <i onclick="NextPD()" class="fa-solid fa-caret-right"></i>
-                    </div>
-                </div>
-                <div class="product-image">
-                    <img class="img-details" onclick="ShowImgDetails(this)" src="image/lenovothinkpadt460s_480_360.jpg" width="25%">
-                    <img class="img-details" onclick="ShowImgDetails(this)" src="image/lenovothinkpadt460s2banphim_480_360.jpg" width="25%">
-                    <img class="img-details" onclick="ShowImgDetails(this)" src="image/lenovothinkpadt460s3canhtrai_480_360.jpg" width="25%">
-                    <img class="img-details" onclick="ShowImgDetails(this)" src="image/lenovothinkpadt460s4canhphai_480_360.jpg" width="25%">
-                </div>
-            </div>
-            <div class="col-7 col-s-12 col-m-12 content-product">
-                <div class="display_content">
-                    <div class="Content1">
-                        <span>Lenovo Thinkpad T460s</span><br><br>
-                        <span style="display:flex ;">
-                            Core i5-6300U (i5-6200U) / RAM 8GB / SSD 128GB / Màn 14.0 inch FHD 1920x1080
-                            <div class="buttom1-fb" >
-                                <div class="like">
-                                    <i  class="fa-brands fa-facebook-square"></i>
-                                    <a href="https://www.facebook.com/maytinhminhvu" target="_blank" >Thích trang</a>
-                                </div>
-                                <div class="like">
-                                    <a href="https://www.facebook.com/maytinhminhvu" target="_blank" >Chia sẻ</a>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="Content2">
-                        <div >
-                            <a>Giá :</a>
-                            <b style="color: red;font-size: 18px;">11.090.000 đ</b>
-                        </div>
-                        <div>
-                            <a>Bảo hành :</a>
-                            <b>12 tháng</b>
-                        </div>
-                        <div>
-                            <a>Kho hàng :</a>
-                            <b>Có 2 cấu hình</b>
-                        </div>
-                        <div>
-                            <a>Xem điểm còn hàng</a>
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="display_content">
-                    <div class="Content1">
-                        <span>Lenovo Thinkpad T460s</span><br><br>
-                        <span style="display:flex ;">
-                            Core i5-6300U (i5-6200U) / RAM 8GB / SSD 256GB / Màn 14.0 inch FHD 1920x1080
-                            <div class="buttom1-fb" >
-                                <div class="like">
-                                    <i  class="fa-brands fa-facebook-square"></i>
-                                    <a href="https://www.facebook.com/maytinhminhvu" target="_blank" >Thích trang</a>
-                                </div>
-                                <div class="like">
-                                    <a href="https://www.facebook.com/maytinhminhvu" target="_blank" >Chia sẻ</a>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="Content2">
-                        <div >
-                            <a>Giá :</a>
-                            <b style="color: red;font-size: 18px;">11.500.000 đ</b>
-                        </div>
-                        <div>
-                            <a>Bảo hành :</a>
-                            <b>12 tháng</b>
-                        </div>
-                        <div>
-                            <a>Kho hàng :</a>
-                            <b>Có 2 cấu hình</b>
-                        </div>
-                        <div>
-                            <a>Xem điểm còn hàng</a>
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="display_content">
-                    <div class="Content1">
-                        <span>Lenovo Thinkpad T460s</span><br><br>
-                        <span style="display:flex ;">
-                            Core i7-6300U (i5-6200U) / RAM 8GB / SSD 256GB / Màn 14.0 inch FHD 1920x1080
-                            <div class="buttom1-fb" >
-                                <div class="like">
-                                    <i  class="fa-brands fa-facebook-square"></i>
-                                    <a href="https://www.facebook.com/maytinhminhvu" target="_blank" >Thích trang</a>
-                                </div>
-                                <div class="like">
-                                    <a href="https://www.facebook.com/maytinhminhvu" target="_blank" >Chia sẻ</a>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="Content2">
-                        <div >
-                            <a>Giá :</a>
-                            <b  style="color: red;font-size: 18px;">15.500.000 đ</b>
-                        </div>
-                        <div>
-                            <a>Bảo hành :</a>
-                            <b>12 tháng</b>
-                        </div>
-                        <div>
-                            <a>Kho hàng :</a>
-                            <b>Có 2 cấu hình</b>
-                        </div>
-                        <div>
-                            <a>Xem điểm còn hàng</a>
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="computer-configuration">
-                    <b>CHỌN CẤU HÌNH :</b><br>
-                </div>
-                <div class="DUI">
-                    <ul>
-                        <li class="optionDUI" onclick="ClickCT(1)">
-                            <span>Core i5-6300U (i5-6200U) / RAM 8GB / SSD 128GB / Màn 14.0 inch FHD 1920x1080</span><br>
-                            <span id="gia" >11.090.000 đ</span>
-                        </li>
-                        <li class="optionDUI" onclick="ClickCT(2)" style="float: right;">
-                            <span>Core i5-6300U (i5-6200U) / RAM 8GB / SSD 256GB / Màn 14.0 inch FHD 1920x1080</span><br>
-                            <span id="gia" >11.500.000 đ</span>
-                        </li>
-                        <li class="optionDUI"  onclick="ClickCT(3)">
-                            <span>Core i7-6300U (i5-6200U) / RAM 8GB / SSD 256GB / Màn 14.0 inch FHD 1920x1080</span><br>
-                            <span id="gia" >15.500.000 đ</span>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="col-7 col-s-12 col-m-12 information">
-    
-                <div style="border-top: 1px solid rgb(227, 224, 224);" class="AB">THÔNG TIN MUA HÀNG</div>
-                <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
-                    <b>Giảm từ 100K đến 500K cho khách mua lần 2, khách cũ giới thiệu khách mới.</b>
-                    <a>Xem chi tiết tại đây</a>
-                </div>
-                <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
-                    <b>Có chương trình hỗ trợ trả góp linh hoạt hấp dẫn.</b>
-                    <a>Xem chi tiết tại đây</a>
-                </div>
-                <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
-                    <b>Có hỗ trợ Free Ship. </b>
-                    <a>Xem chi tiết tại đây</a>
-                </div>
-                <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
-                    <b>Bảo hành miễn phí cả cháy nổ IC (nhiều nơi từ chối bảo hành).</b>
-                    <a>Xem chi tiết tại đây</a>
-                </div>
-                <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
-                    <b>Máy tính Minh Vũ không cộng thêm tiền webcam, bảo mật vân tay, bàn phím sáng như các nơi khác</b>
-                </div>
-                <div style="margin-top:10px; color: red; font-size: 15px; margin-bottom: 10px;" >(*) Các option như Bluetooth, vân tay, bàn phím sáng,... tùy từng đợt hàng sẽ có máy có máy không, khi đặt hàng quý khách lưu ý hỏi tư vấn chi tiết để tránh những hiểu lầm không đáng có về sau. </div>
-            </div>
-            <div class="col-7 col-s-12 col-m-12 information-image">
-                <img src="image/banner-thong-tin-uu-dai.jpg" width="100%">
-            </div>
-            <div class="col-7 col-s-12 col-m-12 submitBT">
-                <button class="BT1" type="submit" onclick="muangay({id:'03',image:'image/lenovothinkpadt460sc_200_150.jpg',name:'Lenovo Thinkpad T460S'})">
-                    <span>MUA NGAY<br>Giao tận nơi hoặc nhận tại công ty</span>
-                </button>
-                <button class="BT2" type="submit">
-                    <span>MUA TRẢ GÓP<br>Lãi suất 0%</span>
-                </button>
-            </div>
-
+        <div class="content">
+            <span>Giới Thiệu Công Ty TNHH Thương Mại Và Đầu Tư Minh Vũ</span>
         </div>
-    </section>
-    <section >
-        <div class="row Information-product">
-            <div class="col-12 col-s-12 col-m-12 product1">
-                <div class="col-2 col-s-3 col-m-5 product11">
-                    THÔNG TIN SẢN PHẨM
-                </div>
-            </div>
-            <div class="col-12 col-s-12 col-m-12 product2">
-               <p>Đánh giá Thinkpad T460S</p>
-               <p>Để tạo bước đột phá mới trong dòng sản phẩm laptop doanh nhân của mình. Hãng Lenovo đã cho ra mắt mẫu Thinkpad T460S với nhiều thay đổi, đột phá mới, tạo tiền đề cho bước ngoặt của hãng trên thị trường máy tính xách tay doanh nhân cao cấp. Cũng chính vì lý do đó mà chiếc T460S đã mang trong mình rất nhiều ưu điểm, các cải tiến nâng cấp toàn diện mà các phiên bản trước không có.</p>
-                <p>Thông số kĩ thuật Thinkpad T460S</p>
-            </div>
-            <div class=" product3">
-                <table>
-                    <tr>
-                        <th>CPU</th>
-                        <td>Intel Core <span> i5-6300U (i5-6200U) / i7-6600U</span></td>
-                    </tr>
-                    <tr>
-                        <th>Memory</th>
-                        <td><span>8GB</span></td>
-                    </tr>
-                    <tr>
-                        <th>Hardisk</th>
-                        <td><span>SSD 256GB</span></td>
-                    </tr>
-                    <tr>
-                        <th>VGA</th>
-                        <td><span>Intel HD Graphics 520</span></td>
-                    </tr>
-                    <tr>
-                        <th>Display</th>
-                        <td><span>14.0 inch FHD 1920x1080</span></td>
-                    </tr>
-                    <tr>
-                        <th>Wireless</th>
-                        <td>Intel Wifi Link 6205 AGN<span></span></td>
-                    </tr>
-                    <tr>
-                        <th>Optical</th>
-                        <td>No<span></span></td>
-                    </tr>
-                    <tr>
-                        <th>LAN</th>
-                        <td>10/100 Mbps Ethernet LAN (RJ-45 connector)<span></span></td>
-                    </tr>
-                    <tr>
-                        <th>Battery</th>
-                        <td>6 Cells<span></span></td>
-                    </tr>
-                    <tr>
-                        <th>OS</th>
-                        <td>Windows® 7 / 8 Professional 64Bit<span></span></td>
-                    </tr>
-                    <tr>
-                        <th>Weight</th>
-                        <td><span>1.4 kg</span></td>
-                    </tr>
-                    <tr>
-                        <th>Color</th>
-                        <td>Nhung đen<span></span></td>
-                    </tr>
-                    <tr>
-                        <th>Warranty</th>
-                        <td>12 Months<span></span></td>
-                    </tr>
-                    <tr>
-                        <th>Option</th>
-                        <td>3 x USB3.0 <br>
-                            HDMI <br>
-                            RJ-45 <br>
-                            Mini Display</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-12 col-s-12 col-m-12 product2">
-                <p>Đánh giá Thinkpad T460S</p>
-             </div>
-             <div class="VideoThinkpadT460s">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/PW3bFEAswXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                
+        <div class="content1">
+            <span>Giới thiệu về công ty Minh Vũ</span>
+            <p>Tên Công ty: CÔNG TY TNHH THƯƠNG MẠI MINH VŨ</p>
+            <p>Tên giao dịch tiếng Anh: MINH VU TRADING AND INVESTMENT COMPANY LIMITED</p>
+            <p>Giấy CNĐKKD và Mã số doanh nghiệp số: 0102494904 do Sở Kế hoạch & Đầu tư Thành phố Hà Nội cấp</p>
+            <p>Đại diện theo pháp luật của doanh nghiệp: Ông Vũ Ngọc Toàn</p>
+            <p>Địa điểm kinh doanh:</p>
+            <p>- Cơ Sở 1 - Laptop Minh Vũ: 244 Lê Thanh Nghị, Hai Bà Trưng, Hà Nội</p>
+            <p>- Cơ Sở 2 - Công Nghệ Số Minh Vũ: 76 Đường Trần Hưng Đạo, Đại Phúc, Bắc Ninh</p>
+            <p>Trung tâm bảo hành: Tầng 2, số 224 Lê Thanh Nghị, Hai Bà Trưng, Hà Nội</p>
+            <p>Website: https://minhvu.vn/</p>
+            <p>Fanpage: https://www.facebook.com/maytinhminhvu/</p>
+            <p>Điện thoại liên hệ:</p>
+            <p>- Hotline: 0898.747.888 (Hà Nội)</p>
+            <p>- Hotline: 0898.747.999 (Hà Nội)</p>
+            <p>- Hotline: 0788.474.999 (Bắc Ninh)</p>
+            <p>- Phản hồi chất lượng dịch vụ, khiếu nại: 0988.880.934</p>
+            <span>Video CÔNG TY TNHH THƯƠNG MẠI MINH VŨ</span>
+            <div class="video">
+                <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/QpncuYbCoow" width="560"></iframe>
              </div>
         </div>
     </section>
-    <section style="background-color: rgb(248, 243, 243); padding-top: 20px;padding-bottom: 20px;">
-        <div class="LaptopT NextB">
-            <div class="Next1">
-                <i onclick="BackSP()" style="left: 5px;" class="fa-solid fa-angle-left"></i> 
-            </div>
-            <div class="Next2">
-                <i onclick="NextSP()" style="float: right;" class="fa-solid fa-angle-right"></i>
-            </div>
-            
-            <div class="row Laptop1">
-                <ul style="padding: 0;">
-                    <li ><a href="#" style="background-color: rgb(8, 88, 8); border-radius: 5px 5px 0 0; color: white; font-weight: bold;" class="col-2 col-s-3 col-m-9 "  >Sản phẩm đã xem</a></li>
-                  
-                    <li style="float: right; width: 120px;"><a href="#"  >
-                     <button>Xem tất cả</button>
-                 </a></li>
-                </ul>
-             </div>
-             <div style="height: 1px; background-color: black; margin-left:5px ;"></div>
-             <div class="row PLLaptop SPWatched"  >
-                <div class="Laptop1-1">
-                    
-                   <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                       <div class="LapBorder">
-                          <div class="box">
-                              <img src="image/lenovothinkpade540c_200_150 (1).jpg" width="100%" height="120%">
-                              <div class="Cu">Cũ</div>
-                              <div class="sale">-3%</div>
-                      </div><br>
-                      <div class="Laptop111">
-                        <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
-                        <br><br>
-                        <div ><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
-                        <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
-                        <del>7.500.000</del>
-                      </div>
-                     
-                      </div>
-                  </div>
-                       
-                  <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                      <div class="LapBorder">
-                         <div class="box">
-                             <img src="image/hpelitebook725g3cdhdkyjc_200_150.jpg">
-                             <div class="Cu">Cũ</div>
-                             <div class="sale">-3%</div>
-                     </div><br>
-                     <div class="Laptop111">
-                        <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
-                        <br><br>
-                        <div><b>Bảo hàng: </b>12 tháng</div>
-                        <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
-                        <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
-                        <del>7.000.000</del>
-                     </div>
-                     
-                     </div>
-                 </div>
-                 <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                  <div class="LapBorder">
-                     <div class="box">
-                         <img src="image/lenovothinkpadt460sc_200_150.jpg">
-                         <div class="Cu">Cũ</div>
-                         <div class="sale">-3%</div>
-                 </div><br>
-                 <div class="Laptop111">
-                    <a href="#" class="Lap-a" >Lenovo Thinkpad T460S</a>
-                    <br><br>
-                    <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
-                    <b style="font-size: 20px; color: red;">11.090.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
-                    <del>11.990.000</del>
-                 </div>
-                 
-                 </div>
-                  </div>
-                  <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                      <div class="LapBorder">
-                      <div class="box">
-                          <img src="image/hpprobook650g1_200_150.jpg">
-                          <div class="Cu">Cũ</div>
-                  </div><br>
-                  <div class="Laptop111">
-                    <a href="#" class="Lap-a" >HP Probook 650 G1</a>
-                    <br><br>
-                    <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Có 2 cấu hình</div><br>
-                    <b style="font-size: 20px; color: red;">7.500.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br><br>
-                  </div>
-                  
-                  </div>
-              </div>
-                  <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                      <div class="LapBorder">
-                      <div class="box">
-                          <img src="image/lenovothinkpadl540_200_150.jpg">
-                          <div class="Cu">Cũ</div>
-                          <div class="sale">-3%</div>
-                  </div><br>
-                  <div class="Laptop111">
-                    <a href="#" class="Lap-a" >Lenovo Thinkpad L540</a>
-                    <br><br>
-                    <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
-                    <b style="font-size: 20px; color: red;">7.400.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
-                    <del>8.000.000</del>
-                  </div>
-                  
-                  </div>
-              </div>
-                  <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                      <div class="LapBorder">
-                      <div class="box">
-                          <img src="image/hpprobook430g3_200_150.jpg" >
-                          <div class="Cu">Cũ</div>
-                          <div class="sale">-2%</div>
-                  </div><br>
-                  <div class="Laptop111">
-                    <a href="#" class="Lap-a" >HP Probook 430 G3</a>
-                    <br><br>
-                    <div ><b>Bảo hàng: </b>12 tháng</div>
-                    <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
-                    <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
-                    <del>8.100.000</del>
-                  </div>
-                  </div>
-                  </div>
+    <section>
+        <div style="margin-top: 30px" class="support">
+            <div class="support1">&nbsp;HỖ TRỢ KHÁCH HÀNG&nbsp;</div>
+            <div class="row border">
+                <div class="col-2 col-s-6 col-m-12 border1">
+                    <i  class="fa-solid fa-cart-shopping"></i>
+                    <a href="#">HƯỚNG DẪN<br>ĐẶT HÀNG</a>
                 </div>
+                <div class="col-2 col-s-6 col-m-12 border1">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <a href="#">HƯỚNG DẪN<br>THANH TOÁN</a>
+                </div>
+                <div class="col-2 col-s-6 col-m-12 border1">
+                    <i class="fa-solid fa-truck-front"></i>
+                    <a href="#">PHƯƠNG THỨC <br>VẬN CHUYỂN</a>
+                </div>
+                <div class="col-2 col-s-6 col-m-12 border1">
+                    <i class="fa-solid fa-recycle"></i>
+                    <a style="font-size: 13px" href="#">CHÍNH SÁCH <br>ĐỔI TRẢ & BẢO HÀNH</a>
+                </div>
+                <div class="col-2 col-s-6 col-m-12 border1">
+                    <i class="fa-solid fa-recycle"></i>
+                    <a style="font-size: 13px" href="#">BẢNG GIÁ NÂNG CẤP <br>LINH PHỤ KIỆN</a>
+                </div>
+            </div>
         </div>
-        <div class="row PLLaptop SPWatched"  >
-            <div class="Laptop1-1">
-               <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                   <div class="LapBorder">
-                      <div class="box">
-                          <img src="image/msipulsegl66cdhbfhc_200_150.jpg" width="100%" height="120%">
-                          <div class="Moi">Mới</div>
-                          <div class="sale">-3%</div>
-                  </div><br>
-                  <div class="Laptop111">
-                    <a href="#" class="Lap-a" >Lenovo Thinkpad E540</a>
-                  <br><br>
-                  <div ><b>Bảo hàng: </b>12 tháng</div>
-                  <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
-                  <b style="font-size: 20px; color: red;">7.300.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
-                  <del>7.500.000</del>
-                  </div>
-                  
-                  </div>
-              </div>
-                   
-              <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                  <div class="LapBorder">
-                     <div class="box">
-                         <img src="image/acernitro5202115bcdhub_200_150.jpg">
-                         <div class="Moi">Mới</div>
-                         <div class="sale">-3%</div>
-                 </div><br>
-                 <div class="Laptop111">
-                    <a href="#" class="Lap-a" >HP Elitebook 725 G3</a>
-                    <br><br>
-                    <div><b>Bảo hàng: </b>12 tháng</div>
-                    <div style=" line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
-                    <b style="font-size: 20px; color: red;">6.800.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
-                    <del>7.000.000</del>
-                 </div>
-                 
-                 </div>
-             </div>
-              <div class="col-2 col-s-4 col-m-6 Laptop11 ">
-                  <div class="LapBorder">
-                  <div class="box">
-                      <img src="image/gigabyteu4ud50s1823socdcdjhbc_200_150 (2).jpg" >
-                      <div class="Moi">Mới</div>
-                      <div class="sale">-2%</div>
-              </div><br>
-              <div class="Laptop111">
-                <a href="#" class="Lap-a" >HP Probook 430 G3</a>
-                <br><br>
-                <div ><b>Bảo hàng: </b>12 tháng</div>
-                <div style="line-height: 20px"><b>Kho hàng: </b>Sẵn hàng</div><br><br>
-                <b style="font-size: 20px; color: red;">7.900.000 đ</b> <a href="#" class="Gio"><i class="fa-solid fa-cart-shopping"></i></a><br>
-                <del>8.100.000</del>
-              </div>
-              
-              </div>
-              </div>
-            </div></div>
-    </div>
     </section>
     <section>
         <div class="Inf">
@@ -961,11 +546,11 @@
         <div class="updown downa">
             <i style="bottom: 270px; "class="fa-solid fa-chevron-down"></i>
         </div>
+        
     </section>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="Js/Js/general.js"></script>
-<script type="text/javascript" src="Js/Js/product_details.js"></script>
 <script type="text/javascript" src="Js/Js/giohang.js"></script>
 <script type="text/javascript" src="Js/Js/onclick.js"></script>
 </html>

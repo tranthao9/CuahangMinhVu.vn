@@ -1,6 +1,7 @@
 function ExitD(){
     $('.display').css({'transform':'scaleY(0)'});
     $('.AddDongmaytinh').css({'transform':'scaleY(0)'});
+    $('.note').text(' ')
 }
 listDMT= JSON.parse(localStorage.getItem("dongmt")) || []
 function OpenAddDongMT(){
@@ -26,9 +27,20 @@ function ADDDongMT()
     {
         mad=listDMT[listDMT.length-1]['madong']+1;
     }
-    if(tend =="" || motad=="" || file=="")
+    if(tend==""  )
     {
         kt=false
+        $('.note').text("* Tên dòng máy tính không được để trống")
+    }
+    if( motad=="" )
+    {
+        kt=false
+        $('.note').text("* Mô tả không được để trống")
+    }
+    if( file=="" )
+    {
+        kt=false
+        $('.note').text("* Bạn chưa chọn hình ảnh")
     }
     if(kt==true)
     {
@@ -45,11 +57,6 @@ function ADDDongMT()
        RefreshD();
         alert("Bạn đã thêm thành công") ; 
     }
-    else
-    {
-        alert("Không được để trống dữ liệu")
-    }
-   
 }
 function RefreshD(){
     if(listDMT =="")
@@ -148,9 +155,15 @@ function UpdateDongMTT()
     var file=$('#hinhanh').val();
     var soluong=$('#soluongDMT').val()
     var ok=true;
-    if(ten=="" || mota==""  )
+    if(ten==""  )
     {
         ok=false
+        $('.note').text("* Tên dòng máy tính không được để trống")
+    }
+    if( mota=="" )
+    {
+        ok=false
+        $('.note').text("* Mô tả không được để trống")
     }
     if(ok==true)
     {

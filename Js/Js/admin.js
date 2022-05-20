@@ -1,100 +1,89 @@
 var listpage= document.getElementsByClassName("Page");
 var listperson=JSON.parse(localStorage.getItem('register')) || [];
 var listuser=JSON.parse(localStorage.getItem('user')) || [];
-var listsale=document.getElementsByClassName("sales");
-var listsalew=document.getElementsByClassName("sales_week");
+function Bieutuan() {  
+    var chart = new CanvasJS.Chart("chartContainerTuan",  
+    {  
+        animationEnabled: true,
+        theme: "light2",
+        title:{  
+        text: "Thống kê theo tuần",   
+        fontWeight: "bolder",  
+        fontColor: "#008B8B",  
+        fontfamily: "tahoma",          
+        fontSize: 25, 
+        padding: 10 ,   
+    },  
+    data: [  
+        {          
+        type: "column",  
+        dataPoints: [  
+            {label: "Thứ 2", y: 46 },  
+            {label: "Thứ 3", y: 87},  
+            {label: "Thứ 4", y: 76},  
+            {label: "Thứ 5", y: 39 },  
+            {label: "Thứ 6", y: 87 },  
+            {label: "Thứ 7", y: 42 },     
+            {label: "Chủ nhật", y: 60}
+        ]  
+        }  
+    ]  
+    });  
+    chart.render();  
+}
+var listclick=document.getElementsByClassName("clickh");
 $(document).ready(function(){
     $('.hello').click(function(e){
         $('.Dangxuat').slideToggle();
     })
+    
     listpage[0].style.display='block'
+    listclick[0].className += " clickhh"
     DoanhThu();
 })
+listdx= JSON.parse(localStorage.getItem("user")) || []
 
-function Thongke()
+function dangxuat()
 {
-    if($('#txt_over').val()=="tuan")
-    {
-        for(x of listsale)
-        {
-            x.style.display='none';
-        }
-        for(y of listsalew)
-        {
-            y.style.display='none';
-        }
-        listsale[0].style.display='block'
-        listsalew[0].style.display='grid'
-    }
-    if($('#txt_over').val()=="thang")
-    {
-        for(x of listsale)
-        {
-            x.style.display='none';
-        }
-        for(y of listsalew)
-        {
-            y.style.display='none';
-        }
-        listsale[1].style.display='block'
-        listsalew[1].style.display='grid'
-    }
-    if($('#txt_over').val()=="nam")
-    {
-        for(x of listsale)
-        {
-            x.style.display='none';
-        }
-        for(y of listsalew)
-        {
-            y.style.display='none';
-        }
-        listsale[2].style.display='block'
-        listsalew[2].style.display='grid'
-    }
+    listdx=null
+    localStorage.setItem("user",JSON.stringify(listdx))
+    window.location.href = "../login.html";
+  
 }
-Thongke();
-var listbill=JSON.parse(localStorage.getItem('bill')) || [];
-// function DoanhThu()
-// {
-//     var t=0;
-//     var d = new Date();
-//     var a=0;
-//     var b=0;
-//     for(x of listbill)
-//     {
-        
-//         for(z of x)
-//         {
-//             if(z.day==d.getDate() && z.thang==d.getMonth()+1 && z.nam==d.getFullYear())
-//             {
-                
-//                 b=b+1;
-//             }
-//             if(z.tensp != undefined)
-//             {
-                
-                
-//             }
-         
-//             if(z.thanhtoan != undefined)
-//             {
 
-//                 if(z.day==d.getDate() && z.thang==d.getMonth()+1 && z.nam==d.getFullYear())
-//                 {
-//                     t=t+z.thanhtoan;
-//                 }
+var listbill=JSON.parse(localStorage.getItem('bill')) || [];
+function DoanhThu()
+{
+    var t=0;
+    var d = new Date();
+    var a=0;
+    var b=0;
+    var c=0
+    for(x of listbill)
+    {
+        if(x[x.length-1].day==d.getDate() && x[x.length-1].thang==d.getMonth()+1 && x[x.length-1].nam==d.getFullYear())
+        {
+            for(z of x)
+            {
+                if(z.thanhtoan != undefined)
+                {
+                    t=t+z.thanhtoan;
+                    a=a+1;
+                }
+                if(z.soluong != undefined)
+                {
+                    b=b+z.soluong
+                }
                 
-//             }
-//             e
-            
-//         }
-//     }
-//     $('.all>.Details>.overview>.overview1>.Bieudo>.bieudo1>span>span').text(t+"đ");
-//     $('.all>.Details>.overview>.overview1>.Bieudo>.bieudo2>span>span').text(a);
-//     $('.all>.Details>.overview>.overview1>.Bieudo>.bieudo3>span>span').text(b);
-// }
-//DoanhThu();
+            }
+        }
+        
+    }
+    $('.all>.Details>.overview>.overview1>.Bieudo>.bieudo1>span>span').text(t+"đ");
+    $('.all>.Details>.overview>.overview1>.Bieudo>.bieudo2>span>span').text(a);
+    $('.all>.Details>.overview>.overview1>.Bieudo>.bieudo3>span>span').text(b);
+}
+DoanhThu();
 function Chucvu(a){
     if(a=="Nhân viên")
     {
@@ -114,7 +103,7 @@ $(document).ready(function(){
     for(x of listperson)
     {
         d=d+1;
-        if(listuser.tailkhoan==x.username)
+        if(listuser.tailkhoan==x.username && listuser.matkhau==x.password)
         {
             $('.homehello').text("Welcome, "+listuser.tailkhoan )
             $('#mahome').text( Chucvu(x.chucvu) + d);
@@ -125,6 +114,7 @@ $(document).ready(function(){
             $('#nhanvienhome').text(x.chucvu)
             $('#chao').text("Xin chào, "+listuser.tailkhoan )
         }
+
     }
 })
 $(document).ready(function(){
@@ -151,7 +141,13 @@ function Home()
     {
         x.style.display='none'
     }
+    for(let y of listclick)
+    {
+       y.className = y.className.replace(" clickhh","")
+    }
+    listclick[0].className += " clickhh"
     listpage[0].style.display='block'
+  
 }
 function OVERVIEW()
 {
@@ -159,7 +155,13 @@ function OVERVIEW()
     {
         x.style.display='none'
     }
+    for(let y of listclick)
+    {
+        y.className = y.className.replace(" clickhh","")
+    }
+    listclick[1].className += " clickhh"
     listpage[1].style.display='block'
+    Bieutuan();
 }
 function HangMT()
 {
@@ -167,6 +169,11 @@ function HangMT()
     {
         x.style.display='none'
     }
+    for(let y of listclick)
+    {
+        y.className = y.className.replace(" clickhh","")
+    }
+    listclick[2].className += " clickhh"
     listpage[2].style.display='block'
 }
 function DongMT()
@@ -175,6 +182,11 @@ function DongMT()
     {
         x.style.display='none'
     }
+    for(let y of listclick)
+    {
+        y.className = y.className.replace(" clickhh","")
+    }
+    listclick[3].className += " clickhh"
     listpage[3].style.display='block'
 }
 function COMPUTER()
@@ -183,6 +195,11 @@ function COMPUTER()
     {
         x.style.display='none'
     }
+    for(let y of listclick)
+    {
+        y.className = y.className.replace(" clickhh","")
+    }
+    listclick[4].className += " clickhh"
     listpage[4].style.display='block'
 }
 function PROVIDER()
@@ -191,7 +208,25 @@ function PROVIDER()
     {
         x.style.display='none'
     }
+    for(let y of listclick)
+    {
+        y.className = y.className.replace(" clickhh","")
+    }
+    listclick[5].className += " clickhh"
     listpage[5].style.display='block'
+}
+function INVOICEINPUT()
+{
+    for(let x of listpage)
+    {
+        x.style.display='none'
+    }
+    for(let y of listclick)
+    {
+        y.className = y.className.replace(" clickhh","")
+    }
+    listclick[6].className += " clickhh"
+    listpage[6].style.display='block'
 }
 function OpenAddcompany(){
     Refresh();
@@ -204,6 +239,7 @@ function OpenAddcompany(){
 function Exit(){
     $('.display').css({'transform':'scaleY(0)'});
     $('.Addcompany').css({'transform':'scaleY(0)'});
+    $('.note').text(' ')
 }
 
 listcompany=JSON.parse(localStorage.getItem('company')) || [] ;
@@ -220,9 +256,15 @@ function AddCompany(){
     {
         mah=Number(listcompany[listcompany.length-1]['mahang'])+1;
     }
-    if (tenh == "" || motah=="")
+    if (tenh == "") 
     {
         kt=false;
+        $('.note').text("* Tên không được để trống")
+    }
+    if(motah=="")
+    {
+        kt=false;
+        $('.note').text("* Mô tả không được để trống")
     }
     if(kt==true)
     {
@@ -237,10 +279,6 @@ function AddCompany(){
        Refresh();
        alert("Bạn đã thêm thành công")
     }
-   else
-   {
-       alert("Dữ liệu không được để trống")
-   }
   
 }
 
@@ -329,10 +367,15 @@ function UpdateCompanyA()
     var ten=$('#tenhang').val();
     var mota=$('#mota').val();
     var ok =true;
-    if(ten == "" || mota =="")
+    if (tenh == "") 
     {
         ok=false;
-       
+        $('.note').text("* Tên không được để trống")
+    }
+    if(motah=="")
+    {
+        ok=false;
+        $('.note').text("* Mô tả không được để trống")
     }
     if(ok==true)
     {
@@ -345,6 +388,7 @@ function UpdateCompanyA()
                 UpdateCompany();
             }
         }
+        $('.note').text("")
     }
     else
     {

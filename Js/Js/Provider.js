@@ -1,6 +1,7 @@
 function ExitProvider(){
     $('.display').css({'transform':'scaleY(0)'});
     $('.AddProvider').css({'transform':'scaleY(0)'});
+    $('.note').text('')
 }
 listprovider = JSON.parse(localStorage.getItem("provider")) || [];
 function OpenAddProvider(){
@@ -17,7 +18,7 @@ function ADDProvider()
     var dcnhacungcap=$('#dcnhacungcap').val();
     var emailnhacungcap=$('#emailnhacungcap').val();
     var sdtnhacungcap=$('#sdtnhacungcap').val();
-    var kt=true;
+    var ok=true;
     if(listprovider == "")
     {
         mancc=1;
@@ -26,11 +27,27 @@ function ADDProvider()
     {
         mancc=listprovider[listprovider.length-1]['manhacungcap']+1;
     }
-    if(tennhacungcap =="" || dcnhacungcap=="" || sdtnhacungcap=="" || emailnhacungcap=="" || sdtnhacungcap=="")
+    if(tennhacungcap==""  )
     {
-        kt=false
+        ok=false
+        $('.note').text("* Tên nhà cung cấp không được để trống")
     }
-    if(kt==true)
+    if(dcnhacungcap=="")
+    {
+        ok=false
+        $('.note').text("* Địa chỉ nhà cung cấp không được để trống")
+    }
+    if(emailnhacungcap=="")
+    {
+        ok=false
+        $('.note').text("* Email nhà cung cấp không được để trống")
+    }
+    if(sdtnhacungcap=="")
+    {
+        ok=false
+        $('.note').text("* Số điện thoại nhà cung cấp không được để trống")
+    }
+    if(ok==true)
     {
         var Provider={
             "manhacungcap":mancc,
@@ -45,11 +62,6 @@ function ADDProvider()
        RefreshProvider();
         alert("Bạn đã thêm thành công") ; 
     }
-    else
-    {
-        alert("Không được để trống dữ liệu")
-    }
-   
 }
 function RefreshProvider(){
     if(listprovider =="")
@@ -148,9 +160,25 @@ function UpdateProviderA()
     var email=$('#emailnhacungcap').val();
     var sdt=$('#sdtnhacungcap').val()
     var ok=true;
-    if(ten=="" || dc=="" || email=="" || sdt=="" )
+    if(ten==""  )
     {
         ok=false
+        $('.note').text("* Tên nhà cung cấp không được để trống")
+    }
+    if(dc=="")
+    {
+        ok=false
+        $('.note').text("* Địa chỉ nhà cung cấp không được để trống")
+    }
+    if(email=="")
+    {
+        ok=false
+        $('.note').text("* Email nhà cung cấp không được để trống")
+    }
+    if(sdt=="")
+    {
+        ok=false
+        $('.note').text("* Số điện thoại nhà cung cấp không được để trống")
     }
     if(ok==true)
     {
@@ -166,11 +194,4 @@ function UpdateProviderA()
             }
         }
     }
-    else
-    {
-        alert("Dữ liệu không được để trống")
-    }
-
-    
-   
 }
