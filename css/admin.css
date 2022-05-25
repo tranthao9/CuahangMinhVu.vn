@@ -124,7 +124,7 @@
 .Details>.home{
     display: none;
 }
-.Details>.home>.logohome{
+.Details>.home>.logohome>a{
     display: flex;
     justify-content: center;
 }
@@ -148,7 +148,7 @@
     color: #064d0c;
     margin-top: 10px;
 }
-.Details>.home>#changepww{
+.Details>.home>a>#changepww{
     float: right;
     margin-right: 30px;
     background-color: #90ed64;
@@ -157,10 +157,10 @@
     font-weight: 500;
     border-radius: 3px;
 }
-.Details>.home>#changepww:hover{
+.Details>.home>a>#changepww:hover{
     background-color: chocolate;
 }
-.Details>.home>#changepww i{
+.Details>.home>a>#changepww i{
    padding-right: 3px;
 }
 .Details>.home>.homedetails{
@@ -722,6 +722,20 @@
 .company_details> #update:hover{
     background-color: #e2d00d;
 }
+.company_details> #xoaall{
+    line-height: 25px;
+    background-color: #b94807;
+    float: right;
+    margin-right: 20px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    color: white;
+}
+.company_details> #xoaall:hover{
+    background-color: #34e20d;
+}
 .Addcompany>#updatea{
     background-color: rgb(155, 223, 31);
     border: none;
@@ -839,7 +853,10 @@
     font-weight: bold;
     color: white;
 }
-
+.all>.Details>.Page>.headerCP a{
+    text-decoration: none !important;
+    color: black !important;
+ }
 /* ADD computer */
 .all>.Details>.computer_managememnt{
     display: none;

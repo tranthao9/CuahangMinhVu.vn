@@ -13,8 +13,8 @@
 <body>
     <section>
         <div class="row head">
-            <div onclick="index()" class="col-2 col-s-2 col-m-4 logo">
-                <img src="image/logo (1).png">
+            <div class="col-2 col-s-2 col-m-4 logo">
+               <a href="http://127.0.0.1:5500/index.html"><img src="image/logo (1).png"></a> 
             </div>
             <div  class="col-2 col-s-2 col-m-4 hello">
                 <span id="chao"></span>
@@ -117,9 +117,8 @@
             
             <div class="col-10 col-s-12 col-m-12 Details">
                 <div class="home Page">
-                    
-                    <div onclick="index()" class="logohome">
-                        <img src="image/logo (1).png" width="20%">
+                    <div  class="logohome">
+                        <a href="http://127.0.0.1:5500/index.html"><img src="image/logo (1).png" width="20%"></a>
                     </div>
                     <div class="homehello">
                         Welcome, Admin
@@ -163,7 +162,7 @@
                             </tr>
                         </table>
                     </div>
-                    <button onclick="changemk()" id="changepww"> <i class="fa-solid fa-repeat"></i>Đổi mật khẩu</button>
+                    <a href="http://127.0.0.1:5500/changepw.html"><button  id="changepww"> <i class="fa-solid fa-repeat"></i>Đổi mật khẩu</button></a>
                 </div>
                 <div class="col-12 col-s-12 col-m-12 overview Page">
                     <div class="col-12 col-s-12 col-m-12 overview1">
@@ -290,7 +289,7 @@
                 <div class="computer_company Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
-                        <a onclick="index()">Trang chủ / </a>
+                        <a href="http://127.0.0.1:5500/index.html">Trang chủ / </a>
                         <a>Quản lý hãng máy tính</a>
                         <button onclick="OpenAddcompany()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
@@ -332,13 +331,13 @@
                     <div class="searchCPdetail">
                         <div class="searchCP1">
                             <span>Mã dòng máy tính</span>
-                        <input type="text" >
+                        <input type="text" id="textDMTMa" >
                         </div>
                         <div class="searchCP1">
                             <span>Tên dòng máy tính</span>
-                        <input type="text" >
+                        <input type="text" id="textDMTT" >
                         </div>
-                        <button><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+                        <button onclick="Search()"><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
                     </div>
                     <div class="company_details">
                         <div class="company_detail1">
@@ -348,13 +347,14 @@
                             <table  id="adddongMT">
                             </table>
                         </div>
+                        <button  onclick="XoaAll()" id="xoaall"><i class="fa-regular fa-circle-check"></i>  Xóa dữ liệu chọn </button>
                         <button onclick="UpdateDongMT()" id="update"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
                     </div>
                 </div>
                 <div class="computer_managememnt Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
-                        <a onclick="index()">Trang chủ / </a>
+                        <a href="http://127.0.0.1:5500/index.html">Trang chủ / </a>
                         <a>Quản lý máy tính</a>
                         <button onclick="OpenAddcomputer()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
@@ -386,7 +386,7 @@
                 <div class="provider_managememnt Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
-                        <a onclick="index()">Trang chủ / </a>
+                        <a href="http://127.0.0.1:5500/index.html">Trang chủ / </a>
                         <a>Quản lý nhà cung cấp</a>
                         <button onclick="OpenAddProvider()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
@@ -418,7 +418,7 @@
                 <div class="invoice_input Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
-                        <a onclick="index()">Trang chủ / </a>
+                        <a href="http://127.0.0.1:5500/index.html">Trang chủ / </a>
                         <a>Quản lý hóa đơn nhập</a>
                         <button onclick="OpenInvoiceInput()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
