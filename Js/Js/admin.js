@@ -42,7 +42,11 @@ $(document).ready(function(){
     DoanhThu();
 })
 listdx= JSON.parse(localStorage.getItem("user")) || []
-
+$(document).ready(function(){
+    $('.XemChiTiet').click(function(e){
+        $('.chitiet').slideToggle();
+    })
+})
 function dangxuat()
 {
     listdx=null
@@ -118,18 +122,19 @@ $(document).ready(function(){
     }
 })
 $(document).ready(function(){
-    $('.all>.selection>.generalinf>dl>dt').click(function (e) { 
-        $('.all>.selection>.generalinf>dl>dd').slideToggle(function(){
+    $('.all>.selection>.generalinf>#TTC>dt').click(function (e) { 
+        $('.all>.selection>.generalinf>#TTC>dd').slideToggle(function(){
         });
 
     });
-   
 })
 $(document).ready(function(){
-    $('.all>.selection>.counting>dl>dt').click(function (e) { 
-        $('.all>.selection>.counting>dl>dd').slideToggle();
+    $('.all>.selection>.generalinf>#QLDH>dt').click(function (e) { 
+        $('.all>.selection>.generalinf>#QLDH>dd').slideToggle(function(){
+        });
     });
 })
+
 $(document).ready(function(){
     $('.all>.selection>.user>dl>dt').click(function (e) { 
         $('.all>.selection>.user>dl>dd').slideToggle();
@@ -227,6 +232,19 @@ function INVOICEINPUT()
     }
     listclick[6].className += " clickhh"
     listpage[6].style.display='block'
+}
+function CXL()
+{
+    for(let x of listpage)
+    {
+        x.style.display='none'
+    }
+    for(let y of listclick)
+    {
+        y.className = y.className.replace(" clickhh","")
+    }
+    listclick[7].className += " clickhh"
+    listpage[7].style.display='block'
 }
 function OpenAddcompany(){
     Refresh();
@@ -367,12 +385,12 @@ function UpdateCompanyA()
     var ten=$('#tenhang').val();
     var mota=$('#mota').val();
     var ok =true;
-    if (tenh == "") 
+    if (ten == "") 
     {
         ok=false;
         $('.note').text("* Tên không được để trống")
     }
-    if(motah=="")
+    if(mota=="")
     {
         ok=false;
         $('.note').text("* Mô tả không được để trống")
@@ -390,9 +408,4 @@ function UpdateCompanyA()
         }
         $('.note').text("")
     }
-    else
-    {
-        alert("Dữ liệu không được để trống !")
-    }
-    
 }

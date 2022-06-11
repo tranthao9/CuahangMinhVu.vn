@@ -243,9 +243,10 @@
 .product11{
     background-color: rgb(8, 88, 8);
     color: white;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 30px;
     border-radius: 3px 3px 0 0;
+    padding-left: 5px;
 }
 .product2 p{
     font-size: 25px;
@@ -286,4 +287,103 @@
     width: 600px;
     margin: auto;
 }
+.Vote{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid rgb(231, 228, 228);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.Vote2{
+    width: 240px;
+}
+.Vote p{
+    font-size: 20px;
+    font-weight: 530;
+    margin-top: 10px;
+}
+.Vote>.Vote1{
+    color: rgb(255, 149, 0);
+}
+.Vote>.Vote1 span:last-child{
+    color: black;
+}
+.Vote2 {
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+}
+.Vote2 div{
+    flex:1;
+    height: 4px;
+    background-color: #d9d9d9;
+    position: relative;
+}
+.Vote2 div a{
+   position: absolute;
+   background-color: orange;
+   left: 0;
+   top: 0;
+   height: 100%;
+}
 
+.Vote2 i{
+    font-size: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.vote2_percent{
+    color: #2f80ed;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    padding-left: 10px;
+    width: 35px;
+    cursor: pointer;
+}
+.comment{
+    
+    border-bottom: 1px solid rgb(231, 228, 228);
+}
+.comment> p:first-child > span:first-child{
+font-weight: bold;
+color: black;
+}
+.comment > p:first-child{
+    color: green;
+}
+.comment > p:first-child i{
+    margin-left: 15px;
+}
+.comment > i{
+    color: rgb(255, 119, 0);
+}
+.comment > p:last-child {
+    color:  #2f80ed
+}
+.comment > p:last-child span{
+   margin-left: 5px;
+   margin-right: 5px;
+}
+.comment > p:last-child> span:last-child{
+   color: rgb(159, 157, 157);
+ }
+ .Vote > p:last-child button{
+    width: 40%;
+    line-height: 35px;
+    margin-right: 20px;
+    border-radius: 5px ;
+ }
+ .Vote> p:last-child{
+    text-align: center;
+ }
+ .Vote > p:last-child button:first-child{
+   background-color:#2f80ed ;
+   color: white;
+   border: none;
+ }
+ .Vote > p:last-child button:last-child{
+   background-color: white;;
+    color: #2f80ed;
+    border: 1px solid #2f80ed;
+  }

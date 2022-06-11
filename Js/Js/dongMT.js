@@ -214,18 +214,26 @@ function UpdateDongMTT()
             }
         }
     }
-    else
-    {
-        alert("Dữ liệu không được để trống")
-    }
 }
 function CheckAll() {
     var ids = document.getElementsByClassName("input2");
-    for (var i = 0; i < ids.length; i++) {
-        if (ids[i].name == "check_all") {
-            ids[i].checked = true;
+    if(ids[0].checked == true)
+    {
+        for (var i = 0; i < ids.length; i++) {
+            if (ids[i].name == "check_all") {
+                ids[i].checked = false;
+            }
         }
     }
+    else
+    {
+        for (var i = 0; i < ids.length; i++) {
+            if (ids[i].name == "check_all") {
+                ids[i].checked = true;
+            }
+        }
+    }
+    
 }
 function XoaAll()
 {

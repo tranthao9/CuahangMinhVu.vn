@@ -29,7 +29,7 @@ body{
 }
 .title>.title-bottom{
     display: grid;
-    grid-template-columns: 20% 16% 14% 20% 16% 16%;
+    grid-template-columns: 20% 16% 14% 20% 15% 15%;
     background-color:rgb(42, 104, 92);
     color: white;
     font-size: 15px;
@@ -37,8 +37,14 @@ body{
     margin-bottom: 0;
     float: right;
     margin-right: 10px;
+    text-align: center;
     
 }
+.title>.title-bottom a:hover{
+   color: orange;
+}
+
+ 
 .title>.title-login{
     float: right;
     
@@ -106,6 +112,7 @@ body{
 }
 .style>.style-i{
     padding-top: 5px;
+    padding-left: 10px;
 }
 .style>.style-i img{
     width:80%;
@@ -494,9 +501,6 @@ body{
     margin-right: 5px;
     line-height: 20px;
 }
-
-
-
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder{
     border: 1px solid gainsboro;
     width: 100%;
@@ -505,8 +509,10 @@ body{
 }
 
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder:hover{
-    border: 1px solid black;
+    border:  1px solid rgb(111, 128, 0);
     box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2) , 0 6px 20px 0 rgba(0,0,0,0.19);
+    transform: translateY(-5px);
+    transition: 0.5s;
 }
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.box {
     position: relative;
@@ -576,6 +582,7 @@ body{
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.Laptop111> .Lap-a{
     font-weight: bold; text-decoration: none;color: black;
     font-size: 13px;
+    cursor: pointer;
 }
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder>.Laptop111> .Lap-a:hover{
     color: red;
@@ -587,30 +594,25 @@ body{
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder> .box>img{
    width: 100%;
    height: 110%;
-   padding: 10%;
    transition: 1s;
+   padding: 10px;
 }
 
-.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder:hover img{
+/* .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder:hover img{
     transform: scale(1.25,1.32);
-}
+} */
 .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder> .box>a>img{
     width: 100%;
     height: 110%;
-    padding: 10%;
     transition: 1s;
+    padding: 10px;
  }
-.LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder:hover>a img{
+/* .LaptopT>.PLLaptop>.Laptop1-1>.Laptop11>.LapBorder:hover>a img{
     transform: scale(1.25,1.32);
-}
-@media screen and (max-width: 768px){
+} */
+@media only screen and (max-width: 600px){
     .Laptop11{
         height: 420px !important;
-    }
-}
-@media screen and (max-width: 460px){
-    .Laptop11{
-        height: 350px !important;
     }
 }
 .new{
@@ -1373,4 +1375,22 @@ position: relative;;
 .overY{
     height: 290px;
     overflow-y: scroll;
+}
+.Cart-product:hover{
+    background-color: rgb(244, 248, 240);
+}
+.close-footer:hover{
+    background-color: rgb(75, 127, 58);
+}
+.order:hover{
+    background-color: rgb(78, 210, 30);
+}
+.option a:hover{
+    text-decoration: underline;
+}
+.option a{
+    cursor: pointer;
+}
+.Infoder11>.Infoder1:hover{
+    background-color: rgb(244, 248, 240);
 }

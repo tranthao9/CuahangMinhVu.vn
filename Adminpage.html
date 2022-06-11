@@ -14,7 +14,7 @@
     <section>
         <div class="row head">
             <div class="col-2 col-s-2 col-m-4 logo">
-               <a href="http://127.0.0.1:5500/index.html"><img src="image/logo (1).png"></a> 
+               <a style="margin-left: 20px" href="http://127.0.0.1:5500/index.html"><img src="image/logo (1).png"></a> 
             </div>
             <div  class="col-2 col-s-2 col-m-4 hello">
                 <span id="chao"></span>
@@ -29,21 +29,32 @@
     <section>
         <div class="row all">
             <div class="col-2 col-s-12 col-m-12 selection">
-                <div class="search">
-                    <input type="text" placeholder="Tìm kiếm ........">
+                <div style="margin-bottom: 12px" class="search">
+                    <input style="outline: none" type="text" placeholder="Tìm kiếm ........">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div onclick="Home()" class="management clickh " style="padding-left: 5%; margin-top: 5px;">
-                    <i  class="fa-solid fa-circle-user"></i> Home
+                <div onclick="Home()" class="management clickh " >
+                    <dl>
+                        <dt>
+                            <span><i  class="fa-solid fa-circle-user"></i></span>
+                             Home
+                        </dt>
+                    </dl>
+                    
                 </div>
-                <div onclick="OVERVIEW()" class="management clickh  counting" style="padding-left: 10px; border-top: 1px solid #ebefeb;">
-                  
-                    <i class="fa-solid fa-chart-column"></i>
-                            Thống kê
+                <div onclick="OVERVIEW()" class="management clickh  counting">
+                  <dl>
+                      <dt>
+                          <span><i class="fa-solid fa-chart-column"></i></span>
+                        
+                        Thống kê
+                      </dt>
+                  </dl>
+                   
                     
                 </div>
                 <div class="management generalinf">
-                    <dl>
+                    <dl id="TTC">
                         <dt >
                             <i class="fa-solid fa-list-ul"></i>
                             Thông tin chung
@@ -76,11 +87,6 @@
                         </dd>
                         <dd>
                             <span>--</span>
-                            <i class="fa-solid fa-building-user"></i>
-                            Quản lý đơn đặt hàng
-                        </dd>
-                        <dd>
-                            <span>--</span>
                             <i class="fa-solid fa-bullhorn"></i>
                             Quản lý CTKM
                         </dd>
@@ -88,6 +94,37 @@
                             <span>--</span>
                             <i class="fa-solid fa-book-open"></i>
                             Quản lý bài viết
+                        </dd>
+                    </dl>
+                    <dl id="QLDH">
+                        <dt style="font-size:15px"> 
+                            <i  class="fa-solid fa-building-user"></i>
+                            Quản lý đơn đặt hàng
+                            <i style="margin-right: 3px;margin-top: 2px;"  class="fa-solid fa-angle-down"></i>
+                        </dt>
+                        <dd onclick="CXL()" class="clickh">
+                            <span>--</span>
+                            Đơn hàng chưa xác nhận
+                        </dd>
+                        <dd>
+                            <span>--</span>
+                            Đơn hàng đã xác nhận
+                        </dd>
+                        <dd>
+                            <span>--</span>
+                            Đơn hàng đang giao
+                        </dd>
+                        <dd>
+                            <span>--</span>
+                            Đơn hàng đang giao
+                        </dd>
+                        <dd>
+                            <span>--</span>
+                            Đơn hàng giao thành công
+                        </dd>
+                        <dd>
+                            <span>--</span>
+                            Đơn hàng hoàn trả
                         </dd>
                     </dl>
                 </div>
@@ -110,8 +147,13 @@
                     </dl>
                 </div>
                 <div class="management thumuc">
-                    <i class="fa-brands fa-adversal"></i>
-                    Quản lý thư mục
+                    <dl>
+                        <dt>
+                            <span>
+                                <i class="fa-brands fa-adversal"></i> Quản lý thư mục
+                            </span>
+                        </dt>
+                    </dl>
                 </div>
             </div>
             
@@ -252,6 +294,94 @@
                                 <span>Đơn hoàn trả<br><span>123</span><br>
                             </div>
                         </div>
+                        <div class="XemChiTiet">
+                            <button>Xem Chi Tiết  <i class="fa-solid fa-sort-down"></i></button>
+                        </div>
+                        <div class="chitiet">
+                            <table>
+                                <tr>
+                                    <th colspan="12">BÁO CÁO NHẬP, XUẤT, TỒN</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">Mã Hàng</th>
+                                    <th rowspan="2" >Tên hàng hóa Hàng</th>
+                                    <th rowspan="2" >Đơn vị tính</th>
+                                    <th colspan="2">Tồn kho đầu kỳ</th>
+                                    <th colspan="2">Nhập trong kỳ</th>
+                                    <th colspan="3">Xuất trong kỳ</th>
+                                    <th colspan="2">Tồn kho cuối kỳ</th>
+                                </tr>
+                                <tr>
+                                    <th>SL</th>
+                                    <th>Thành tiền</th>
+                                    <th>SL</th>
+                                    <th>Thành tiền</th>
+                                    <th>Đơn giá xuất kho</th>
+                                    <th>SL</th>
+                                    <th>Thành tiền</th>
+                                    <th>SL</th>
+                                    <th>Thành tiền</th>
+                                </tr>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                </tr>
+                                <tr>
+                                    <td>MH213</td>
+                                    <td>Thinkpad T450s</td>
+                                    <td>cái</td>
+                                    <td>5</td>
+                                    <td>3557.000.000đ</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>10.000.000đ</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>5</td>
+                                    <td>109.000.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td>MH3453</td>
+                                    <td>Thinkpad T460s</td>
+                                    <td>cái</td>
+                                    <td>3</td>
+                                    <td>237.000.000đ</td>
+                                    <td>2</td>
+                                    <td>124.000.000đ</td>
+                                    <td>16.000.000đ</td>
+                                    <td>3</td>
+                                    <td>230.000.000đ</td>
+                                    <td>5</td>
+                                    <td>109.000.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td>MH1243</td>
+                                    <td>Macbook Air2012</td>
+                                    <td>cái</td>
+                                    <td>5</td>
+                                    <td>3557.000.000đ</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>10.000.000đ</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>5</td>
+                                    <td>109.000.000đ</td>
+                                </tr>
+                            </table>
+
+                        </div>
                         <div class="col-12 col-s-12 col-m-12 sale_quickly">
                             <div class="sale_quickly1">
                                 <i class="fa-solid fa-draw-polygon"></i>
@@ -337,7 +467,7 @@
                             <span>Tên dòng máy tính</span>
                         <input type="text" id="textDMTT" >
                         </div>
-                        <button onclick="Search()"><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+                        <button class="TimKIEM" onclick="Search()"><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
                     </div>
                     <div class="company_details">
                         <div class="company_detail1">
@@ -347,7 +477,7 @@
                             <table  id="adddongMT">
                             </table>
                         </div>
-                        <button  onclick="XoaAll()" id="xoaall"><i class="fa-regular fa-circle-check"></i>  Xóa dữ liệu chọn </button>
+                        <button  onclick="XoaAll()" id="xoaall"><i class="fa-regular fa-trash-can"></i>  Xóa dữ liệu chọn </button>
                         <button onclick="UpdateDongMT()" id="update"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
                     </div>
                 </div>
@@ -447,6 +577,113 @@
                         <button onclick="UpdateInvoiceInput()" id="update"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
                     </div>
                 </div>
+                <div class="Uniconfirmed_Invoice Page">
+                    <div class="headerCP">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                        <a href="http://127.0.0.1:5500/index.html">Trang chủ / </a>
+                        <a>Quản lý đơn hàng chưa xử lý</a>
+                        <button  id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
+                    </div>
+                    <div class="searchCP">
+                        Tìm kiếm
+                    </div>
+                    <div class="searchCPdetail">
+                        <div class="searchCP1">
+                            <span>Mã đơn hàng</span>
+                        <input type="text" >
+                        </div>
+                        <div class="searchCP1">
+                            <span>Tên đơn hàng</span>
+                        <input type="text" >
+                        </div>
+                        <button><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+                    </div>
+                    <div class="company_details ">
+                        <div class="company_detail1">
+                            <i class="fa-brands fa-accusoft"></i>  Danh sách đơn hàng
+                        </div>
+                        <div class="company_detail2">
+                            <table >
+                                <tr style="font-size:13px">
+                                    <th><input type="checkbox"></th>
+                                    <th>STT</th>
+                                    <th>Mã hóa đơn</th>
+                                    <th>Mã sản phẩm</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Mã nhân viên</th>
+                                    <th>Tên khách hàng</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Ngày đặt</th>
+                                    <th>Đơn giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
+                                    <th>Tác vụ</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>1</td>
+                                    <td>HD01</td>
+                                    <td>SE12356</td>
+                                    <td>Laptop LenovoT450s</td>
+                                    <td>NV02</td>
+                                    <td>Trần Thị Thảo</td>
+                                    <td>0832297222</td>
+                                    <td>02/05/2021</td>
+                                    <td>13.500.000đ</td>
+                                    <td>01</td>
+                                    <td>13.500.000đ</td>
+                                    <td><i class="fa-solid fa-pen-to-square"></i>   <i  class="fa-solid fa-trash-can"></i></td>
+                                    </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>2</td>
+                                    <td>HD02</td>
+                                    <td>SD1212356</td>
+                                    <td>Laptop LenovoT440s</td>
+                                    <td>NV03</td>
+                                    <td>Nguyễn Thị Lan</td>
+                                    <td>0832245622</td>
+                                    <td>06/05/2021</td>
+                                    <td>17.500.000đ</td>
+                                    <td>01</td>
+                                    <td>17.500.000đ</td>
+                                    <td><i class="fa-solid fa-pen-to-square"></i>   <i  class="fa-solid fa-trash-can"></i></td>
+                                    </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>3</td>
+                                    <td>HD03</td>
+                                    <td>SA374656</td>
+                                    <td>Laptop DellE345</td>
+                                    <td>NV02</td>
+                                    <td>Trần Thị Nhàn</td>
+                                    <td>0345237222</td>
+                                    <td>06/06/2021</td>
+                                    <td>10.500.000đ</td>
+                                    <td>02</td>
+                                    <td>21.000.000đ</td>
+                                    <td><i class="fa-solid fa-pen-to-square"></i>   <i  class="fa-solid fa-trash-can"></i></td>
+                                    </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>4</td>
+                                    <td>HD04</td>
+                                    <td>SQ443356</td>
+                                    <td>Laptop Macbook Air2012</td>
+                                    <td>NV02</td>
+                                    <td>Phan Thị Minh Tâm</td>
+                                    <td>0987297222</td>
+                                    <td>02/07/2021</td>
+                                    <td>23.500.000đ</td>
+                                    <td>01</td>
+                                    <td>23.500.000đ</td>
+                                    <td><i class="fa-solid fa-pen-to-square"></i>   <i  class="fa-solid fa-trash-can"></i></td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <button  id="update"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
+                    </div>
+                </div>
             </div>
             </div>
         </div>
@@ -487,17 +724,17 @@
                 <input id="madong" type="text" disabled>
                 </div>
                 <div class="addCP1">
-                    <span>Tên dòng máy tính<span style="color: red"> *</span></span>
+                    <span>Tên dòng máy tính</span>
                 <input id="tendong" type="text" >
                 </div>
                 <div class="addCP1">
-                    <span>Mô tả<span style="color: red"> *</span></span>
+                    <span>Mô tả</span>
                 <textarea id="motad"></textarea></div>
                 <div style="border:none" class="addCP2">
-                    <span>Hình ảnh<span style="color: red"> *</span></span>
+                    <span>Hình ảnh</span>
                     <input  id="hinhanh" type="file"> </div>
                 <div class="addCP2 ">
-                    <span>Số lượng<span style="color: red"> *</span></span>
+                    <span>Số lượng</span>
                     <input style="outline:none;border: 1px solid seagreen;border-radius: 3px;" id="soluongDMT"  type="number" min="1" value="1">
                 </div>
                 <div class=" note" style="color: red;margin-bottom: 15px;"></div>

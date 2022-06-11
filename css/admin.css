@@ -83,11 +83,8 @@
     cursor: pointer;
     
 }
-.all>.selection>.thumuc{
-    padding-left: 10px;
-    border-top: 1px solid #ebefeb;
-}
-.all>.selection>.management:hover{
+
+.all>.selection>.management>dl>dt:hover{
    background-color: #eaf9eb;
 }
 .all>.selection>.management>dl{
@@ -115,12 +112,15 @@
 .all>.selection>.management>dl>dt>i:last-child{
    
     float: right;
-    margin-right: 15px;
+    margin-right: 3px;
     padding-top: 15px;
 }
+
 .all>.selection>.management>dl>dd:hover{
-   background-color: bisque;
-}
+    background-color: bisque;
+ }
+
+/*  */
 .Details>.home{
     display: none;
 }
@@ -1687,3 +1687,178 @@
     font-weight: bold;
     color: white;
 }
+
+/*  */
+.all>.Details>.Uniconfirmed_Invoice{
+    display: none;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.headerCP{
+     padding-top: 5px;
+     padding-left: 20px;
+     line-height: 30px;
+     box-shadow: 2px 3px 2px 0 rgba(33, 33, 33, 0.3),-2px 0px 2px 0 rgba(33, 33, 33, 0.3);
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.headerCP button{
+     float: right;
+     margin-right: 20px;
+     background-color: rgb(13, 230, 136);
+     border: none;
+     line-height: 25px;
+     border-radius: 3px;
+     color: rgb(32, 32, 25);
+     font-weight: 500;
+    
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.searchCP{
+     padding-left: 20px;
+     line-height: 30px;
+     background-color: #dee2de;
+     margin-top: 3px;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.searchCPdetail{
+     border-bottom: 1px solid rgb(224, 222, 222);
+     border-right: 1px solid rgb(224, 222, 222);
+     border-top: 1px solid rgb(224, 222, 222);
+ 
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.searchCPdetail>.searchCP1{
+     display: flex;
+     width: 50%;
+     padding-top: 20px;
+     margin-left: 20%;
+     line-height: 25px;
+ 
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.searchCPdetail>.searchCP1 span{
+     width: 30%;
+     font-weight: 600;
+     color: #1bc129;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.searchCPdetail>.searchCP1 input{
+     width: 70%;
+     border: 1px solid rgb(44, 150, 44);
+     border-radius: 3px;
+     outline: none;
+     padding: 5px;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.searchCPdetail>.searchCP1 #mota{
+     width: 80%;
+     border: 1px solid rgb(44, 150, 44);
+     border-radius: 3px;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.searchCPdetail button{
+     width: 100px;
+     line-height: 25px;
+     margin-left:60.5%;
+     margin-top: 15px;
+     border-radius: 3px;
+     background-color: #04700d;
+     border: none;
+     color: white;
+     margin-bottom: 20px;
+ 
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.company_details{
+     margin-top: 10px;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.company_details>.company_detail1{
+     font-size: 20px;
+     font-weight: bold;
+     color:#07b916;
+     margin-bottom: 10px;
+     padding-left: 30px;
+ }
+ 
+ .all>.Details>.Uniconfirmed_Invoice>.company_details>.company_detail2 table{
+     width: 100%;
+     border: 1px solid black;
+     border-collapse: collapse;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.company_details>.company_detail2 >table th{
+    padding: 8px;
+    border: 1px solid black;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.company_details>.company_detail2 >table td{
+     padding: 8px;
+     border: 1px solid black;
+     text-align: center;
+     font-size: 13px;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.company_details>.company_detail2 >table td i{
+     margin: 8px;
+     cursor: pointer;
+     color: #07b916;
+ }
+ .all>.Details>.Uniconfirmed_Invoice>.company_details>.company_detail2 >table td i:hover{
+    color: #f74d0a;
+}
+ .TimKIEM:hover{
+     background-color: rgb(0, 140, 255) !important;
+ }
+#Addnew:hover{
+    background-color: rgb(74, 216, 248) !important;
+}
+.company_detail2>table tr:hover{
+    background-color: rgb(235, 251, 239);
+}
+.company_detail2>table tr:first-child:hover{
+    background-color: white;
+}
+#exitd:hover{
+    background-color: #04700d;
+}
+#agreed:hover{
+    background-color: #30a4f1;
+}
+#refeshd:hover{
+    background-color: #b94807;
+}
+#updatead:hover{
+    background-color: darkorange;
+}
+.headerCP a{
+   cursor: pointer;
+}
+
+.chitiet>table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 14px;
+    margin: auto;
+  }
+  .chitiet>table td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+  }
+ 
+.chitiet{
+    margin-bottom: 20px;
+    display: none;
+}
+.chitiet>table tr:first-child th:first-child {
+   color: red;
+   font-size: 16px;
+  }
+  .chitiet>table tr th{
+   color: rgb(16, 16, 191);
+   }
+.chitiet>table tr td{
+text-align: center;
+}
+.XemChiTiet button{
+    background-color: #04700d;
+    color: white;
+    border: none;
+    line-height: 25px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+}
+.XemChiTiet button i{
+   padding-top: 3%;
+   margin-left: 5px;
+}
+
+

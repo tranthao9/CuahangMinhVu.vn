@@ -140,14 +140,14 @@ function ADDPeople()
                                                {
                                                 for(let x of listregister)
                                                 {
-                                                    if(tk[0]==x.username && tk[1]==x.password && x.chucvu=="Nhân viên")
+                                                    if(tk.tailkhoan==x.username && tk.matkhau==x.password && x.chucvu=="Nhân viên")
                                                     {
                                                        
                                                         ok=false;
                                                         $('.note_register').text("Bạn không có quyền để tạo nhân viên or admin mới!");
                                                         
                                                     }
-                                                    if(tk[0]==x.username && tk[1]==x.password && x.chucvu=="Khách hàng")
+                                                    if(tk.tailkhoan==x.username && tk.matkhau==x.password && x.chucvu=="Khách hàng")
                                                     {
                                                      
                                                         ok=false;

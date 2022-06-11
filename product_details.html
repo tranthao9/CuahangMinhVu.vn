@@ -16,7 +16,7 @@
         <section class="street"></section>
         <section class="header1">
         <div class="row title">
-            <div class=" col-3 col-s-12 col-m-12 title-w"><i>Thời gian làm việc: Từ 8h30 - 20h30</i></div>
+            <div style="padding-top:5px" class=" col-3 col-s-12 col-m-12 title-w"><i>Thời gian làm việc: Từ 8h30 - 20h30</i></div>
             
             <div class=" title-login">
                 <a href="http://127.0.0.1:5500/login.html" target="_bank"> <i class="fa-solid fa-circle-user"></i></a>
@@ -35,7 +35,7 @@
                             <a>Giỏ hàng</a>
                             <a id="Soluong"></a>
                             <span id="HideCart"> &times;</span>
-                            <a target="_blank" href="http://127.0.0.1:5500/Paying.html" class="Watchall-Cart">Xem tất cả</a>
+                            <a  href="http://127.0.0.1:5500/Paying.html" class="Watchall-Cart">Xem tất cả</a>
                             
                         </div>
                         <div class="Cart-body">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="modal-footer">
                             <button onclick="UpdateCart()" type="button" class="close-footer">Cập nhập giỏ hàng</button>
-                            <a target="_blank" href="http://127.0.0.1:5500/Paying.html"><button type="button" class="order">Thanh Toán</button></a>
+                            <a  href="http://127.0.0.1:5500/Paying.html"><button type="button" class="order">Thanh Toán</button></a>
                         </div>
                 </div>
             </div>
@@ -64,11 +64,11 @@
     <section >
         <div class="row style style1">
             <div class="col-2 col-s-2 col-m-2 style-i">
-                <a href="http://127.0.0.1:5500/index.html"> <img  src="image/logo.png"  ></a>
+                <a style="padding-left: 20px" href="http://127.0.0.1:5500/index.html"> <img  src="image/logo.png"  ></a>
             </div>
             <div class="col-3 col-s-9 col-m-9 style-center" >
                 <form style="display: flex;">
-                    <input style=" height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);outline: none;" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
+                    <input style="padding: 10px; height: 30px;width: 85%;border-radius: 5px 0 0 5px ; border: 1px solid rgb(154, 199, 169);outline: none;" type="text" class="f" placeholder="Tìm kiếm..." name="search" >
                     <button style="background-color:rgb(229, 245, 234) ;border: 1px solid rgb(188, 225, 200);border-radius: 0 5px 5px 0;"  type="submit"><div style="font-size: 18px;"><i class="fa-solid fa-magnifying-glass"></i></div></button>
                 </form>
             </div>
@@ -277,18 +277,18 @@
     </section>
     <section style="margin-top: 150px;">
         <div class="option">
-            <a href="http://127.0.0.1:5500/index.html">Trang chủ </a>
+            <a style=" padding-left: 10px;" href="http://127.0.0.1:5500/index.html">Trang chủ </a>
             <span>&#160;/&#160;</span>
             <a href="http://127.0.0.1:5500/WatchAll.html">LapTop Dùng cho học tập và làm việc online (4-10tr)</a>
             <span>&#160;/&#160;</span>
-            <a href="#">Thinkpad T460s</a>
+            <a id="contentF" href="#"></a>
         </div>
     </section>
     <section>
         <div class="row Details">
             <div class="col-5 col-s-12 col-m-12 DetailImg">
                 <div class="DetailImg1" >
-                    <img id="main-details" src="image/lenovothinkpadt460s_480_360.jpg" width="100%">
+                    <img id="main-details" src="" width="100%">
                     <div class="images22"></div>
                     <div class="Next3">
                         <i onclick="BackPD()"  class="fa-solid fa-caret-left"></i> 
@@ -298,18 +298,90 @@
                     </div>
                 </div>
                 <div class="product-image">
-                    <img class="img-details" onclick="ShowImgDetails(this)" src="image/lenovothinkpadt460s_480_360.jpg" width="25%">
-                    <img class="img-details" onclick="ShowImgDetails(this)" src="image/lenovothinkpadt460s2banphim_480_360.jpg" width="25%">
-                    <img class="img-details" onclick="ShowImgDetails(this)" src="image/lenovothinkpadt460s3canhtrai_480_360.jpg" width="25%">
-                    <img class="img-details" onclick="ShowImgDetails(this)" src="image/lenovothinkpadt460s4canhphai_480_360.jpg" width="25%">
+                    <img class="img-details" id="img1" onclick="ShowImgDetails(this)" src="" width="25%">
+                    <img class="img-details " id="img2" onclick="ShowImgDetails(this)" src="" width="25%">
+                    <img class="img-details " id="img3" onclick="ShowImgDetails(this)" src="" width="25%">
+                    <img class="img-details " id="img4" onclick="ShowImgDetails(this)" src="" width="25%">
+                </div>
+                <div class="Vote">
+                    <p id="Tieude"></p>
+                    <div class="Vote1" style="margin-bottom: 30px;">
+                        <span>4.8</span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>169 đánh giá</span>
+                    </div>
+                    <div class="Vote2" >
+                        <span>5</span>
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <a style="width: 70%;"></a>
+                        </div>
+                        <span class="vote2_percent">70%</span>
+                    </div>
+                    <div class="Vote2">
+                        <span>4</span>
+                        <i class="fa-solid fa-star"></i>
+                        <div><a style="width: 20%;"></a></div>
+                        <span class="vote2_percent">20%</span>
+                    </div>
+                    <div class="Vote2">
+                        <span>3</span>
+                        <i class="fa-solid fa-star"></i>
+                        <div><a style="width: 5%;"></a></div>
+                        <span class="vote2_percent">5%</span>
+                    </div>
+                    <div class="Vote2">
+                        <span>2</span>
+                        <i class="fa-solid fa-star"></i>
+                        <div><a style="width: 4%;"></a></div>
+                        <span class="vote2_percent">4%</span>
+                    </div>
+                    <div class="Vote2" >
+                        <span>1</span>
+                        <i class="fa-solid fa-star"></i>
+                        <div><a style="width: 2%;"></a></div>
+                        <span class="vote2_percent">2%</span>
+                    </div>
+                    <div class="comment" style="border-top: 1px solid rgb(231, 228, 228);margin-top: 20px;"> 
+                        <p> <span>Tạ Thị Kim Nghĩa </span> <i class="fa-solid fa-circle-check"></i>
+                        <span>Đã mua tại Minh Vũ</span></p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><i class="fa-regular fa-thumbs-up"></i><span>Hữu ích</span> 
+                            <i class="fa-regular fa-comment"></i><span>Thảo luận</span>
+                        <span>Đã dùng khoảng 1 tháng<i style="margin-left: 10px" class="fa-solid fa-circle-question"></i> ...</span></p>
+                    </div>
+                    <div class="comment"> 
+                        <p> <span>Chu Văn Hảo </span> <i class="fa-solid fa-circle-check"></i>
+                        <span>Đã mua tại Minh Vũ</span></p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><i class="fa-regular fa-thumbs-up"></i><span>Hữu ích</span> 
+                            <i class="fa-regular fa-comment"></i><span>Thảo luận</span>
+                        <span>Đã dùng khoảng 4 tháng<i style="margin-left: 10px" class="fa-solid fa-circle-question"></i> ...</span></p>
+                    </div>
+                    <p>
+                        <button><i class="fa-solid fa-bahai"></i> Viết đánh giá</button>
+                        <button>Xem 169 đánh giá <i class="fa-solid fa-caret-right"></i></button>
+                    </p>
                 </div>
             </div>
             <div class="col-7 col-s-12 col-m-12 content-product">
                 <div class="display_content">
                     <div class="Content1">
-                        <span>Lenovo Thinkpad T460s</span><br><br>
-                        <span style="display:flex ;">
-                            Core i5-6300U (i5-6200U) / RAM 8GB / SSD 128GB / Màn 14.0 inch FHD 1920x1080
+                        <span class="contentF"></span><br><br>
+                        <span id="CauHinhChinh1" style="display:flex ;">
+                           
                             <div class="buttom1-fb" >
                                 <div class="like">
                                     <i  class="fa-brands fa-facebook-square"></i>
@@ -324,7 +396,7 @@
                     <div class="Content2">
                         <div >
                             <a>Giá :</a>
-                            <b style="color: red;font-size: 18px;">11.090.000 đ</b>
+                            <b id="Gia1" style="color: red;font-size: 18px;"></b>
                         </div>
                         <div>
                             <a>Bảo hành :</a>
@@ -342,9 +414,9 @@
                 </div>
                 <div class="display_content">
                     <div class="Content1">
-                        <span>Lenovo Thinkpad T460s</span><br><br>
-                        <span style="display:flex ;">
-                            Core i5-6300U (i5-6200U) / RAM 8GB / SSD 256GB / Màn 14.0 inch FHD 1920x1080
+                        <span id="contentF"></span><br><br>
+                        <span id="CauHinhChinh2" style="display:flex ;">
+                           
                             <div class="buttom1-fb" >
                                 <div class="like">
                                     <i  class="fa-brands fa-facebook-square"></i>
@@ -359,7 +431,7 @@
                     <div class="Content2">
                         <div >
                             <a>Giá :</a>
-                            <b style="color: red;font-size: 18px;">11.500.000 đ</b>
+                            <b id="Gia2" style="color: red;font-size: 18px;"></b>
                         </div>
                         <div>
                             <a>Bảo hành :</a>
@@ -377,9 +449,9 @@
                 </div>
                 <div class="display_content">
                     <div class="Content1">
-                        <span>Lenovo Thinkpad T460s</span><br><br>
-                        <span style="display:flex ;">
-                            Core i7-6300U (i5-6200U) / RAM 8GB / SSD 256GB / Màn 14.0 inch FHD 1920x1080
+                        <span id="contentF"></span><br><br>
+                        <span id="CauHinhChinh3" style="display:flex ;">
+                           
                             <div class="buttom1-fb" >
                                 <div class="like">
                                     <i  class="fa-brands fa-facebook-square"></i>
@@ -394,7 +466,7 @@
                     <div class="Content2">
                         <div >
                             <a>Giá :</a>
-                            <b  style="color: red;font-size: 18px;">15.500.000 đ</b>
+                            <b id="Gia3" style="color: red;font-size: 18px;"></b>
                         </div>
                         <div>
                             <a>Bảo hành :</a>
@@ -417,17 +489,17 @@
                 </div>
                 <div class="DUI">
                     <ul>
-                        <li class="optionDUI" onclick="ClickCT(1)">
-                            <span>Core i5-6300U (i5-6200U) / RAM 8GB / SSD 128GB / Màn 14.0 inch FHD 1920x1080</span><br>
-                            <span id="gia" >11.090.000 đ</span>
+                        <li  onclick="ClickCT(1)">
+                            <span class="CauHinhChinh1"></span><br>
+                            <span class="Gia1" id="gia " ></span>
                         </li>
-                        <li class="optionDUI" onclick="ClickCT(2)" style="float: right;">
-                            <span>Core i5-6300U (i5-6200U) / RAM 8GB / SSD 256GB / Màn 14.0 inch FHD 1920x1080</span><br>
-                            <span id="gia" >11.500.000 đ</span>
+                        <li  class="optionDUI" onclick="ClickCT(2)" style="float: right;">
+                            <span class="CauHinhChinh2"></span><br>
+                            <span class="Gia2" id="gia " ></span>
                         </li>
                         <li class="optionDUI"  onclick="ClickCT(3)">
-                            <span>Core i7-6300U (i5-6200U) / RAM 8GB / SSD 256GB / Màn 14.0 inch FHD 1920x1080</span><br>
-                            <span id="gia" >15.500.000 đ</span>
+                            <span class="CauHinhChinh3"></span><br>
+                            <span class="Gia3" id="gia " ></span>
                         </li>
                         
                     </ul>
@@ -437,27 +509,27 @@
     
                 <div style="border-top: 1px solid rgb(227, 224, 224);" class="AB">THÔNG TIN MUA HÀNG</div>
                 <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
+                    <i class="fa-solid fa-square-check" style="padding-right:10px"></i>
                     <b>Giảm từ 100K đến 500K cho khách mua lần 2, khách cũ giới thiệu khách mới.</b>
                     <a>Xem chi tiết tại đây</a>
                 </div>
                 <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
+                    <i class="fa-solid fa-square-check" style="padding-right:10px"></i>
                     <b>Có chương trình hỗ trợ trả góp linh hoạt hấp dẫn.</b>
                     <a>Xem chi tiết tại đây</a>
                 </div>
                 <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
+                    <i class="fa-solid fa-square-check" style="padding-right:10px"></i>
                     <b>Có hỗ trợ Free Ship. </b>
                     <a>Xem chi tiết tại đây</a>
                 </div>
                 <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
+                    <i class="fa-solid fa-square-check" style="padding-right:10px"></i>
                     <b>Bảo hành miễn phí cả cháy nổ IC (nhiều nơi từ chối bảo hành).</b>
                     <a>Xem chi tiết tại đây</a>
                 </div>
                 <div class="Fistif">
-                    <i class="fa-solid fa-square-check"></i>
+                    <i class="fa-solid fa-square-check" style="padding-right:10px"></i>
                     <b>Máy tính Minh Vũ không cộng thêm tiền webcam, bảo mật vân tay, bàn phím sáng như các nơi khác</b>
                 </div>
                 <div style="margin-top:10px; color: red; font-size: 15px; margin-bottom: 10px;" >(*) Các option như Bluetooth, vân tay, bàn phím sáng,... tùy từng đợt hàng sẽ có máy có máy không, khi đặt hàng quý khách lưu ý hỏi tư vấn chi tiết để tránh những hiểu lầm không đáng có về sau. </div>
@@ -484,7 +556,7 @@
                 </div>
             </div>
             <div class="col-12 col-s-12 col-m-12 product2">
-               <p>Đánh giá Thinkpad T460S</p>
+               <p id="DanhGiaLapTop"></p>
                <p>Để tạo bước đột phá mới trong dòng sản phẩm laptop doanh nhân của mình. Hãng Lenovo đã cho ra mắt mẫu Thinkpad T460S với nhiều thay đổi, đột phá mới, tạo tiền đề cho bước ngoặt của hãng trên thị trường máy tính xách tay doanh nhân cao cấp. Cũng chính vì lý do đó mà chiếc T460S đã mang trong mình rất nhiều ưu điểm, các cải tiến nâng cấp toàn diện mà các phiên bản trước không có.</p>
                 <p>Thông số kĩ thuật Thinkpad T460S</p>
             </div>
@@ -552,7 +624,7 @@
                 </table>
             </div>
             <div class="col-12 col-s-12 col-m-12 product2">
-                <p>Đánh giá Thinkpad T460S</p>
+                <p id="DanhGiaLapTop"></p>
              </div>
              <div class="VideoThinkpadT460s">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/PW3bFEAswXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -968,4 +1040,5 @@
 <script type="text/javascript" src="Js/Js/product_details.js"></script>
 <script type="text/javascript" src="Js/Js/giohang.js"></script>
 <script type="text/javascript" src="Js/Js/onclick.js"></script>
+<script type="text/javascript" src="Js/Js/details.js"></script>
 </html>

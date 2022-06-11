@@ -29,17 +29,27 @@
     margin: auto;
     margin-top: 10px;
 }
-.content1>span{
+.content1> div span{
     font-size: 20px;
     color: darkgreen;
     font-weight: bold;
 }
-.content1>p{
+.content1> div p{
     line-height: 20px;
 }
-.content1>.video{
+.content2{
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 10px;
+}
+.content2> .video{
     width: 600px;
     margin: auto;
     margin-top: 30px;
     margin-top: 30px;
+}
+.content2 span{
+    font-size: 20px;
+    color: darkgreen;
+    font-weight: bold;
 }
